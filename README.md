@@ -1,4 +1,7 @@
 # I've joined the #100DaysOfCode Challenge
+From the 15th September I will spend a minimum of 1 hour per day writing Clojure code for 100 days.  This will take me up to the 24th December.  
+
+Follow my journey in the [log](log.md), collaborate with issues, pull requests and via the [Clojurians Slack #100-days-of-code channel](https://clojurians.slack.com/) - [self sign-up](https://clojurians.net/), [archive](https://clojurians-log.clojureverse.org/)
 
 ## Contents
 
@@ -6,6 +9,35 @@
 * [Log - click here to see my progress](log.md)
 * [FAQ](FAQ.md)
 * [Resources](resources.md)
+* [Another 10days of Clojure example](https://github.com/natenka/100-days-of-Clojure)
+
+
+## Basic plan for the 100 days challenge
+An initial plan for the 100 days challenge
+ Day 1:
+ - Clojure syntax and basic language use
+ 
+ Day 2-42:
+ One or more exercises from the following websites
+ - [4Clojure challenges](http://www.4clojure.com/)
+ - [Awesome kata exercises](https://github.com/gamontal/awesome-katas) with `clojure.test`
+ - [ClojureBridge London exercises](https://clojurebridgelondon.github.io/workshop/)
+
+Day 43-75:
+-	[Exercisim.io](https://exercism.io/)
+-	[CodeWars](https://www.codewars.com/)
+-	Clacks cryptography – other more advanced cyphers
+-	Game of Life basics / clojurescript
+-	Tic-tac-toe clojurescript
+-	Othello clojurescript
+-	Connect 4 - clojurescript
+-	Space-wars in Clojurescript / svg – quil.info ?
+-	Some projects with spec
+
+Day 77-100:
+- [Advent of code](https://adventofcode.com/)
+- [24 pull requests](https://24pullrequests.com/)
+
 
 ## Translations
 [español](intl/es/README.md) – [français](intl/fr/FAQ-fr.md) – [polski](intl/pl/README.md) - [русский](intl/ru/README-ru.md) - [português do Brasil](intl/pt-br/LEIAME.md) – [deutsch](intl/de/README.md) – [українська](intl/ua/README-ua.md) – [한국어](intl/ko/README-ko.md) – [中文](intl/ch/README.md)
