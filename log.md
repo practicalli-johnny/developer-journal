@@ -21,22 +21,71 @@ I am a little nervous about this challenge as it will demonstrate just how much 
 [My Github repository for 100 Days Of Clojure Code](https://github.com/jr0cket/100-days-of-clojure-code)
 
 
-### Day 0: February 30, 2016 (Example 2)
-##### (delete me or comment me out)
+### Day 1: Staus Monitor mock website (server side)
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+Started a simple status monitor application to collate monitoring information from different sources into one simple web dashboard.
 
-**Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+### Today's Progress
 
-**Link(s) to work**: [Calculator App](http://www.example.com)
+Started a new project using the [compojure]() Leiningen template
+
+```bash
+lein new compojure status-monitor
+```
+
+This created a project using the `ring` and `compojure` libraries and Clojure 1.8.0
+
+```clojure
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [compojure "1.5.1"]
+                 [ring/ring-defaults "0.2.1"]]
+```
+
+The project was updated to use the creative commons licence, rather than the deffault Eclipse public license which has is more restrictive.
+
+Version 1.9.0 is now the current stable version of Clojure, so that has been updated in the dependencies.
 
 
-### Day 1: June 27, Monday
+The lein-compojure template is very simple to get started with, although it seems the libraries are a little behind the latest.  The project runs successfully without upgrading versions.  It is usually better to use the latest stable versions of these libraries to pick up any fixes.
 
-**Today's Progress**: I've gone through many exercises on FreeCodeCamp.
+The latest stable versions were found via https://clojars.org/.
 
-**Thoughts** I've recently started coding, and it's a great feeling when I finally solve an algorithm challenge after a lot of attempts and hours spent.
+> Consider submitting a pull request to update the lein-compojure template project on Github.
 
-**Link(s) to work**
-1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
-2. [Title Case a Sentence](https://www.freecodecamp.com/challenges/title-case-a-sentence)
+
+#### Running the REPL from Spacemacs
+
+Although the project runs well from the command line using the `lein-ring` plugin, we dont get the full benefit of the REPL until we connect our editor to the REPL.  With the Compojure template you need to run the repl from Spacemacs as there is no way to connect to the REPL port from Spacemacs when the project is run with `lein ring server`.
+
+Using the keybinding `, '` is a quick way to start the repl in Spacemacs.
+
+#### Enhancing the webpage
+
+The website is a litle basic in terms of output, so I added Bootstrap CSS and JavaScript libraries to the project as a simple way to make the output look a little more professional.
+
+To use Bootstrap easily and avoid writing lots of html code, I used the Hiccup library.  Hiccup allows you to generate html code from Clojure vectors that contain Clojure keywords representing html tags.  Generating an html `h1` header and its text is written as `[:h1 "I am an HTML header"]`.
+
+Using Clojure syntax in this way, makes it much easier to type.  Using this syntax also makes it easy to use structured editing with your code.
+
+The project needs to include Hiccup library as a dependency.  Using the `clj-refactor` tools in Emacs, I added the hiccup dependencies and also hotloaded it into the already running repl.
+
+### Added Hiccup and Bootstrap to create a better web page
+
+Created the basics of our monitor dashboard page without writing html direct.
+
+Added the Hiccup library to generate html from Clojure data structures and
+keywords.
+
+Using the hiccup.page/html5 function we created a page that allows us to include
+the Bootstrap CSS and JavaScript libraries.  Hiccup allows us to include CSS
+styles in the data structures, or more usefully refer to the Bootstrap styles by
+name.
+
+
+### Thoughts
+The compojure template is easy to get started with, it just works with the help of the `lein-ring` plugin.  The plugin takes the app defined in the `src/status_monitor/handler.clj` file and passes it to an embedded Jetty application server.  The plugin abstracts this detail away, making the project easy to run and less code to write.
+
+This abstraction does make it a little harder to understand how this application actually runs and there is a lack of information on the template website.
+
+### Link(s) to work
+https://github.com/jr0cket/webapp-status-monitor
