@@ -2,8 +2,99 @@
 
 
 
+## 20180916 - Day 2: Investigating compojure-template and lein-ring
 
-### Day 1: Staus Monitor mock website (server side)
+Today was more a journey of discovery on how projects from the compojure-template can be run and how the lein-ring plugin works.
+
+### Thoughts for today
+
+I really appreciated the work done by all Open Source project owners and maintainers, especially @weavejester who has created so many great projects for Clojure.
+
+I didnt write a lot of code today, but felt I learnt some really invaluable information.  It also feels good to give back to an open source project, no matter how big or small the contribution.
+
+Not having to concern myself with a delivery date for my project allowed me the feedom to dive into the projects and tools I have been using for quite a while.  This has given me a much better understanding of how to get the most out of them and help me teach other developers how to use them.  It is also way more fun.
+
+
+### Code from today
+
+I submitted a [pull request](https://github.com/weavejester/compojure-template/pull/25) to update the each library dependency to their latest stable version in the compojure-template.
+
+
+### Activities in detail
+
+Here is what I got up to in a lot more detail.
+
+
+#### compojure-template pull request
+
+When creating a new project from the [compojure-template]() yesterday I noticed that the version of libraries used in the template were a little dated.  Those versions stil work, but I decided to create a pull request with the latest stable versions of those libraries.
+
+https://github.com/weavejester/compojure-template/pull/25
+
+There was an existing pull request to update the libraries dependencies, however, that was also out of date.
+
+The compojure-template project only describes how to run a generated project using the lein-ring plugin, using `lein ring server`.  The [lein-ring](https://github.com/weavejester/lein-ring) project readme describes [how to run the project from the Java command line](https://github.com/weavejester/lein-ring#executable-jar-files), but there is no reference to this information on the [compojure-template](https://github.com/weavejester/compojure-template/) project.  Again, I spotted a [pull request](https://github.com/weavejester/compojure-template/pull/23) to add these details to the readme so I added a thumbs up reaction with hope the maintainer will accept the pull request.
+
+
+#### Digging deeper into lein-ring plugin
+
+It is common in Clojure projects to define a `-main` function that is the start point to running the application.  However, the compojure-template doesnt generate a project with a `-main` function, instead it defines a Var called `app` that is the start of our application.
+
+The reason for this approach is so that the compojure application can be packaged into a Java Web Archive (WAR) file and dropped into an existing Java Application Server (Tomcat, Jett, etc.).  This is the traditional approach to deploying a JVM webapp.
+
+The lein-ring plugin adds a task called `ring` to Leiningen, so you can start the application on the command line using
+
+```
+lein ring server
+```
+
+Running the compojure project using lein-ring plugin starts an embedded Jetty web application server and passes the `app` to that running process to start listening for http requests.
+
+
+#### Running as a stand alone application
+
+With the rise in Cloud computing it is more common to run each application in its own embedded server, rather than deploying mulitple apps on a single applicaton server.  This new approach enables vertical scaling and parallel processing, something Clojure is an excellent language for.
+
+Rather than write our own `-main` function to call Jetty, we can ask lein-ring plugin to do it for us.  A `-main` function is boilerplate code after all.
+
+Use the lein-ring version of `lein uberjar` to generate a JAR file
+
+```
+lein ring uberjar
+```
+
+Taking a look at the contents of the generated JAR file we can see the additions made by the plugin.
+
+> I use Spacemacs to open the Jar file as it will list all the files and let me read each text file it contains.
+
+An application entry point has been added to the `meta-inf/manifest.mf` by specifying `Main-Class: status_monitor.handler.main`
+
+Hold on though... we didnt have a `main` namespace in our code, so how does that work?
+
+Well, lein-ring had created a file for that namespace with a `-main` function within it.  Here is the code contained within this automatically generated namespace.
+
+```
+(do
+  (clojure.core/ns status-monitor.handler.main
+    (:gen-class))
+
+  (clojure.core/defn -main []
+    ((do
+       (clojure.core/require (quote ring.server.leiningen))
+
+       (clojure.core/resolve (quote ring.server.leiningen/serve)))
+     (quote {:ring
+             {:handler status-monitor.handler/app,
+              :open-browser? false,
+              :stacktraces? false,
+              :auto-reload? false,
+              :auto-refresh? false}}))))
+```
+
+The code requires the namespace `ring.server.leiningen` so ic can run the `serve` function that takes the `app` as an argument.  `serve` will run an embedded jetty server and run our `app` within.
+
+As `uberjar` is typically used to deply your application to a remote server (e.g. uat, production), then development features are set to false.  We dont really want a browser window to be opened when we run the app on a production server.
+
 ------------------------------------------
 
 ## 20180915 - Day 1: Staus Monitor mock website (server side) -
