@@ -1,24 +1,6 @@
 # 100 Days Of Code - Log
 
-### Day 0: 14th September, 2016
 
-Test out my development environment is working.  For the exercises I will be using Spacemacs, a community configuration for Emacs that also provides a comprehensive set of Vim states (Evil mode) that make editing code more effective.
-
-Spacemacs is configured to use the Clojure layer, which pulls in CIDER packages, providing a comprehensive Clojure development environment that is equivalent to the features of an IDE without the resource requirements.
-
-I will use Spacemacs for all coding and documentation for this 100 days challenge.  Along the way I will document my usage of Spacemacs and useful practices in the online guide: [Practicalli Spacemacs](https://practicalli.github.io/spacemacs).
-
-
-### Today's Progress
-As today is just a check of my environment, then no progress to report yet.
-
-### Thoughts
-I am a little nervous about this challenge as it will demonstrate just how much coding skill I currently have. My imposter syndome is kicking in a little as I think about it.  However, the excitement of emersing myself in Clojure coding for 100 days is over-riding this nervousness and hopefully this will continue to the end of the challenge.
-
-
-### Link to work
-[Practicalli Spacemacs](https://practicalli.github.io/spacemacs)
-[My Github repository for 100 Days Of Clojure Code](https://github.com/jr0cket/100-days-of-clojure-code)
 
 
 ### Day 1: Staus Monitor mock website (server side)
@@ -89,3 +71,25 @@ This abstraction does make it a little harder to understand how this application
 
 ### Link(s) to work
 https://github.com/jr0cket/webapp-status-monitor
+
+
+
+### Day 0: 14th September, 2016
+
+Test out my development environment is working.  For the exercises I will be using Spacemacs, a community configuration for Emacs that also provides a comprehensive set of Vim states (Evil mode) that make editing code more effective.
+
+Spacemacs is configured to use the Clojure layer, which pulls in CIDER packages, providing a comprehensive Clojure development environment that is equivalent to the features of an IDE without the resource requirements.
+
+I will use Spacemacs for all coding and documentation for this 100 days challenge.  Along the way I will document my usage of Spacemacs and useful practices in the online guide: [Practicalli Spacemacs](https://practicalli.github.io/spacemacs).
+
+
+### Today's Progress
+As today is just a check of my environment, then no progress to report yet.
+
+### Thoughts
+I am a little nervous about this challenge as it will demonstrate just how much coding skill I currently have. My imposter syndome is kicking in a little as I think about it.  However, the excitement of emersing myself in Clojure coding for 100 days is over-riding this nervousness and hopefully this will continue to the end of the challenge.
+
+
+### Link to work
+[Practicalli Spacemacs](https://practicalli.github.io/spacemacs)
+[My Github repository for 100 Days Of Clojure Code](https://github.com/jr0cket/100-days-of-clojure-code)
