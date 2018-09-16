@@ -4,12 +4,25 @@
 
 
 ### Day 1: Staus Monitor mock website (server side)
+------------------------------------------
+
+## 20180915 - Day 1: Staus Monitor mock website (server side) -
 
 Started a simple status monitor application to collate monitoring information from different sources into one simple web dashboard.
 
-### Today's Progress
+### Thoughts from today
 
-Started a new project using the [compojure]() Leiningen template
+The compojure template is easy to get started with, it just works with the help of the `lein-ring` plugin.  The plugin takes the app defined in the `src/status_monitor/handler.clj` file and passes it to an embedded Jetty application server.  The plugin abstracts this detail away, making the project easy to run and less code to write.
+
+This abstraction does make it a little harder to understand how this application actually runs and there is a lack of information on the template website.
+
+### Code from today
+https://github.com/jr0cket/webapp-status-monitor
+
+
+### Details of today's activites
+
+Started a new project using the Leiningen [compojure-template](https://github.com/weavejester/compojure-template)
 
 ```bash
 lein new compojure status-monitor
@@ -63,18 +76,9 @@ the Bootstrap CSS and JavaScript libraries.  Hiccup allows us to include CSS
 styles in the data structures, or more usefully refer to the Bootstrap styles by
 name.
 
+------------------------------------------
 
-### Thoughts
-The compojure template is easy to get started with, it just works with the help of the `lein-ring` plugin.  The plugin takes the app defined in the `src/status_monitor/handler.clj` file and passes it to an embedded Jetty application server.  The plugin abstracts this detail away, making the project easy to run and less code to write.
-
-This abstraction does make it a little harder to understand how this application actually runs and there is a lack of information on the template website.
-
-### Link(s) to work
-https://github.com/jr0cket/webapp-status-monitor
-
-
-
-### Day 0: 14th September, 2016
+## 20180914 - Day 0: 14th September, 2016
 
 Test out my development environment is working.  For the exercises I will be using Spacemacs, a community configuration for Emacs that also provides a comprehensive set of Vim states (Evil mode) that make editing code more effective.
 
