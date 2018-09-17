@@ -1,6 +1,50 @@
 # 100 Days Of Code - Log
 
 
+## 20180917 - Day 3: Joker Clojure linter and SVG status bars
+
+
+### Thoughts for today
+
+I had a little excursion into [Joker](https://github.com/candid82/joker), a linter for Clojure.  Someone was having problems getting the [clojure-lint](https://github.com/n2o/clojure-lint-spacemacs-layer) layer to work in Spacemacs, so I though I would give it a try and see if I could help.  I really like the feedback I get from the Joker linter, its very clearly presented and is very fast.
+
+I like coding interfaces with Scalable Vector Graphics (SVG) as the graphics are defined as data structures (when using the hiccup syntax).  So SVG is really easy to use with Clojure.  It requires a little trial and error as its not specifically documented as far as I can tell, but having a repl means is really quick to experiment.
+
+### Code from today
+
+Defined a status bar component using Hiccup syntax to generate SVG
+* https://github.com/jr0cket/webapp-status-monitor/commit/4d7925184c8cf181f0addfb8fb829844ba56002d
+* https://github.com/jr0cket/webapp-status-monitor/commit/17efddc7233fb134b107c89f88fe3875ff40f83c
+
+
+### Activities in detail
+
+#### Continuing the status-monitor webapp
+
+I added some mock status bars to my status-monitor application, using hiccup and [Scalable Vector Graphics (SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) to add some colour and design to the page.
+
+There is a bit of a challenge with using SVG with the Hiccup syntax, as it does not seem to be documented anywhere.  However, its not that hard to work out by looking at the [SVG elements in HTML](https://developer.mozilla.org/en-US/docs/Web/SVG/Element).  We are generating HTML after all.
+
+> I did find some SVG projects that may be interesting to try:
+> [Tikkba](https://github.com/pallix/tikkba) for the creation and the dynamic modification of SVG documents
+> [analemma](http://liebke.github.io/analemma/) for generating charts and Scalable Vector Graphics (SVG)
+> [dali](https://github.com/stathissideris/dali) for representing the SVG graphics format. It allows the creation and manipulation of SVG files. The syntax used to describe the graphical elements is based on hiccup with a few extensions
+> [svg-wrangler](https://github.com/gfredericks/svg-wrangler) a collection of Clojure functions to help assemble SVG images via hiccup data structures
+
+
+#### Joker linter and clojure-lint layer in Spacemacs
+
+I setup on [Joker](https://github.com/candid82/joker) on ubuntu by downloading a [pre-compiled linux binary](https://github.com/candid82/joker/releases) and placing it in `~/bin` which is already on my executable path.
+
+Added the `clojure-lint` layer to `.spacemacs` configuration file and restarted Spacemacs with `SPC q r`.
+
+Opened my status-monitor `status-monitor.handler` namespace and it showed me where I had been less clear with my code straight away.
+
+If I call a function with the wrong number of argument then Joker will put an orange dot in the margin.  That's so awesome.
+
+I will refactor a few things that Joker found tomorrow, such especially refining the namespace refer.
+
+------------------------------------------
 
 ## 20180916 - Day 2: Investigating compojure-template and lein-ring
 
