@@ -1,5 +1,57 @@
 # 100 Days Of Code - Log
 
+## 20180918 - Day 4: Are you mocking me :)
+
+Today was a great meetup at Signal Media.  Talked about the #100daysofcode challenge I am doing and the experiments with Scalable Vector Graphics. Discussed the case for ClojureScript and Reagent over JavaScript and React.js
+
+Also helped someone on Clojurians Slack write a keybinding for [lispy]() functions `lispy-pair` and `lispy-quote` that did not have keybindings defined in the package.  Lispy is an alternative to Evil and Smartparents and whilst interesting, its not something I am inclined to try myself.
+
+### Thoughts for today
+
+There are so many companies using Clojure I keep finding out about.  The TV company Vue.tv uses Clojure for all their data processing around their broadcasting business.
+
+GraphQL in a lambda works surprisingly well according to Alex's talk.  That was really interesting.
+
+### Code from today
+
+https://github.com/jr0cket/webapp-status-monitor/commit/1c282057c2d1a7433a36ad50b2845c79e788f128
+
+### Activities in detail
+
+#### Mock data generators
+
+I'd like to test out the SVG dashboard with a number of different data sets.  Rather than just type a lot of random numbers into the code, I wrote a mock-data generator function.  This mock data first returned float values.
+
+
+```
+(defn mock-data
+  "Mock data generator"
+  [maximum-value]
+  (rand (+ maximum-value 1)))
+```
+
+The `mock-data` function was refactored to generate either float or integer random data based on the type passed to the `mock-data` function as an argument.
+
+gAs the float generated number has multiple decimal places and we only want two for the display, the `format` function is used to limit the precision of the returning number to 2 decimal places.
+
+```(defn mock-data
+  "Mock data generator"
+  [maximum-value]
+  (if (float? maximum-value)
+    (format "%.2f" (rand (+ maximum-value 1)))
+    (rand-int (+ maximum-value 1))))
+```
+
+
+#### Joker linter
+
+As I was experimenting with a mock-data generator in the REPL experiments section, I noticed that Joker reports out of order issues.  So it will highlight if you try to call a function before its defined in the file.  This happens even if the function has already been evaluated in the repl.  This situation does remind me that Joker reads the whole Clojure file each time a change is made.
+
+I am finding Joker invaluable to guard against very silly mistakes and thus avoiding hunting through code for silly mistakes.
+
+More Joker awesomenessness.
+
+------------------------------------------
 
 ## 20180917 - Day 3: Joker Clojure linter and SVG status bars
 
