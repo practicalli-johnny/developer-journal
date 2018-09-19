@@ -1,5 +1,35 @@
 # 100 Days Of Code - Log
 
+
+## 20180918 - Day 5: A very Googley day - Alexa, Android and Googling answers
+
+
+### Thoughts for today
+
+I was at an Amazon for an Alexa workshop building what they refer to as _skills_, their word for defining the things that you can configure Alexa to do.  It was good fun, very well explained and I also won an Echo dot (which should arrive in the post tomorrow).
+
+This evening I coached at [Codebar](https://codebar.io), helping a very bright person with their Augmented Reality application for Android which was written in Kotlin.  I can see why experienced Android developers are able to get a great rate for their work, as it feels like a lot of moving parts to build such a native app.  They managed to get further with the app and we even got some UI tests instrumented.
+
+Not progress on the Clojure app today, although had a very interesting talk about the need to do more to highlight what makes Clojure so special.  I did do some work on this for ClojureBridge London workshop https://clojurebridgelondon.github.io/workshop/introducing-clojure/
+
+
+### Code from today
+
+AWS Lambda function for several Alexa skills:
+https://github.com/jr0cket/aws-lambda-jenkins-deployer-alexa/commit/5e601b817c812549104d1a8f14ce7ade23c6c5f9
+
+### Activities in detail
+
+#### Alexa Workshop
+
+To make voice work, the service needs to understand millions of words so that it can accurately interpret what you are saying and have a better chance of doing the right thing.  If Alexa doesunt understand the words you say, then its not going to do what you want.
+
+The Alexa Framework can be used to enable any device, not just the devices from Amazon.
+
+They are called skills (rather than voice apps) as we are teaching Alexa to do something specific.
+
+
+
 ## 20180918 - Day 4: Are you mocking me :)
 
 Today was a great meetup at Signal Media.  Talked about the #100daysofcode challenge I am doing and the experiments with Scalable Vector Graphics. Discussed the case for ClojureScript and Reagent over JavaScript and React.js
