@@ -2,6 +2,25 @@
 
 
 
+
+## 20180928 - Day 6: ClojureBridge London
+
+
+### Thoughts for today
+
+Preparing for the ClojureBridge London event next weekend by reviewing the workshop content and enhancing some of the challenges and sample answers.
+
+Also carried out some user research for developer portals of several financial institues.  There was definately a large difference in usability and developer experience between the sites reviewed.  Hopefully my comments are of some contructive use and I wasnt overly critical.
+
+### Code from today
+
+Code examples and content for the ClojureBridge London workshop
+https://github.com/ClojureBridgeLondon/workshop-content-gitbook
+
+### Activities in detail
+
+Improved several sections of the ClojureBridge workshop content.
+
 ------------------------------------------
 
 ## 20180919 - Day 5: A very Googley day - Alexa, Android and Googling answers
@@ -32,6 +51,7 @@ The Alexa Framework can be used to enable any device, not just the devices from 
 They are called skills (rather than voice apps) as we are teaching Alexa to do something specific.
 
 
+------------------------------------------
 
 ## 20180918 - Day 4: Are you mocking me :)
 
