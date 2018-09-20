@@ -1,7 +1,10 @@
 # 100 Days Of Code - Log
 
 
-## 20180918 - Day 5: A very Googley day - Alexa, Android and Googling answers
+
+------------------------------------------
+
+## 20180919 - Day 5: A very Googley day - Alexa, Android and Googling answers
 
 
 ### Thoughts for today
