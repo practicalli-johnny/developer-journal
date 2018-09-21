@@ -1,7 +1,26 @@
 # 100 Days Of Code - Log
 
 
+## 20180918 - Day 7: Clojure advocacy and Spacemacs
 
+### Thoughts for today
+
+This morning I had a great conversation with an exciting company that is looking to move to Clojure for key computational parts of their systems.  Lots of discussion centred around finding and hiring Clojure developers, for which there are many options.
+
+The rest of the day was spent working on my book [Spacemacs for Clojure development](https://github.com/practicalli/spacemacs-gitbook/).
+
+### Code from today
+
+Content and elisp code snippets for my Spacemacs book:
+https://github.com/practicalli/spacemacs-gitbook/
+
+### Activities in detail
+
+I have been steadily creating content for my book to help developers make the most out of Spacemacs for Clojure development.  There is still much content to go, however, there is lots of really useful things I have learnt and added over the last few weeks.
+
+I have also been adding more content ideas in the [Github project for the book](https://github.com/practicalli/spacemacs-gitbook/projects/1).
+
+------------------------------------------
 
 ## 20180928 - Day 6: ClojureBridge London
 
