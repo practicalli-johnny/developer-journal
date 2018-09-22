@@ -1,7 +1,7 @@
 # 100 Days Of Code - Log
 
 
-## 20180918 - Day 7: Clojure advocacy and Spacemacs
+## 20180921 - Day 7: Clojure advocacy and Spacemacs
 
 ### Thoughts for today
 
@@ -22,7 +22,7 @@ I have also been adding more content ideas in the [Github project for the book](
 
 ------------------------------------------
 
-## 20180928 - Day 6: ClojureBridge London
+## 20180920 - Day 6: ClojureBridge London
 
 
 ### Thoughts for today
