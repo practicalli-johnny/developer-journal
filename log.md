@@ -1,5 +1,103 @@
 # 100 Days Of Code - Log
 
+
+## 20180923 - Day 9: Testing is fun
+
+### Thoughts for today
+
+More testing today and taking a brief look at the mocking framework that Compojure Leiningen template added to the test code generated.
+
+Also has a quick look at eftest from @weavejester which is supposed to be faster and can run more tests in parrallel than just running `lein test`.  I mainly wanted to use it for the coloured output at this stage (as I only have a few tests).
+
+By accident I found the Emacs transpose keybinding is still in Spacemacs today. Instead of pressing `M-TAB` I was pressing `M-t` and swapping around the two words either side of the cursor position.  The transpose call even jumps over and ignores comments and other separators.
+
+The standard Spacemacs bindings for transpose are as follows:
+
+* `SPC x t c`	swap (transpose) the current character with the previous one
+* `SPC x t w`	swap (transpose) the current word with the previous one
+* `SPC x t l`	swap (transpose) the current line with the previous one
+
+This is something else to add to my [Spacemacs for Clojure development guide](https://practicalli.github.io/spacemacs).
+
+### Code from today
+
+* Added eftest plugin
+https://github.com/jr0cket/webapp-status-monitor/commit/b5f8b2a83ce9839c7881b4a5b80d8d7911b13fb2
+
+* Added tests for monitor dashboard
+https://github.com/jr0cket/webapp-status-monitor/commit/d2016c004b9122677986f3933270e900ce59d0a8
+
+* Added author and documentation to test namespace
+https://github.com/jr0cket/webapp-status-monitor/commit/f5eed17e129ffd2e6c402d1292fb900164129259
+
+* Experimenting in the REPL
+https://github.com/jr0cket/webapp-status-monitor/commit/bfa92e18ebb5b57c223c6b6851277ee88c1819c7
+
+* Updated the Readme to include an ascii text logo
+https://github.com/jr0cket/webapp-status-monitor/commit/f8b6bef2486fc972e0f82599b9303c0616ef5195
+
+
+### Activities in detail
+
+#### Adding an ascii text logo
+
+Perhaps a little superfluous but an easy thing to add is an ascii text logo of the project name.  I use the [text to ascii art generator (TAAG)](http://patorjk.com/software/taag/#p=display&f=Fire%20Font-k&t=status%20monitor) and the Fire Font.
+
+The output of the generator was copied into a text block in the project README.md file.
+
+#### REPL experiement - calling monitor-dashboard function
+
+Confirming the output of the monitor-dashboard function by calling that function via the REPL, using an empty map {} as the function argument.
+
+The monitor-dashboard is currently passive and so does not use any data from the request map.
+
+If the monitor-dashboard function did use data from the request map, we would need to mock that in the call to monitor-dashboard.
+
+#### Testing monitor-dashboard
+
+Using clojure.string/includes? to see if the result of calling the monitor-dashboard function includes specific sub-strings.
+
+This could be done using the mock framework and put into a let to make the code cleaner.
+
+```clojure
+(deftest test-monitor-dashboard
+  (testing "Test dashboard contains key pieces of information"
+    (is (clojure.string/includes?
+         (monitor-dashboard {})
+         "<title>Area51 Mock Status</title>"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {})
+         "<link href=\"//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {}) "<div class=\"jumbotron\"><h1>Mock Status Monitor Dashboard</h1></div>"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {}) "<h2>Application monitor</h2>"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {})
+         "view-box=\"0 0 100 20\""))))
+```
+
+Tomorrow I'll refactor the above test to use a `let` value for the response from calling monitor-dashboard. I will also use the `(app (mock/request :get "/"))` call in the `let` and compare the `:body` from the response.
+
+
+#### Added eftest plugin for pretty results report
+
+[eftest](https://github.com/weavejester/eftest) provides a faster testing tool and syntax coloured reporting of results, making it nicer to use that `lein test`.
+
+Run the tests using the eftest plugin on the command line using `lein eftest`
+
+The plugin uses several dependencies
+
+[Clojure Leiningen eftest plugin dependencies](/images/clojure-testing-eftest-dependencies.png)
+
+The output in this test run that contains two test failures is very clear to understand and spot the issues easily.
+
+[Clojure Leiningen eftest plugin - failing test run](/images/clojure-testing-eftest-test-run-failures.png)
+
+
+------------------------------------------
+
+
 ## 20180922 - Day 8: Clojure coaching and Testing
 
 ### Thoughts for today
