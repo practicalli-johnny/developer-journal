@@ -1,6 +1,76 @@
 # 100 Days Of Code - Log
 
 
+## 20180923 - Day 10: Mocking has never been easier
+
+### Thoughts for today
+
+Refined the tests using the `ring.mock.request` mocking library that Compojure Leiningen template added when creating the project.
+
+
+### Code from today
+
+* Refactor test to use ring.mock.request
+https://github.com/jr0cket/webapp-status-monitor/commit/a71781610e800f524ce46dfdb0e18653aea19c2d
+
+### Activities in detail
+
+#### Refining the tests with ring.mock.request
+
+The test from yesterday was not quite as elegant as it could be.  Although it showed clearly what it was testing, there was much duplication.
+
+```clojure
+#_(deftest test-monitor-dashboard
+  (testing "Test dashboard contains key pieces of information"
+    (is (clojure.string/includes?
+         (monitor-dashboard {})
+         "<title>Area51 Mock Status</title>"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {})
+         "<link href=\"//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {}) "<div class=\"jumbotron\"><h1>Mock Status Monitor Dashboard</h1></div>"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {}) "<h2>Application monitor</h2>"))
+    (is (clojure.string/includes?
+         (monitor-dashboard {})
+         "view-box=\"0 0 100 20\""))))
+```
+
+
+I refactored the above test to use a let function to create a local binding called response, bound to the value of calling the webapp route `/dashboard`.  This testing the correct flow of our webapp route and its response.
+
+The let name `response` was bound to the `/dashboard` response by calling `(app (mock/request :get "/dashboard"))` from the `ring.mock.request` mocking library.
+
+The response is a Clojure map which has a key called `:body` that contains the html output for the web page.  So I extract the value using the `:boot` key.
+
+Added `clojure.string` to the namespace with an alias `string` so I could simply call `string/includes?` instead of `clojure.string/includes?`.  I could refer `includes?` into the namespace, however, I prefer to be explicit in the use of libraries (unless there is extensive use of specific functions in a namespace that is focused on the context of those functions, i.e. a UI namespace that uses Hiccup).
+
+So, the refactored test now looks a little more streamlined.
+
+```clojure
+(deftest test-monitor-dashboard
+  (testing "Test dashboard contains key pieces of information"
+    (let [response (app (mock/request :get "/dashboard"))]
+      (is (= (:status response) 200))
+
+      (is (string/includes?
+          (:body response)
+           "<title>Area51 Mock Status</title>"))
+      (is (string/includes?
+           (:body response)
+           "<link href=\"//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">"))
+      (is (string/includes?
+           (:body response) "<div class=\"jumbotron\"><h1>Mock Status Monitor Dashboard</h1></div>"))
+      (is (string/includes?
+           (:body response) "<h2>Application monitor</h2>"))
+      (is (string/includes?
+           (:body response)
+           "view-box=\"0 0 100 20\"")))))
+```
+
+------------------------------------------
+
 ## 20180923 - Day 9: Testing is fun
 
 ### Thoughts for today
