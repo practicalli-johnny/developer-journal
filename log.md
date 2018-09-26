@@ -2,7 +2,7 @@
 
 
 
-## 20180924 - Day 11: Diversity is a balancing act
+## 20180925 - Day 11: Diversity is a balancing act
 
 ### Thoughts for today
 
@@ -37,7 +37,7 @@ Created a new namespace in the status-monitor application for svg-components.  P
 ------------------------------------------
 
 
-## 20180923 - Day 10: Mocking has never been easier
+## 20180924 - Day 10: Mocking has never been easier
 
 ### Thoughts for today
 
