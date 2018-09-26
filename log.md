@@ -1,6 +1,21 @@
 # 100 Days Of Code - Log
 
+## 20180926 - Day 12: Demo-graphics
 
+### Thoughts for today
+
+More experimenting with SVG and included some simple HTML.  At some stage will need to decide what styles to include inline for HTML elements, what to include as templates and what to define as CSS (and any other / additonal css libraries to use).
+
+### Code from today
+
+* Demos with SVG and HTML
+https://github.com/jr0cket/webapp-status-monitor/commit/93189468fc80938865fb67f4ff6de77f9d4bc724
+
+### Activities in detail
+
+Hacking with more SVG graphics and wrapping those graphics with HTML.
+
+Debugging the html output is very easy with the Chrome Inspector.
 
 ## 20180925 - Day 11: Diversity is a balancing act
 
