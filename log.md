@@ -1,6 +1,42 @@
 # 100 Days Of Code - Log
 
 
+
+## 20180924 - Day 11: Diversity is a balancing act
+
+### Thoughts for today
+
+Today was distracted with issues raised around this years ClojureX conference.  Although we strive to get as much balance as possible in the speakers for our annual conference and the last few years have been quite successful, unfortunately we only have a few women speakers confirmed this year.  We spend time reaching out to under represented groups and supporting them in many ways to get involved with the conference.  We do reach out to speakers we want to appear at the conference and this also has a bias to ensure we have a good balance.  Although we have been very successful encouraging new speakers to the conference, the representation of those new speakers has not been as broad this year.  One of our speakers pulled out of the conference as they understandably felt it was not appropriate to speak, especially as they were pair presenting with a colleague who would have contributed to the balance we strive to achieve.  Luckily the speaker had two other colleagues who would bring the same balance that we were hoping for.
+
+Unfortunately this took up most of the day today and didnt leave much time for coding before heading off to run the Coding dojo at Thoughtworks.  Unfortunately Yolina who has done a wonderful job of running these events for the last few years was ill. I hope Yolina a swift recovery.
+
+The Clojure code dojo was lots of fun tonight.  We had 3 groups of people fairly new to Clojure, working through lots of 4clojure.com exercises.  We also had a group creating a notification app for the Park Run events.  Unfortunately this popular site does not have a published API, so lots of webscraping with the enlive library was in order.  I spent most of the time coaching the teams through the 4Clojure exercises, helping them to think in a functional way.  We also had a very interesting discussion around functional design patterns and what if any were the relationships between functional and OO patterns.  Our conclusion being that most of the OO patterns provide features that are not available in the language.  Understanding functional design or patterns is more about understanding the Clojure (or Lisp) style of functional programming and what is the so called `idiomatic` approach to Clojure.
+
+I still managed to get some time to work on the Status Monitor, although this was more about defining SVG elements and considering creating a library of SVG components to make it easier to incorporate them in Clojure or ClojureScript projects.
+
+The day ended on a high note with my pull request to the Compojure Leiningen template merged by @weavejester
+
+
+### Code from today
+
+* Compojure template pull request merged
+https://github.com/weavejester/compojure-template/pull/25
+
+* SVG components namespace with a simple demo
+https://github.com/jr0cket/webapp-status-monitor/commit/427c56c5ce5e7c516955d34daa32f49cb3893d79
+
+
+### Activities in detail
+
+Not much coding today, so no real detail to cover.
+
+Created a new namespace in the status-monitor application for svg-components.  Planning to start converting the [Mozilla SVG guide](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started) and [SVG Elements Reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Element)
+
+
+
+------------------------------------------
+
+
 ## 20180923 - Day 10: Mocking has never been easier
 
 ### Thoughts for today
