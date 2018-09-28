@@ -1,5 +1,29 @@
 # 100 Days Of Code - Log
 
+
+------------------------------------------
+
+## 20180927 - Day 13: Demo-graphics continued
+
+### Thoughts for today
+
+Some more user research.  Buiding websitest that tell you something isnt as easy as it seams.
+
+Making good used of Layouts in Spacemacs to organise my work more effectively.
+
+Continued with building up the SVG library
+
+### Code from today
+
+* https://github.com/jr0cket/webapp-status-monitor/commit/940ec90df0ef87cd69fce7f9e9859c7dfd75488b
+
+### Activities in detail
+
+More hacking on the SVG library I have been working on in the status-monitor app.  Continuing to define example SVG elements in Clojure.
+
+
+------------------------------------------
+
 ## 20180926 - Day 12: Demo-graphics
 
 ### Thoughts for today
@@ -16,6 +40,8 @@ https://github.com/jr0cket/webapp-status-monitor/commit/93189468fc80938865fb67f4
 Hacking with more SVG graphics and wrapping those graphics with HTML.
 
 Debugging the html output is very easy with the Chrome Inspector.
+
+------------------------------------------
 
 ## 20180925 - Day 11: Diversity is a balancing act
 
