@@ -1,5 +1,22 @@
 # 100 Days Of Code - Log
 
+## 20180928 - Day 14: Hacking ClojureBridge London
+
+### Thoughts for today
+
+Running our 8th ClojureBridge London event to support under represented groups gain experience and build confidence when it comes to codeing.
+
+Updated some of the ClojureBridge content and examples.
+
+Some ClojureX conference management.
+
+
+### Code from today
+
+* https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commits/master
+
+### Activities in detail
+
 
 ------------------------------------------
 
