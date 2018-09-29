@@ -1,5 +1,40 @@
 # 100 Days Of Code - Log
 
+
+
+## 20180929 - Day 15: Coaching ClojureBridge London
+
+### Thoughts for today
+
+I get a wonderful warm feeling when helping people get into the software industry, especially when its addressing the balance of voices in that industry.  To be able to help those new to development using my favourite language, Clojure, makes it extra special.
+
+Clojure is quite different from most languages, specifically in the way it encourages you to think about the design of your code.  The simplicity that is achievable with Clojure is something that continues make me smile every day, even after 8 years of learning and working with Clojure.
+
+The ClojureBridge event had over 20 women enjoying the day.  Six women already had some experience coding and one of them had just found out they had got their first job in the industry.  The rest of the students were very new.  Everyone was very excited about the day and that enthusiasm carried on throughout the day.
+
+
+### Code from today
+
+* The student wrote the code today, using examples from my status-monitor app and examples on stackoverflow.
+
+### Activities in detail
+
+I was coaching 4 women who had some coding experience.  Two of them had completed the first 6 levels of the workshop exercise in the afternoon and started building websites using Clojure.
+
+Each student took a slightly different approch.  One student followed my [Practicalli Clojure WebApps]() step by step guide to building a server side web application with ring and compojure.  The second student used the [leiningen compojure template]() to start building a server side website that calculated the distance between two cities.
+
+With the project created, we started the server with `lein ring server` to check it all worked.  To start building the page we added the [hiccup]() library, allowing us write an html web page using just Clojure code.  The `hiccup.page/html` function creates a web page and we define a `[:head ]` section that contains `include-css` and `include-js` functions so we can add bootstrap to our website and use some simple styles to make the site look better.
+
+The data for the countries was defined within a Clojure map, e.g. `{:city "London" :latitude 51.5074 :longtitude 0.1278}`.  We added a dozen cities as maps to a Clojure vector and bound that vector to the symbol `locations`.
+
+To select the cities from the web interface, we added a `form-to` function that included two input drop-downs.  Using a `for` statement we iterated over the `locations` collection and extracted the city name, placing it into the drop down.  This gave us a to and from location to select.
+
+Using the submit button to call a results page, we extracted the selected cities from the request params.  Then called a function that calculated the distance between two locations using their respective latitude and longtitude positions.
+
+
+------------------------------------------
+
+
 ## 20180928 - Day 14: Hacking ClojureBridge London
 
 ### Thoughts for today
