@@ -1,5 +1,51 @@
 # 100 Days Of Code - Log
 
+## 20181004 - Day 20: Hacking Spacemacs and code folding
+
+### Thoughts for today
+
+Spacemacs is infinitely hackable, but learning to use the features it just gives you is much quicker :)
+
+I love writing my Spacemacs book and its great to see others finding it useful.
+
+
+### Code from today
+
+* Code folding
+https://github.com/practicalli/spacemacs-gitbook/commit/ec7ec3a250301b4f5a93ceb8d3c8536cd1951d81
+
+* Spacemacs Vim
+https://github.com/practicalli/spacemacs-gitbook/commit/e41f6783f59e9ba711836e2197817a98eb4ccc64
+
+* Font and frame scaling
+https://github.com/practicalli/spacemacs-gitbook/commit/16ad893898dddd5d32a1458b655c82c3cedf712b
+
+### Activities in detail
+
+#### Spacemacs menus for Vim Normal mode
+
+I keep finding more ways to do things faster, mostly by accident as I pressed the wrong key.  I have found a few menus on the keys `# * g z` that I wanted to investigate and today was the day.
+
+I use `g` for commenting code `g c c` and for toggling character case `v g ~`  or word case `SPC v g ~`
+
+
+#### Code folding
+Interesting discussion on how Spacemacs does code folding in the #spacemacs channel of the London Clojurians Slack community. A suggestion was made about folding different levels of code, in a similar manor to org-mode and magit (magit has the stage, file and hunks that can be expanded and collapsed).
+
+I was not particularly convinced that changes were needed at first.  After experimenting I did think that the collapsing of function definitions could be made better for me.  Currently the argument list is collapsed on a function and it would be really useful to keep that shown, along with the `def function-name`.  If there was a docstring (and there really should be) then that sting would be collapsed too, or just show the first line.
+
+The default code folding uses some Vim magic and I didnt see an easy way to configure the behaviour.  It is easy to change code folding to a package called [origami](https://github.com/gregsexton/origami.el#does-it-support-my-favourite-major-mode) which enables you to write your own parser in order to create custom folding for your language.
+
+There is also [evil-vimish-fold](https://github.com/mrkkrp/vimish-fold/blob/master/vimish-fold.el) which some have commented to be really good for every language, however, I dont think this has been added to Spacemacs as a layer yet.  I am trying out Origami now, but it seem less useful for Clojure than evil-fold, as folding seems to only work at the top level.  I could be doing something wrong, or the Clojure parser for origami needs tweeking.  I would love to see the argument list still shown when folding, as an example.
+
+To try the evil-vimish-fold package without a layer, you can add it to your `.spacemacs` file as follows
+1) add the package name `evil-vimish-fold` to `dotspacemacs-additional-packages`
+2) add `(evil-vimish-fold-mode 1)` to `user-config`
+
+
+------------------------------------------
+
+
 
 
 ## 20180929 - Day 15: Coaching ClojureBridge London
