@@ -1,7 +1,127 @@
 # 100 Days Of Code - Log
 
 
-* 20181004 - Day 21: Hacking markdown into org-mode
+
+* 20011006 - Day 22:
+** Thoughts for today
+   Had a quick look at the many Clojure extensions for VisualStudio Code.  [Calva](https://marketplace.visualstudio.com/items?itemName=cospaia.clojure4vscode)
+seems the most maintained.  It requires you to start a repl outside of the editior, which I am not that keen on as it means more complexity.  However, it seems to generally be the better choice.
+
+** Code from today
+*** Nothing in Github, but example code in activities section of this journal
+** Activities in detail
+A developer considering Clojure reached out to me with the following question.
+
+---
+I have these two types of class definitions in Java:
+
+    public class SomeClass {
+        public void generateFor(SomeArgType argument);
+    }
+              ----- or ----
+
+    public class SomeClass {
+        public SomeType generateFor(SomeArgType argument);
+    }
+
+How do you write them in Clojure if you even write any such definitions to start with. I know you dont have types or interfaces or classes as such.
+---
+
+It was an interesting reminder of where I had come from several years ago.  OO languages and especially Java have become the main-stay of much application development because its a very stable language (Java) with a highly optomised runtime environment (JVM).  My journey into Clojure has allowed me to use a much simpler syntax with barely any boilerplate code.  I find it quite challenging to go back to the Java and OO way of thinking.
+
+So, I tried to answer the question with as meaningful an answer as possible, so I just wrote some code and explained how it worked.
+
+---
+Here is a simple function which would typically be defined in a namespace (a package in Java).
+
+This function just generates a message, so nothing very exciting in this code.  First we define a function, as you would define a method, but we dont need to do it in a class.  The function takes one argument and returns what ever is the result of the last expression (no need to define an explicit result call.
+
+The If function determines which is the last expression to be called.  If the condition, (= feature "function") - compare the value of feature with the string "function", is true then use the first line after the condition, if false then use the second line.  If is a macro, so acts slightly different to normal function evaluation.
+
+#+BEGIN_SRC clojure
+(defn feature-generator
+  "I am a very simple function, this is my docstring
+  Usually I would tell you something useful about myself"
+  [feature]
+  (if (= feature "function")
+    (str "In Clojure everything is a" " " feature)
+    (str "Clojure doesnt use:" " " feature)))
+#+END_SRC
+
+Now we have the function defined, with a name that we can call it by, we can call it anywhere in our namespace (or in another namespace if we add it to that namespace).
+
+Here is the function call, followed by the result as a comment underneath
+
+
+#+BEGIN_SRC clojure
+(feature-generator "objects")
+;; => "Clojure doesnt use: objects"
+#+END_SRC
+
+Lets call it again with a different argument
+
+#+BEGIN_SRC clojure
+(feature-generator "classes")
+;; => "Clojure doesnt use: classes"
+#+END_SRC
+
+And we can use the function call inside another function call... this is how we build up our application.
+
+Here we call the str function that joins two things together to make a string.  The first argument to str is the result of a function call, so the Clojure runtime (the REPL) first goes and evaluates that function which is then passed to the str function along with the string as a second argument
+
+#+BEGIN_SRC clojure
+(str
+ (feature-generator "function")
+ ", with persistent data structures, eg maps, vectors")
+;; => "In Clojure everything is a function, with persistent data structures, eg maps, vectors"
+#+END_SRC
+
+This is a very quick example of defining your own behaviour in Clojure and calling it.
+
+The other important aspect of Clojure is to model data, for which we use either lists (linked list), vectors (an array), maps (hash map), sets (unique values).  We dont need generics here and we dont need to define types of our data (although we can define a specification, usually if we are pulling data from outside of Clojure).
+
+If we were going to model different science fiction worlds, we could construct a data structure as follows
+
+#+BEGIN_SRC clojure
+(def starwars
+  {:characters
+   {:jedi   ["Luke Skywalker"
+             "Obiwan Kenobi"]
+    :sith   ["Darth Vader"
+             "Darth Sideous"]
+    :droids ["C3P0"
+             "R2D2"]}
+   :ships
+   {:rebel-alliance  ["Millenium Falcon"
+                      "X-wing figher"]
+    :imperial-empire ["Intergalactic Cruser"
+                      "Destroyer"
+                      "Im just making these up now"]}})
+#+END_SRC
+
+We have bound the name starwars to a maps of maps with vectors.
+
+There are lots of functions that help us get or update (creates a new data structure) this data structure
+
+Lets start simple and get a value from the map using a key
+
+#+BEGIN_SRC
+(get starwars :characters)
+;; => {:jedi ["Luke Skywalker" "Obiwan Kenobi"], :sith ["Darth Vader" "Darth Sideous"], :droids ["C3P0" "R2D2"]}
+#+END_SRC
+
+We can see that the result itself is a map, so we could use another get function around the first to drill down further in the map.
+Clojure has a function that allows you to traverse the path in the map though.
+
+#+BEGIN_SRC clojure
+(get-in starwars [:characters :jedi])
+;; => ["Luke Skywalker" "Obiwan Kenobi"]
+#+END_SRC
+
+The developer was appreciative of the detailed answer, however, as this was all over email its hard to know how well they understood the examples.  I will suggest some resources they can use to learn.
+
+
+* 20181005 - Day 21: Hacking markdown into org-mode
 ** Thoughts for today
    Spacemacs org-mode is a much richer experience when it comes to writing when compared to markdown in Emacs.  Thanks to Bobby Towers for reminding me that I should be using org-mode to write this journal.  Being able to fold up headings in org-mode, add code blocks that evaluate and move sections around easily are well worth the conversion of this file from markdown.
 
@@ -21,7 +141,6 @@
     Hyperlinks are the same way around as they are defined in HTML, the link first and then the anchor text.  Not sure why markdown is the reverse.  The link and anchor text are each surrounded with square brackets, e.g. [http://spacemacs.org] and [Spacemacs], then both are wrapped inside another pair of square brackets to make the link.  Org-mode then renders the text so the anchor is now a hyperlink in your text, only showing the anchor text.
 
     How well this all works we will discover when I push this big change to Github.
-
 
 * 20181004 - Day 20: Hacking Spacemacs and code folding
 ** Thoughts for today
@@ -365,7 +484,6 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
 
 ------------------------------------------
-
 
 
 * 20180922 - Day 8: Clojure coaching and Testing
