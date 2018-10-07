@@ -1,6 +1,54 @@
 # 100 Days Of Code - Log
 
 
+* 20011007 - Day 23:
+** Thoughts for today
+   Discussing approaches for setting environment variables for Clojure applications.  Its quite common to use environment variables for key settings, like the port of your web application using, although using a map for your configuration is more prevalent when there are lots of environment variables to set.
+
+   Using keyboard symbols for certain keys can make documentation easier to follow, e.g. for arrow keys.  I could use some CSS with the ~<kbd>~ tag, although adding html tags makes markdown less clean.  Using unicode characters works really well though and of course Spacemacs makes it easy for you to add these characters by name using ~SPC i u~.
+
+   Using org-mode continues to be much more fun that markdown for writing this journal.  I updated the orgmode section with useful stuff I found.  I also just discovered adding (and editing existing) links using ~, i l~.  I also looked at the insert orgmode keybinding, but it generates quite a lot of text and I suspect its something that needs to be exported to work with github
+
+   ~@@html:<kbd>@@ <right> @@html:</kbd>@@~
+
+** Code from today
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/727a25f62dc3519b14f1c35b5ece09cb57cbedd1][Org-mode section major update]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/5a98cbb9cdf1c65115356b8a1d13c4a525681285][Sayid debugger package and clj-refactor are no longer loaded by default]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/34865614e9ff24a02040df3994bc6340b8eba05c][Overview of projectile for working with files only from the current project]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/5106f525d860ed86f849c57aaf9b1324ac257eeb][New section - Linting]]
+
+** Activities in detail
+*** Environment variables
+    Separate environment variable definitions are used when you have a small number of settings, e.g. for PORT, often using the https://github.com/weavejester/environ library.
+
+    Using maps is also a good approach, especially where there are a great number of settings for different environments.  The https://github.com/juxt/aero library is a nice clean way to specify a collection of environment settings across multiple environments.
+
+    In my last project, we deployed in dev, qa, uat and prod environments with multiple services (oracle, tibco, datomic, etc) and used aero to great effect.
+
+*** Spacemacs - sayid and clj-refactor optional
+    Sayid debugger package and clj-refactor are no longer loaded by default.
+
+    Sayid has caused a few issues with Cider recently so it is left to the user to decide if it is useful for them.
+
+    clj-refactor has not been updated in several years and some of its functionality is moving into clojure-mode.
+
+    Both these packages can be included by defining their package names as :variables on the clojure layer
+
+*** Spacemacs - using projectile to manage project files and buffers effectively
+    Overview of projectile for working with files only from the current project, making it easier to open files and navigate buffers for a project.
+
+    Using helm transient state to help tidy up buffers.
+
+    Used ~SPC i u~ to add unicode characters for arrow keys, e.g.🡄🡇🡅🡆
+
+*** Spacemacs - Linting
+    Added a new section on Linting tools, providing a quick overview of linting tools I use for my Clojure projects, Joker and Eastwood.
+
+    Joker is simpler to use, thanks to the clojure-lint layer.  It does use an external binary, which I placed on my existing executable path.  Joker uses a
+sub-set of Clojure so it may give a few inaccuracies, these are usually false positives on things like macros.  There is a way to tell joker to ignore certain symbols though.
+
+    Still a bit of work to do on these sections, but they cover the basics.
+
 
 * 20011006 - Day 22:
 ** Thoughts for today
