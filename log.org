@@ -1,7 +1,66 @@
 # 100 Days Of Code - Log
 
 
-* 20011007 - Day 23:
+
+
+* 20011009 - Day 25: Quarter of the way there
+** Thoughts for today
+
+   Added quick reference section for adding unicode characters
+
+   Mainly using unicode characters in the content of my books/guides to represent keyboard characters, such as arrow keys.  It is assumed that these unicode characters make the keybindings easier to understand.
+
+** Code from today
+*** [[https://github.com/practicalli/atom-protorepl-content/commit/eac9a377d238c4a33437930fa098eeaa72a7ca69][New gitbook on using Atom and protorepl with Clojure]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/1a0f2b166d97f232ea08404d09b531dc50196dcd][Embedded video - Magit create local repo and add remote]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/3dbf246f89113b9c62b00a4b82ada3c05dbb7f39][Added quick reference section for adding unicode characters]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/686916d4864df096a48eda8a9d89d1185f0fd266][Updated Magit section]]
+
+** Activities in detail
+*** Spacemacs book updates
+    I started on using Atom and ProtoREPL for Clojure development when I was coaching a developer who wanted to learn some Clojure. Although I had published the content a while ago, I realised I had not pushed the content to github.
+
+    I used this as an opportunity to create a video of using Magit in Spacemacs.  The video covered how to create a new local Git repository, create the first commit, add a remote repository and push the commit to the remote. This should be exactly the same for GitLab.
+
+    https://www.youtube.com/watch?v=AdEOazt1rD0
+
+    I embedded the video in the section on [[https://practicalli.github.io/spacemacs/magit/create-local-repository.html][creating a local Git repository]]
+
+    I also took the opportunity to add the very cool Git Timemachine, which provides an easy way to navigate the code commits for a particular file and see the file contents change as you visit each commit.  The Git Timemachine is very useful for reviewing how a file has evolved.  Its also useful for `live coding` demos where you dont want to show how a project has evolved, but dont want to waste time doing all the typing.
+
+    https://practicalli.github.io/spacemacs/magit/timemachine.html
+
+* 20011008 - Day 24: Events, events, events
+** Thoughts for today
+
+   Community events are fun and quite a responsibility too.  Today we reviewed the speaker schedule for ClojureX, aiming to make the best flow of the talks and ensure we give the best possible experience for the audience and the speakers.  Also organising a workshop before the ClojureX conference at uSwitch.  We also have a hack day on 15th December along with the Scala community.
+
+   The evening was the Clojure dojo at uSwtich were we...
+
+** Code from today
+*** [[https://github.com/practicalli/practicalli.github.io/commit/0521a3d74ea08b244c8d1613febc809727ff3d2f][Updated the links to my books to use https]]
+*** [[https://github.com/practicalli/practicalli.github.io/commit/c6d643623476ba2f4274dc990ddfe0cc7781c4d7][Added ClojureBridge London workshop to list of my online books]]
+** Activities in detail
+*** Updating Practicalli website
+    Added the ClojureBridge London workshop as a link on my Practicalli website.  The workshop is complete, unlike most of my other books, so good to show (myself at least) that I can finish one.  Will focus more on finishing the Spacemacs book and reworking the Clojure Practicalli book.
+
+Updated all the links to my books to use https rather than http, as this makes Google and other search engines happier.
+*** Clojure dojo - Native Clojure binaries with GraalVM
+    I paired with a friend who is starting to learn Clojure and we used [[https://www.graalvm.org/][GraalVM]] to create a native binary from a Clojure application.
+
+    While I set them up with Clojure via `brew install clojure` and installing [[https://leiningen.org][Leiningen]], I installed  [[https://www.graalvm.org/][GraalVM]]
+
+    GraalVM is just a tarball (Linux, Macosx) that is extracted and the bin directory added to the executable path.  It turns out later that I also needed to install ~zlib~ to create the native image from my Uberjar file.  I assume the Uberjar file used zlib compression, or perhaps the zlib library is used to compress the native binary in some way.  Either way, it was just a matter of ~sudo apt install zlib-dev~.
+
+    Development of the Clojure app wasnt any different from normal.  We did use the Leiningen ~app~ template to add code and configuration to allow our Clojure application run from the command line, via ~java -jar target/uberjar/my-app-standalone.jar~
+
+    Once the code was written the application was packages using ~lein uberjar~.
+
+    By installing GraalVM and putting it up front in the executable path, the GraalVM version of Java is run when running ~java -version~.  To check Clojure the application still works on GraalVM we just needed to run it via the command line.
+
+    GraalVM has a command to create a native binary
+
+* 20011007 - Day 23: Spacemacs Sunday
 ** Thoughts for today
    Discussing approaches for setting environment variables for Clojure applications.  Its quite common to use environment variables for key settings, like the port of your web application using, although using a map for your configuration is more prevalent when there are lots of environment variables to set.
 
@@ -49,8 +108,7 @@ sub-set of Clojure so it may give a few inaccuracies, these are usually false po
 
     Still a bit of work to do on these sections, but they cover the basics.
 
-
-* 20011006 - Day 22:
+* 20011006 - Day 22: Coaching a developer new to Clojure
 ** Thoughts for today
    Had a quick look at the many Clojure extensions for VisualStudio Code.  [Calva](https://marketplace.visualstudio.com/items?itemName=cospaia.clojure4vscode)
 seems the most maintained.  It requires you to start a repl outside of the editior, which I am not that keen on as it means more complexity.  However, it seems to generally be the better choice.
@@ -167,7 +225,6 @@ Clojure has a function that allows you to traverse the path in the map though.
 #+END_SRC
 
 The developer was appreciative of the detailed answer, however, as this was all over email its hard to know how well they understood the examples.  I will suggest some resources they can use to learn.
-
 
 * 20181005 - Day 21: Hacking markdown into org-mode
 ** Thoughts for today
