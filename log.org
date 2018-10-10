@@ -2,7 +2,23 @@
 
 
 
+* 20011010 - Day 26: Spacemacs and ClojureBridge dev tools
+** Thoughts for today
+It is great to hear from people reading your books, blogs, etc.  I received some very warm feedback today from a developer who is interested in learning Clojure and is really enjoying my practicalli books.  This is great to hear and really helps motivate me to finish those books.
 
+** Code from today
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/159fcc6c2bcec1f918d463dcc3bba93d0451adfe][Spacemacs book - Updated debugging section]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/eeac717165ef5426b4c3784915e98daa1d59f3fa][Spacemacs book - Converted transient state menus list to a table]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/3854cc06f6ae31b49876c1db0b831abfc6d3502d][Spacemacs book - Refined page on enhanced clojure experience]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/8f68f1b579178543db63a64b4ce284260d000ea9][Spacemacs book - Added section on opening Magic Full Screen]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/488004871a2a6c581effee302c4985b5e9a2a596][ClojureBridge London - Starting rework of development environment section]]
+
+** Activities in detail
+
+   Continued working on the Spacemacs book, organising the debugging section a little better.  Added details of how to run Magit in full frame, which I find much easier to work with changes.
+
+   Also worked on the development tools install guides for ClojureBridge London.  Although we have Klipse REPL built into the workshop material, it doesnt save any work.  Obviously Klipse is also not going to be the follow on editor that the students use, so we use the Friday evening of the event installing a Clojure aware editor.  The editor tends to be one of Atom.io, VisualStudio Code, Emacs (yes, we have had several students using Emacs, mostly with a Spacemacs setup).  Some students that are studying Java are using Intellij, so we also help with installing Cursive.
+*
 * 20011009 - Day 25: Quarter of the way there
 ** Thoughts for today
 
