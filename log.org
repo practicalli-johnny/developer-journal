@@ -2,6 +2,35 @@
 
 
 
+* 20011011 - Day 27: ClojureBridge London dev tools setup
+** Thoughts for today
+   I found a nice plugin for Gitbook to have a tabbed section in a page, improving the presentation of a single install page for each of the tools.  Any differences in approach, e.g. installing on a particular operating system, can be put in their own tab. It probably shows my bias that I put Ubuntu Linux as the default tab (oops).
+
+   Had a catchup with a company interested in getting involved more in the London Clojurians community.  We discussed the ClojureBridge London event and other activities that the community does.  Now have two ClojureBridge London events in planning for 2019.
+
+   Assisting a couple of speakers with their talk titles and descriptions for the ClojureX conference this year.  Almost everyone is published on the schedule now.
+
+   I will be coaching a new person this weekend, just arranging the details and starting to set expectations.
+
+** Code from today
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/a8a861f1bd216613726badf790ceb6f83d1e1fc7][Add Gitbook Plugin - simple tabs]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/b29e3f5e7c5a0e2b052ba7b32e211d2d80dd464e][Update Atom ProtoREPL and Proton development tools]]
+
+** Activities in detail
+*** Update Atom ProtoREPL and Proton development tools
+    Updated to use the simple tabs plugin to provide a simple way to separate the
+unique install steps for each operating system.
+
+    Added installation instructions for all operating systems.
+
+    Added details on how to run and test the installation.
+*** Add Gitbook Plugin - simple tabs
+    A plugin for adding tabbed sections in a page, useful for separating out
+specific details in a wider article.
+
+    This plugin will be used for the development environment section.
+
+
 * 20011010 - Day 26: Spacemacs and ClojureBridge dev tools
 ** Thoughts for today
 It is great to hear from people reading your books, blogs, etc.  I received some very warm feedback today from a developer who is interested in learning Clojure and is really enjoying my practicalli books.  This is great to hear and really helps motivate me to finish those books.
@@ -14,14 +43,12 @@ It is great to hear from people reading your books, blogs, etc.  I received some
 *** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/488004871a2a6c581effee302c4985b5e9a2a596][ClojureBridge London - Starting rework of development environment section]]
 
 ** Activities in detail
-
    Continued working on the Spacemacs book, organising the debugging section a little better.  Added details of how to run Magit in full frame, which I find much easier to work with changes.
 
    Also worked on the development tools install guides for ClojureBridge London.  Although we have Klipse REPL built into the workshop material, it doesnt save any work.  Obviously Klipse is also not going to be the follow on editor that the students use, so we use the Friday evening of the event installing a Clojure aware editor.  The editor tends to be one of Atom.io, VisualStudio Code, Emacs (yes, we have had several students using Emacs, mostly with a Spacemacs setup).  Some students that are studying Java are using Intellij, so we also help with installing Cursive.
-*
+
 * 20011009 - Day 25: Quarter of the way there
 ** Thoughts for today
-
    Added quick reference section for adding unicode characters
 
    Mainly using unicode characters in the content of my books/guides to represent keyboard characters, such as arrow keys.  It is assumed that these unicode characters make the keybindings easier to understand.
