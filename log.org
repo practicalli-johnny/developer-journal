@@ -70,7 +70,7 @@ It is great to hear from people reading your books, blogs, etc.  I received some
 
     I embedded the video in the section on [[https://practicalli.github.io/spacemacs/magit/create-local-repository.html][creating a local Git repository]]
 
-    I also took the opportunity to add the very cool Git Timemachine, which provides an easy way to navigate the code commits for a particular file and see the file contents change as you visit each commit.  The Git Timemachine is very useful for reviewing how a file has evolved.  Its also useful for `live coding` demos where you dont want to show how a project has evolved, but dont want to waste time doing all the typing.
+    I also took the opportunity to add the very cool Git Timemachine, which provides an easy way to navigate the code commits for a particular file and see the file contents change as you visit each commit.  The Git Timemachine is very useful for reviewing how a file has evolved.  Its also useful for ~live coding~ demos where you dont want to show how a project has evolved, but dont want to waste time doing all the typing.
 
     https://practicalli.github.io/spacemacs/magit/timemachine.html
 
@@ -92,7 +92,7 @@ Updated all the links to my books to use https rather than http, as this makes G
 *** Clojure dojo - Native Clojure binaries with GraalVM
     I paired with a friend who is starting to learn Clojure and we used [[https://www.graalvm.org/][GraalVM]] to create a native binary from a Clojure application.
 
-    While I set them up with Clojure via `brew install clojure` and installing [[https://leiningen.org][Leiningen]], I installed  [[https://www.graalvm.org/][GraalVM]]
+    While I set them up with Clojure via ~brew install clojure~ and installing [[https://leiningen.org][Leiningen]], I installed  [[https://www.graalvm.org/][GraalVM]]
 
     GraalVM is just a tarball (Linux, Macosx) that is extracted and the bin directory added to the executable path.  It turns out later that I also needed to install ~zlib~ to create the native image from my Uberjar file.  I assume the Uberjar file used zlib compression, or perhaps the zlib library is used to compress the native binary in some way.  Either way, it was just a matter of ~sudo apt install zlib-dev~.
 
@@ -311,7 +311,7 @@ The developer was appreciative of the detailed answer, however, as this was all 
 *** Code folding
     Interesting discussion on how Spacemacs does code folding in the #spacemacs channel of the London Clojurians Slack community. A suggestion was made about folding different levels of code, in a similar manor to org-mode and magit (magit has the stage, file and hunks that can be expanded and collapsed).
 
-    I was not particularly convinced that changes were needed at first.  After experimenting I did think that the collapsing of function definitions could be made better for me.  Currently the argument list is collapsed on a function and it would be really useful to keep that shown, along with the `def function-name`.  If there was a docstring (and there really should be) then that sting would be collapsed too, or just show the first line.
+    I was not particularly convinced that changes were needed at first.  After experimenting I did think that the collapsing of function definitions could be made better for me.  Currently the argument list is collapsed on a function and it would be really useful to keep that shown, along with the ~def function-name~.  If there was a docstring (and there really should be) then that sting would be collapsed too, or just show the first line.
 
     The default code folding uses some Vim magic and I didnt see an easy way to configure the behaviour.  It is easy to change code folding to a package called [origami](https://github.com/gregsexton/origami.el#does-it-support-my-favourite-major-mode) which enables you to write your own parser in order to create custom folding for your language.
 
@@ -375,11 +375,11 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
 *** Distance between two cities web app
 
-    With the project created, we started the server with `lein ring server` to check it all worked.  To start building the page we added the [hiccup]() library, allowing us write an html web page using just Clojure code.  The `hiccup.page/html` function creates a web page and we define a `[:head ]` section that contains `include-css` and `include-js` functions so we can add bootstrap to our website and use some simple styles to make the site look better.
+    With the project created, we started the server with ~lein ring server~ to check it all worked.  To start building the page we added the [hiccup]() library, allowing us write an html web page using just Clojure code.  The ~hiccup.page/html~ function creates a web page and we define a ~[:head ]~ section that contains ~include-css~ and ~include-js~ functions so we can add bootstrap to our website and use some simple styles to make the site look better.
 
-    The data for the countries was defined within a Clojure map, e.g. `{:city "London" :latitude 51.5074 :longtitude 0.1278}`.  We added a dozen cities as maps to a Clojure vector and bound that vector to the symbol `locations`.
+    The data for the countries was defined within a Clojure map, e.g. ~{:city "London" :latitude 51.5074 :longtitude 0.1278}~.  We added a dozen cities as maps to a Clojure vector and bound that vector to the symbol ~locations~.
 
-    To select the cities from the web interface, we added a `form-to` function that included two input drop-downs.  Using a `for` statement we iterated over the `locations` collection and extracted the city name, placing it into the drop down.  This gave us a to and from location to select.
+    To select the cities from the web interface, we added a ~form-to~ function that included two input drop-downs.  Using a ~for~ statement we iterated over the ~locations~ collection and extracted the city name, placing it into the drop down.  This gave us a to and from location to select.
 
     Using the submit button to call a results page, we extracted the selected cities from the request params.  Then called a function that calculated the distance between two locations using their respective latitude and longtitude positions.
 
@@ -400,11 +400,11 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
    Each student took a slightly different approch.  One student followed my [Practicalli Clojure WebApps]() step by step guide to building a server side web application with ring and compojure.  The second student used the [leiningen compojure template]() to start building a server side website that calculated the distance between two cities.
 
-   With the project created, we started the server with `lein ring server` to check it all worked.  To start building the page we added the [hiccup]() library, allowing us write an html web page using just Clojure code.  The `hiccup.page/html` function creates a web page and we define a `[:head ]` section that contains `include-css` and `include-js` functions so we can add bootstrap to our website and use some simple styles to make the site look better.
+   With the project created, we started the server with ~lein ring server~ to check it all worked.  To start building the page we added the [hiccup]() library, allowing us write an html web page using just Clojure code.  The ~hiccup.page/html~ function creates a web page and we define a ~[:head ]~ section that contains ~include-css~ and ~include-js~ functions so we can add bootstrap to our website and use some simple styles to make the site look better.
 
-   The data for the countries was defined within a Clojure map, e.g. `{:city "London" :latitude 51.5074 :longtitude 0.1278}`.  We added a dozen cities as maps to a Clojure vector and bound that vector to the symbol `locations`.
+   The data for the countries was defined within a Clojure map, e.g. ~{:city "London" :latitude 51.5074 :longtitude 0.1278}~.  We added a dozen cities as maps to a Clojure vector and bound that vector to the symbol ~locations~.
 
-   To select the cities from the web interface, we added a `form-to` function that included two input drop-downs.  Using a `for` statement we iterated over the `locations` collection and extracted the city name, placing it into the drop down.  This gave us a to and from location to select.
+   To select the cities from the web interface, we added a ~form-to~ function that included two input drop-downs.  Using a ~for~ statement we iterated over the ~locations~ collection and extracted the city name, placing it into the drop down.  This gave us a to and from location to select.
 
    Using the submit button to call a results page, we extracted the selected cities from the request params.  Then called a function that calculated the distance between two locations using their respective latitude and longtitude positions.
 
@@ -465,7 +465,7 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
    Unfortunately this took up most of the day today and didnt leave much time for coding before heading off to run the Coding dojo at Thoughtworks.  Unfortunately Yolina who has done a wonderful job of running these events for the last few years was ill. I hope Yolina a swift recovery.
 
-   The Clojure code dojo was lots of fun tonight.  We had 3 groups of people fairly new to Clojure, working through lots of 4clojure.com exercises.  We also had a group creating a notification app for the Park Run events.  Unfortunately this popular site does not have a published API, so lots of webscraping with the enlive library was in order.  I spent most of the time coaching the teams through the 4Clojure exercises, helping them to think in a functional way.  We also had a very interesting discussion around functional design patterns and what if any were the relationships between functional and OO patterns.  Our conclusion being that most of the OO patterns provide features that are not available in the language.  Understanding functional design or patterns is more about understanding the Clojure (or Lisp) style of functional programming and what is the so called `idiomatic` approach to Clojure.
+   The Clojure code dojo was lots of fun tonight.  We had 3 groups of people fairly new to Clojure, working through lots of 4clojure.com exercises.  We also had a group creating a notification app for the Park Run events.  Unfortunately this popular site does not have a published API, so lots of webscraping with the enlive library was in order.  I spent most of the time coaching the teams through the 4Clojure exercises, helping them to think in a functional way.  We also had a very interesting discussion around functional design patterns and what if any were the relationships between functional and OO patterns.  Our conclusion being that most of the OO patterns provide features that are not available in the language.  Understanding functional design or patterns is more about understanding the Clojure (or Lisp) style of functional programming and what is the so called ~idiomatic~ approach to Clojure.
 
    I still managed to get some time to work on the Status Monitor, although this was more about defining SVG elements and considering creating a library of SVG components to make it easier to incorporate them in Clojure or ClojureScript projects.
 
@@ -484,7 +484,7 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
 * 20180924 - Day 10: Mocking has never been easier
 *** Thoughts for today
-    Refined the tests using the `ring.mock.request` mocking library that Compojure Leiningen template added when creating the project.
+    Refined the tests using the ~ring.mock.request~ mocking library that Compojure Leiningen template added when creating the project.
 
 *** Code from today
 **** Refactor test to use ring.mock.request
@@ -513,13 +513,13 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
           "view-box=\"0 0 100 20\""))))
 #+END_SRC
 
-    I refactored the above test to use a let function to create a local binding called response, bound to the value of calling the webapp route `/dashboard`.  This testing the correct flow of our webapp route and its response.
+    I refactored the above test to use a let function to create a local binding called response, bound to the value of calling the webapp route ~/dashboard~.  This testing the correct flow of our webapp route and its response.
 
-    The let name `response` was bound to the `/dashboard` response by calling `(app (mock/request :get "/dashboard"))` from the `ring.mock.request` mocking library.
+    The let name ~response~ was bound to the ~/dashboard~ response by calling ~(app (mock/request :get "/dashboard"))~ from the ~ring.mock.request~ mocking library.
 
-    The response is a Clojure map which has a key called `:body` that contains the html output for the web page.  So I extract the value using the `:boot` key.
+    The response is a Clojure map which has a key called ~:body~ that contains the html output for the web page.  So I extract the value using the ~:boot~ key.
 
-    Added `clojure.string` to the namespace with an alias `string` so I could simply call `string/includes?` instead of `clojure.string/includes?`.  I could refer `includes?` into the namespace, however, I prefer to be explicit in the use of libraries (unless there is extensive use of specific functions in a namespace that is focused on the context of those functions, i.e. a UI namespace that uses Hiccup).
+    Added ~clojure.string~ to the namespace with an alias ~string~ so I could simply call ~string/includes?~ instead of ~clojure.string/includes?~.  I could refer ~includes?~ into the namespace, however, I prefer to be explicit in the use of libraries (unless there is extensive use of specific functions in a namespace that is focused on the context of those functions, i.e. a UI namespace that uses Hiccup).
 
     So, the refactored test now looks a little more streamlined.
 
@@ -550,15 +550,15 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 ** Thoughts for today
    More testing today and taking a brief look at the mocking framework that Compojure Leiningen template added to the test code generated.
 
-   Also has a quick look at eftest from @weavejester which is supposed to be faster and can run more tests in parrallel than just running `lein test`.  I mainly wanted to use it for the coloured output at this stage (as I only have a few tests).
+   Also has a quick look at eftest from @weavejester which is supposed to be faster and can run more tests in parrallel than just running ~lein test~.  I mainly wanted to use it for the coloured output at this stage (as I only have a few tests).
 
-   By accident I found the Emacs transpose keybinding is still in Spacemacs today. Instead of pressing `M-TAB` I was pressing `M-t` and swapping around the two words either side of the cursor position.  The transpose call even jumps over and ignores comments and other separators.
+   By accident I found the Emacs transpose keybinding is still in Spacemacs today. Instead of pressing ~M-TAB~ I was pressing ~M-t~ and swapping around the two words either side of the cursor position.  The transpose call even jumps over and ignores comments and other separators.
 
    The standard Spacemacs bindings for transpose are as follows:
 
-*** `SPC x t c`	swap (transpose) the current character with the previous one
-*** `SPC x t w`	swap (transpose) the current word with the previous one
-*** `SPC x t l`	swap (transpose) the current line with the previous one
+*** ~SPC x t c~	swap (transpose) the current character with the previous one
+*** ~SPC x t w~	swap (transpose) the current word with the previous one
+*** ~SPC x t l~	swap (transpose) the current line with the previous one
 
   This is something else to add to my [[https://practicalli.github.io/spacemacs][Spacemacs for Clojure development guide]].
 
@@ -634,7 +634,6 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
 ------------------------------------------
 
-
 * 20180922 - Day 8: Clojure coaching and Testing
 ** Thoughts for today
    Started coaching a developer today.  It has been a few months since I coached, so am happy to be starting again.  Coaching really does help me exercise my mind and it is very enjoyable to guide someone.
@@ -656,7 +655,7 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 
     [[/images/circleci-add-project-detection.png]]
 
-    Added the sample `config.yml` to the project as `.configci/config.yml`.  The only change made to the config file was to update the version of Leiningen to 2.8.1 (was version 2.7.1).  Once this was added to the project and pushed up to the github repostitory, then we are ready to create a build.
+    Added the sample ~config.yml~ to the project as ~.configci/config.yml~.  The only change made to the config file was to update the version of Leiningen to 2.8.1 (was version 2.7.1).  Once this was added to the project and pushed up to the github repostitory, then we are ready to create a build.
 
     This launches the project on CircleCI and webhooks listen for new commits to the Github repository.
 
@@ -731,7 +730,7 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 * 20180918 - Day 4: Are you mocking me :)
   Today was a great meetup at Signal Media.  Talked about the #100daysofcode challenge I am doing and the experiments with Scalable Vector Graphics. Discussed the case for ClojureScript and Reagent over JavaScript and React.js
 
-  Also helped someone on Clojurians Slack write a keybinding for [lispy]() functions `lispy-pair` and `lispy-quote` that did not have keybindings defined in the package.  Lispy is an alternative to Evil and Smartparents and whilst interesting, its not something I am inclined to try myself.
+  Also helped someone on Clojurians Slack write a keybinding for [lispy]() functions ~lispy-pair~ and ~lispy-quote~ that did not have keybindings defined in the package.  Lispy is an alternative to Evil and Smartparents and whilst interesting, its not something I am inclined to try myself.
 
 ** Thoughts for today
    There are so many companies using Clojure I keep finding out about.  The TV company Vue.tv uses Clojure for all their data processing around their broadcasting business.
@@ -753,9 +752,9 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
   (rand (+ maximum-value 1)))
 #+END_SRC
 
-    The ~mock-data~ function was refactored to generate either float or integer random data based on the type passed to the `mock-data` function as an argument.
+    The ~mock-data~ function was refactored to generate either float or integer random data based on the type passed to the ~mock-data~ function as an argument.
 
-    As the float generated number has multiple decimal places and we only want two for the display, the `format` function is used to limit the precision of the returning number to 2 decimal places.
+    As the float generated number has multiple decimal places and we only want two for the display, the ~format~ function is used to limit the precision of the returning number to 2 decimal places.
 
 #+BEGIN_SRC clojure
 (defn mock-data
@@ -839,7 +838,7 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
     The ~compojure-template~ project only describes how to run a generated project using the lein-ring plugin, using ~lein ring server~.  The [[https://github.com/weavejester/lein-ring][lein-ring]] project readme describes [[https://github.com/weavejester/lein-ring#executable-jar-files][how to run the project from the Java command line]], but there is no reference to this information on the [[https://github.com/weavejester/compojure-template/][compojure-template]] project.  Again, I spotted a [[https://github.com/weavejester/compojure-template/pull/23][pull request]] to add these details to the readme so I added a thumbs up reaction with hope the maintainer will accept the pull request.
 
 *** Digging deeper into lein-ring plugin
-     It is common in Clojure projects to define a `-main` function that is the start point to running the application.  However, the compojure-template doesnt generate a project with a `-main` function, instead it defines a Var called `app` that is the start of our application.
+     It is common in Clojure projects to define a ~-main~ function that is the start point to running the application.  However, the compojure-template doesnt generate a project with a ~-main~ function, instead it defines a Var called ~app~ that is the start of our application.
 
      The reason for this approach is so that the compojure application can be packaged into a Java Web Archive (WAR) file and dropped into an existing Java Application Server (Tomcat, Jett, etc.).  This is the traditional approach to deploying a JVM webapp.
 
@@ -849,14 +848,14 @@ Hacking on my [Practicalli Spacemacs](https://practicalli.github.io/spacemacs) b
 lein ring server
 #+END_SRC
 
-     Running the compojure project using lein-ring plugin starts an embedded Jetty web application server and passes the `app` to that running process to start listening for http requests.
+     Running the compojure project using lein-ring plugin starts an embedded Jetty web application server and passes the ~app~ to that running process to start listening for http requests.
 
 *** Running as a stand alone application
      With the rise in Cloud computing it is more common to run each application in its own embedded server, rather than deploying mulitple apps on a single applicaton server.  This new approach enables vertical scaling and parallel processing, something Clojure is an excellent language for.
 
-     Rather than write our own `-main` function to call Jetty, we can ask lein-ring plugin to do it for us.  A `-main` function is boilerplate code after all.
+     Rather than write our own ~-main~ function to call Jetty, we can ask lein-ring plugin to do it for us.  A ~-main~ function is boilerplate code after all.
 
-     Use the lein-ring version of `lein uberjar` to generate a JAR file
+     Use the lein-ring version of ~lein uberjar~ to generate a JAR file
 
 #+BEGIN_SRC shell
 lein ring uberjar
@@ -900,7 +899,7 @@ lein ring uberjar
   Started a simple status monitor application to collate monitoring information from different sources into one simple web dashboard.
 
 ** Thoughts from today
-   The compojure template is easy to get started with, it just works with the help of the `lein-ring` plugin.  The plugin takes the app defined in the `src/status_monitor/handler.clj` file and passes it to an embedded Jetty application server.  The plugin abstracts this detail away, making the project easy to run and less code to write.
+   The compojure template is easy to get started with, it just works with the help of the ~lein-ring~ plugin.  The plugin takes the app defined in the ~src/status_monitor/handler.clj~ file and passes it to an embedded Jetty application server.  The plugin abstracts this detail away, making the project easy to run and less code to write.
 
    This abstraction does make it a little harder to understand how this application actually runs and there is a lack of information on the template website.
 
@@ -935,18 +934,18 @@ lein new compojure status-monitor
 
 *** Running the REPL from Spacemacs
 
-    Although the project runs well from the command line using the `lein-ring` plugin, we dont get the full benefit of the REPL until we connect our editor to the REPL.  With the Compojure template you need to run the repl from Spacemacs as there is no way to connect to the REPL port from Spacemacs when the project is run with `lein ring server`.
+    Although the project runs well from the command line using the ~lein-ring~ plugin, we dont get the full benefit of the REPL until we connect our editor to the REPL.  With the Compojure template you need to run the repl from Spacemacs as there is no way to connect to the REPL port from Spacemacs when the project is run with ~lein ring server~.
 
-    Using the keybinding `, '` is a quick way to start the repl in Spacemacs.
+    Using the keybinding ~, '~ is a quick way to start the repl in Spacemacs.
 
 *** Enhancing the webpage
     The website is a litle basic in terms of output, so I added Bootstrap CSS and JavaScript libraries to the project as a simple way to make the output look a little more professional.
 
-    To use Bootstrap easily and avoid writing lots of html code, I used the Hiccup library.  Hiccup allows you to generate html code from Clojure vectors that contain Clojure keywords representing html tags.  Generating an html `h1` header and its text is written as `[:h1 "I am an HTML header"]`.
+    To use Bootstrap easily and avoid writing lots of html code, I used the Hiccup library.  Hiccup allows you to generate html code from Clojure vectors that contain Clojure keywords representing html tags.  Generating an html ~h1~ header and its text is written as ~[:h1 "I am an HTML header"]~.
 
     Using Clojure syntax in this way, makes it much easier to type.  Using this syntax also makes it easy to use structured editing with your code.
 
-    The project needs to include Hiccup library as a dependency.  Using the `clj-refactor` tools in Emacs, I added the hiccup dependencies and also hotloaded it into the already running repl.
+    The project needs to include Hiccup library as a dependency.  Using the ~clj-refactor~ tools in Emacs, I added the hiccup dependencies and also hotloaded it into the already running repl.
 
 *** Added Hiccup and Bootstrap to create a better web page
     Created the basics of our monitor dashboard page without writing html direct.
