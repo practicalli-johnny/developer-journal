@@ -2,7 +2,33 @@
 
 
 
-* 20011011 - Day 27: ClojureBridge London dev tools setup
+* 20081012 - Day 28: More ClojureBridge London dev tools
+** Thoughts for today
+   If I didnt use Spacemacs, what editor would I use.  I havent found a more suitable environment for myself yet, but as I document tools for ClojureBridge London, then hopefully I will have a better view.
+
+** Code from today
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/5cda41640d4357014f604829e382662633440e5b][Update: Summary Navigation - Friday section]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/2019c4860810a794cf99c32c27bb33eb090a5910][New: VSCode and Calva extension install guide]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/fb17de0300dcfa06c69b116d8874937af6305c0b][Configure ProtoREPL with Leiningen]]
+
+** Activities in detail
+*** Clojure development tools options
+
+    I am still trying to decide which tools I like for Clojure development, other than Spacemacs of course.
+
+    Atom.io and ProtoREPL are pretty polished, however, the keybindings for ProtoREPL are more complicated than Emacs. Using Proto-mode with ProtoREPL gives more sensible keybindings as it gives a Vim multi-modal editing experience and a Spacemacs style menu.  The Proton menu seems to have the basics, but there are some things that could be added (que a pull request, as proton is written in ClojureScript after all).
+
+    VisualStudio Code is a pretty slick editor and Calva is the best of several extensions to support Clojure development.  I just find VSCode a little tricky to use as I havent read the user guide properly I guess.  I would prefer if Calva started a REPL from within VSCode, rather than starting one outside and connect, although it works well.  There are Vim extensions for Code too.
+
+    I should be able to get a better handle on ProtoREPL and Calva as I put together a simple user guide for ClojureBridge London workshop.
+
+*** ClojureBridge London workshop updates
+
+    Added a distinct Friday section to make it easier to see that the workshop has content for both Friday evening and Saturday.
+
+    Created a new install guide for VSCode and Calva extension, using new tabbed format to separate the Operating System specific information.
+
+    Updated the ProtoREPL install guide with details on how to configure with Leiningen, which is an important step in the ProtoREPL setup.
 
 * 20081011 - Day 27: ClojureBridge London dev tools setup
 ** Thoughts for today
