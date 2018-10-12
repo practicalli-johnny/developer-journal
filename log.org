@@ -3,6 +3,8 @@
 
 
 * 20011011 - Day 27: ClojureBridge London dev tools setup
+
+* 20081011 - Day 27: ClojureBridge London dev tools setup
 ** Thoughts for today
    I found a nice plugin for Gitbook to have a tabbed section in a page, improving the presentation of a single install page for each of the tools.  Any differences in approach, e.g. installing on a particular operating system, can be put in their own tab. It probably shows my bias that I put Ubuntu Linux as the default tab (oops).
 
@@ -30,8 +32,7 @@ specific details in a wider article.
 
     This plugin will be used for the development environment section.
 
-
-* 20011010 - Day 26: Spacemacs and ClojureBridge dev tools
+* 20081010 - Day 26: Spacemacs and ClojureBridge dev tools
 ** Thoughts for today
 It is great to hear from people reading your books, blogs, etc.  I received some very warm feedback today from a developer who is interested in learning Clojure and is really enjoying my practicalli books.  This is great to hear and really helps motivate me to finish those books.
 
@@ -47,7 +48,7 @@ It is great to hear from people reading your books, blogs, etc.  I received some
 
    Also worked on the development tools install guides for ClojureBridge London.  Although we have Klipse REPL built into the workshop material, it doesnt save any work.  Obviously Klipse is also not going to be the follow on editor that the students use, so we use the Friday evening of the event installing a Clojure aware editor.  The editor tends to be one of Atom.io, VisualStudio Code, Emacs (yes, we have had several students using Emacs, mostly with a Spacemacs setup).  Some students that are studying Java are using Intellij, so we also help with installing Cursive.
 
-* 20011009 - Day 25: Quarter of the way there
+* 20081009 - Day 25: Quarter of the way there
 ** Thoughts for today
    Added quick reference section for adding unicode characters
 
@@ -73,7 +74,7 @@ It is great to hear from people reading your books, blogs, etc.  I received some
 
     https://practicalli.github.io/spacemacs/magit/timemachine.html
 
-* 20011008 - Day 24: Events, events, events
+* 20081008 - Day 24: Events, events, events
 ** Thoughts for today
 
    Community events are fun and quite a responsibility too.  Today we reviewed the speaker schedule for ClojureX, aiming to make the best flow of the talks and ensure we give the best possible experience for the audience and the speakers.  Also organising a workshop before the ClojureX conference at uSwitch.  We also have a hack day on 15th December along with the Scala community.
@@ -103,7 +104,7 @@ Updated all the links to my books to use https rather than http, as this makes G
 
     GraalVM has a command to create a native binary
 
-* 20011007 - Day 23: Spacemacs Sunday
+* 20081007 - Day 23: Spacemacs Sunday
 ** Thoughts for today
    Discussing approaches for setting environment variables for Clojure applications.  Its quite common to use environment variables for key settings, like the port of your web application using, although using a map for your configuration is more prevalent when there are lots of environment variables to set.
 
@@ -151,7 +152,7 @@ sub-set of Clojure so it may give a few inaccuracies, these are usually false po
 
     Still a bit of work to do on these sections, but they cover the basics.
 
-* 20011006 - Day 22: Coaching a developer new to Clojure
+* 20081006 - Day 22: Coaching a developer new to Clojure
 ** Thoughts for today
    Had a quick look at the many Clojure extensions for VisualStudio Code.  [Calva](https://marketplace.visualstudio.com/items?itemName=cospaia.clojure4vscode)
 seems the most maintained.  It requires you to start a repl outside of the editior, which I am not that keen on as it means more complexity.  However, it seems to generally be the better choice.
