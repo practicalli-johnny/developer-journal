@@ -2,6 +2,54 @@
 
 
 
+
+* 20081013 - Day 29: Hacking Spacemacs REPL and History
+** Thoughts for today
+
+   I havent used the REPL history buffer feature much in Spacemacs and today I remembered why.  It works great for Emacs state, but doesnt work well for Evil as you have to switch from Vim normal to Vim insert states to do anything.
+
+   Luckily someone has started working on a pull request to address this.
+
+   I realised the book was a bit out of date regarding the REPL history and history buffer, so gave it a quick update.
+
+** Code from today
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/69ae2445c3c0911b5f5b75818db8b35d41830462][Update - Clojure history and cider-repl-history]]
+
+** Activities in detail
+*** Update - Clojure history and cider-repl-history
+    Added table of keybindings for scrolling backwards and forwards through the REPL buffer history to my personal config, ~.spacemacs~.
+
+    Changed keybinding documentation to use unicode arrow keys. Added specific keybindings and commands for working with the cider-repl-history popup buffer.
+
+*** Hacking the Spacemacs Clojure layer
+    A new pull request for the Spacemacs Clojure layer was added today, [[https://github.com/syl20bnr/spacemacs/pull/11431][#11431 Clojure enhancements]]
+
+1. add a keybinding to open the cider repl history buffer in an evil way
+2. evilfy ~cider-repl-history-mode-map~
+3. allow to send input to a cider repl in normal mode with ~RET~
+
+
+    To summarise the pull reqest, ~, P~ in Vim normal mode in the repl buffer leader would open the repl-history buffer.  ~RET~ would send the current expression under the cursor to the REPL and close the REPL history buffer.  ~RET~ in the REPL buffer in Vim Normal mode would evaluate the current expression (without having to go into vim insert state).
+
+    Having experimented with the repl-history it is definitely confusing to have to switch to vim insert mode to call the buffer history and again switch to vim insert. I would like to have ~SPC s h~ keybinding that opens a buffer with repl history in vim normal mode, which i can navigate quickly between each expression in that history and press ~RET~ to push that expression back into the REPL buffer for bonus points you could evaluate the expression just pushed without having to go into vim insert mode.
+
+    It would be nice to have different keybindings, one that quits the history after you send the expression (so this is what ~SPC~ or ~RET~ currently does in vim insert mode), the other vim insert keybindnigs keep the repl history open.
+
+    ~RET~ is for vim normal mode, so you can evaluate an expression in the repl buffer without having to go into vim normal mode.
+
+    My own preference for a REPL history keybinding would be ~, s h~ for ~major-mode > cider > history~.  I am not sure how ~P~ means history in a mnemonic way, unless it is for Previous?  If P is used in cider itself, then I am okay with that. For a top level keybinding for REPL history a meaningful symbol could be used, as is used to start the repl.  So you could have ~, s h~ and ~, <~ which both call the repl-history
+
+    ~, s h~ avoids switching to the repl buffer first to get to the history and especially if somebody would want to eval form again
+
+    In cider it is ~C-c M-p~, but this does not fit the mnemonic menu system. ~, s h~ and ~, <~ fits into the existing Spacemacs keybindings and mnemonic menu approach.  I would be interested to hear from others as to what they prefer.
+
+
+Spacemacs Clojure layer related issues:
+https://github.com/syl20bnr/spacemacs/issues/4124
+#4124 Support Emacs lisp keybindings in Clojure mode
+Emacs lisp has some useful keybindings like "go to end of line and evaluate last sexp" that are absent from the Clojure mode keybindings.
+Clojure, Enhancement :relaxed:, Key Bindings
+
 * 20081012 - Day 28: More ClojureBridge London dev tools
 ** Thoughts for today
    If I didnt use Spacemacs, what editor would I use.  I havent found a more suitable environment for myself yet, but as I document tools for ClojureBridge London, then hopefully I will have a better view.
