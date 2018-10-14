@@ -2,6 +2,51 @@
 
 
 
+* 20081014 - Day 30: Spacemacs Clojure layer hacking continued
+** Thoughts for today
+   A wet day is a good day to focus when working at home.
+
+   Started a new coaching relationship today with an experienced Python developer.  Had a great first catchup over hangouts and defined some tasks to work on.
+
+   Testing a pull request to make the REPL and REPL history buffers a better experience - still some work required.
+
+** Code from today
+*** Testing [[https://github.com/syl20bnr/spacemacs/pull/11431][#11431 pull request]]
+
+** Activities in detail
+*** Testing a pull request from Magit
+    Trying out a pull request as a branch is really easy to do thanks to Magit.
+
+    Open a file from the Spacemacs repository, eg ~.emacs.d/README.org~.
+
+    Open Magit status, ~SPC g s~
+
+    ~b~ opens the branch menu
+    ~y~ opens a branch from a pull request, prompting you for the URL.
+
+    And that is it.  As this commit contains elisp changes, then I can go and evaluate the code in a buffer, or restart Spacemacs to pick up the changes. I should create a screen cast for this.
+
+*** Hacking the Spacemacs Clojure layer
+  Some more hacking around with a pull request for the Spacemacs Clojure layer, improving the Vim Experience for the Clojure REPL and REPL history buffers.  Both these buffers are configured only for Vim Insert or Emacs states, not usable in Vim normal state.  This is unfortunate at both these buffers open in Vim normal state, so you have to change state before doing anything
+
+Trying out [[https://github.com/syl20bnr/spacemacs/pull/11431][#11431 pull request]] I noticed that ~RET~ is not working in the REPL buffer.  Including ~n~ and ~p~ navigation in the pull request is really needed in the REPL History buffer, to navigate between expressions, along with replicating the existing [[https://cider.readthedocs.io/en/latest/using_the_repl/#key-bindings][vim insert keybindings]].
+
+I opened a Clojure source file and started the REPL.  I opened the REPL buffer with ~, s s~.  Whilst still in Vim normal mode I used ~, P~ to open a buffer with the REPL history.  That all works very well.
+
+I cant jump to each expression (as you can with ~n~ and ~p~ in vim insert mode).  However, I can press ~RET~ to send the current expression to the REPL buffer and close the REPL history.
+
+With the cursor back in the REPL buffer in Vim normal mode, ~RET~ doesnt make the expression evaluate in the REPL buffer, it does nothing.  If I switch to Vim insert, ~i~, then of course I can evaluate the expression.  I've tried a few examples and it seems something is missing.
+
+*** Multi-line editing in the REPL
+    I found an example of multi-line editing in the REPL in the #emacs channel, so considering a pull request that does the equivalent of this, but defined in the usual keybinding form in the Clojure layer.  ~RET~ creates new lines and indents, ~C-RET~ evaluates the expression.  This works the same way in other tools, eg. Atom, VSCode, LightTable, rebelreadline, etc
+
+#+BEGIN_SRC elisp
+  (define-key cider-repl-mode-map (kbd "RET") #'cider-repl-newline-and-indent)
+  (define-key cider-repl-mode-map (kbd "C-<return>") #'cider-repl-return)~~~
+#+END_SRC
+
+Perhaps a ~:variable~ can be added to the Clojure layer to allow configuration of a single or multi-line REPL buffer.
+
 
 * 20081013 - Day 29: Hacking Spacemacs REPL and History
 ** Thoughts for today
