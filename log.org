@@ -2,6 +2,45 @@
 
 
 
+* 20081015 - Day 31:
+** Thoughts for today
+   More work on the ClojureBridge install guides (as I am on a roll).
+
+** Code from today
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/386f9f2219cb0207fb2eb14b7ebf6863f8941ed6][Updated atom protoREPL and Proton install guides]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/a1f1f72a3620b36ffd265d77b68e17e6eac736b4][Updated VSCode and Calva section - section comments]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/af974ca883abc07e9633381161862f4043da3b2b][Update: Java install - openjdk guides by OS]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/671943ddde65932a1b8e8e3e74a698b8523ba6a0][Update: Leiningen install guide]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/a724a9a62143d3f4643985b0b587a83b10887a40][Updated: Install guides and Editor overviews]]
+
+
+** Activities in detail
+   Lots of changes to the [[https://clojurebridgelondon.github.io/workshop/development-environment/][development environment section of the ClojureBridge London workshop]].
+
+*** Updated atom protoREPL and Proton install guides
+    Changed files to consistent naming convention
+
+*** Updated VSCode and Calva section - section comments
+    Added comments to each section to make changes easier to do by specifically highlighting each operating system section.
+
+*** Update: Java install - openjdk guides by OS
+   Updated the installation instructions to use OpenJDK 8 where possible.
+
+   Used simpletabs plugin to create a separate tab for each operating system.
+
+*** Update: Leiningen install guide
+    Added operating system sections via simpletabs plugin
+
+    Added more install options, including GitBash for windows
+
+    Moved the checking of the install to the bottom of the page
+
+*** Updated: Install guides and Editor overviews
+    Changed the install guide list into a table for each of the common tools (Java, Leiningen, Git).
+
+    Added brief overview of each editor to start students thinking about which editor they may want to use.
+
+
 * 20081014 - Day 30: Spacemacs Clojure layer hacking continued
 ** Thoughts for today
    A wet day is a good day to focus when working at home.
