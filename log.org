@@ -2,7 +2,87 @@
 
 
 
-* 20081015 - Day 31:
+* 20081016 - Day 32: Clojure through code examples and performance tests
+** Thoughts for today
+   Hacking on Clojure examples as a break from ClojureBridge London.
+
+** Code from today
+*** [[https://github.com/practicalli/clojure-through-code/commit/de573925e6436004ea01e997b027fcba6f42a4da][Fizzbuzz example with core.match]]
+*** [[https://github.com/practicalli/clojure-through-code/commit/cf5340a0598750e8ce5abe6f07f4d90b8d2ca3a2][Refactoring code examples]]
+*** [[https://github.com/practicalli/clojure-through-code/commit/e014a73680d323a06fe08a59fc2438f84fd25b61][Iteration and list comprehension with for]]
+*** [[https://github.com/practicalli/clojure-through-code/commit/7940e9b23550ea5d7ce31a5d49061eb20769b266][Performance testing expressions with Criterium]]
+
+** Activities in detail
+
+Hacking on some examples for my [[https://github.com/practicalli/clojure-through-code][Clojure through code repository]], to be used for my [[https://practicalli.github.io/clojure/][Practicalli Clojure book]]
+
+*** Performance testing expressions with Criterium
+    Using the Criterium library to measure the performance of expressions in Clojure.  Very useful for analysing parts of your code to see how quick they are
+to run.
+
+*** Iteration and list comprehension with for
+    Modelling a combination lock and calculating all the possible combinations. Then adding a constraint that no combination should contain the same numbers,
+eg. discard 1,1,1 and 1,1,2, etc.
+
+*** Fizzbuzz example with core.match
+An example of the power of clojure.core.match to solve the classic fizzbuzz game.
+
+The classic fizzbuzz game were you substitute any number cleanly divisible by 3 with fix and any number cleanly divisible by 5 with buzz.
+
+If the number is cleanly divisible by 3 & 5 then substitute fizzbuzz.
+
+Using the require function we include the library [[https://github.com/clojure/core.match][~clojure.core.match~]] (match may seem similar to a case statement from other languages). We use match to compare the two results returned from the modulus functions.
+
+#+BEGIN_SRC clojure
+(require '[clojure.core.match :refer [match]])
+
+(defn fizzbuzz
+  [number]
+  (match [(mod number 3) (mod number 5)]
+         [0 0] :fizzbuzz
+         [0 _] :fizz
+         [_ 0] :buzz
+         :else number))
+#+END_SRC
+
+This is an example of a simple pattern matching problem.
+
+First we calculate the modulus of the number given as an argument by 3 then the same number by 5. If the modulus value is 0 then the number is divisible exactly without remainder. The result of these two function calls are the elements of a vector.
+
+There are 3 possible patterns to match against, each returns the appropriate value (fizz, buzz, or fizzbuzz). If there is no match, then the original number is returned. The underscore character, ~_~, means that any number will match in that position.
+
+Now we can call fizbuzz for a specfic number
+
+#+BEGIN_SRC clojure
+(fizzbuzz 1)
+(fizzbuzz 3)
+(fizzbuzz 4)
+(fizzbuzz 15)
+#+END_SRC
+
+If we want to convert a sequence of numbers, then we can call fizzbuzz over a collection (eg, a vector) of numbers using the map function
+
+#+BEGIN_SRC clojure
+(map fizzbuzz [1 2 3 4 5])
+#+END_SRC
+
+We can make a function called ~play-fizzbuzz~ to make it easy to use
+
+The function takes the highest number in the range and generates all the numbers from 0 to that number. Finally, we convert the results into strings
+
+#+BEGIN_SRC clojure
+(defn play-fizbuzz [max-number]
+  (->> (range max-number)
+       (map fizzbuzz)
+       (map str)))
+
+;; Now, lets call our play-fizzbuzz function with the highest number in the range of numbers we want to play fizzbuzz on.
+
+(play-fizbuzz 30)
+#+END_SRC
+
+
+* 20081015 - Day 31: ClojureBridge London workshop install guides
 ** Thoughts for today
    More work on the ClojureBridge install guides (as I am on a roll).
 
