@@ -1,6 +1,27 @@
 # 100 Days Of Code - Log
 
 
+* 20081017 - Day 33: Adding Style to ClojureBridge workshop
+** Thoughts for today
+  As I've been updating the content in the ClojureBridge London workshop, it needed some more style to make sections stand out further.
+
+  I also added the install guide for Spacemacs, including Emacs of course, for Linux, MacOSX and Windows.
+
+** Code from today
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/fb2f1ce4a5f07682219bf944254d1003d52a16c8][Updated: website style and style related plugins]]
+*** [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/5724ffa7fbb3498f868b0516e4e618f13453f48e][Added Spacemacs Install guide]]
+
+** Activities in detail
+   More updates on ClojureBridge London workshop
+
+*** Updated: website style and style related plugins
+    Some of the content did not stand out very well, especially inline code and code blocks. Added website.css styles to make the code stand out.
+
+    Added the wide-page plugin to spread the content wider on the page, so it looks better on a higher resolution monitor.  The plugin has a maximum width of 95% which was a bit high, but it was easy to over-ride this by adding a style to the website.css file.  A width of 72% looks good and will seek further feedback on this.
+
+*** Added Spacemacs Install guide
+    Wrote simple install instructions for 64bit Emacs, minimum version 25 and installing Spacemacs.
+
 
 * 20081016 - Day 32: Clojure through code examples and performance tests
 ** Thoughts for today
