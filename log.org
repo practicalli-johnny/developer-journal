@@ -1,5 +1,52 @@
 # 100 Days Of Code - Log
 
+* 20081018 - Day 34: Spacemacs Videos for Helm and Magit
+** Thoughts for today
+  Today is Cosmic Cuttlefish day, the release of Ubuntu 18.10.  I've been using Ubuntu 18.10 and its pretty snappy as a desktop and uses less memory.  Will wait a few weeks before updating my main laptop.
+
+  I created two more videos for the [[https://www.youtube.com/watch?v=MNzaALUDDvw&list=PLy9I_IfUBzKIC9I3iUcxCyL-i1hlJfYRp][Practicalli Spacemacs playlist]] on my YouTube channel.  One on [[https://youtu.be/t8tEzJ1RnW0][using Magit to easily try out pull requests]], the other to [[https://youtu.be/cadXnbAEfUo][delete multiple buffers easily with Helm transient state]].
+
+  I had a look at https://github.com/Unrepl/spiral, an Emacs Clojure IDE that uses Socket REPL via UNREPL protocol.  It has some nice usability concepts that are shown on the project page.  Its sill a young project, so wont replace CIDER for me at the moment.  There has been a [[https://github.com/Unrepl/spiral/issues/5][discussion about merging this work into CIDER]] though.  There is also the [[https://lambdaisland.com/guides/clojure-repls][ultimate guide to REPLs]] that is an interesting read.
+
+** Code from today
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/fbe3e809a2ceeadabdef4b0eaf1f5faf4be72a40][Update: Helm Transient State - video of killing multiple buffers]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/7f4009f168ca77d396becf451b8f47d6c3b8d4f6][New: Checking out pull requests with Magit]]
+
+** Activities in detail
+*** Ubuntu theme for spacemacs
+    Trying out the [[https://github.com/rocher/ubuntu-theme][Ubuntu theme for Spacemacs]].  It looks pretty good, although I might want to tone down some of the colours and make them a little darker.
+
+   [[images/spacemacs-themes-ubuntu-example-org-link.png][Spacemacs Ubuntu theme - org-mode link example]]
+
+*** Spacemacs Helm Transient State menu video
+    I've started using Helm Transient state menu more often, opening with ~M-SPC~ when you have a helm popup open.  I find the transient state useful for navigating through the list with just ~j~ and ~k~.  However, the transient state menu is really great for running actions over multiple files.  Combining the pattern based searching with marking files (~T~ marks all files listed for a particular pattern) makes it really easy to kill lots of Magit buffers that never seem to close properly.
+
+    I created a quick 2 minute 30 second video on [[https://youtu.be/cadXnbAEfUo][Helm Transient State for killing multiple buffers easily]].
+
+*** Update: Helm Transient State - video of killing multiple buffers
+    Created a video to demonstrate how easy it is to use Helm Transient State to kill multiple buffers of a particular type.  In this case removing several magit buffers that didnt close when I used q to quit magit.
+
+*** Spacemacs Magit - easily fetching pull requests - new video
+    Magit git client provides an easy way to try out pull requests shared on remote repositories.
+
+    Open a file from a project and press ~SPC g s~ to open Magic.
+
+    ~b y~ will popup the current list of pull request from the git project.  Selecting a pull request will open git a local branch for that pull request.  You can now test all the changes you wish.
+
+    Once you are done, you can go back to magit with ~SPC g s~ and change back to your previous local branch with ~b b~.
+
+    So Magit provides a quick and simple way to collaborate with other developers.
+
+    To use Magit with Spacemacs, simply add the git layer to your .spacemacs layer configuration.
+
+    https://practicalli.github.io/spacemacs/magit/
+
+    I created a quick video of how to [[https://youtu.be/t8tEzJ1RnW0][use Magit to easily try out pull requests]] and published it to my [[https://www.youtube.com/watch?v=MNzaALUDDvw&list=PLy9I_IfUBzKIC9I3iUcxCyL-i1hlJfYRp][Practicalli Spacemacs playlist]].
+
+*** New: Checking out pull requests with Magit
+    Added a section on using Magit to checkout a new branch that is a pull request on a remote repository (i.e. Github).
+
+    Embedded a video from YouTube showing this in action.
 
 * 20081017 - Day 33: Adding Style to ClojureBridge workshop
 ** Thoughts for today
@@ -21,7 +68,6 @@
 
 *** Added Spacemacs Install guide
     Wrote simple install instructions for 64bit Emacs, minimum version 25 and installing Spacemacs.
-
 
 * 20081016 - Day 32: Clojure through code examples and performance tests
 ** Thoughts for today
@@ -102,7 +148,6 @@ The function takes the highest number in the range and generates all the numbers
 (play-fizbuzz 30)
 #+END_SRC
 
-
 * 20081015 - Day 31: ClojureBridge London workshop install guides
 ** Thoughts for today
    More work on the ClojureBridge install guides (as I am on a roll).
@@ -140,7 +185,6 @@ The function takes the highest number in the range and generates all the numbers
     Changed the install guide list into a table for each of the common tools (Java, Leiningen, Git).
 
     Added brief overview of each editor to start students thinking about which editor they may want to use.
-
 
 * 20081014 - Day 30: Spacemacs Clojure layer hacking continued
 ** Thoughts for today
@@ -186,7 +230,6 @@ With the cursor back in the REPL buffer in Vim normal mode, ~RET~ doesnt make th
 #+END_SRC
 
 Perhaps a ~:variable~ can be added to the Clojure layer to allow configuration of a single or multi-line REPL buffer.
-
 
 * 20081013 - Day 29: Hacking Spacemacs REPL and History
 ** Thoughts for today
