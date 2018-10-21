@@ -1,5 +1,217 @@
 # 100 Days Of Code - Log
 
+
+* 20081021 - Day 37: Spacemacs Videos for Helm and Magit
+** Thoughts for today
+  Finally [[https://circleci.com/gh/jr0cket/webapp-status-monitor/tree/master][fixed the build]] on the Status Monitor app and continued to work on the SVG library.
+
+  Added beginner friendly issues to the ClojureBridge London task board, specifically to write a simple user guide for the most common Clojure editors.
+
+  Asked Alexa to "play classical music" and it was pretty good mixture.  I discovered I can also ask Alexa what the name of the song is that is currently playing (handy when I am in the flow of typing).  I switched to rock music when I started feeling sleepy.
+
+
+** Code from today
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/31240db79552b15f4d6f29e6db0e395136eec314][Fixed the build: Experiment left uncommented]]
+*** Fix ns requires - compojure.core
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/704e409a45933a26fe5c6902fd7829d930a8c58f][Updated Hiccup requires alias and function calls]]
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/c83e4699149634dbbecdbf36a5ce050c604388a8][Fix Build - remove :refer from hiccup require]]
+
+
+** Activities in detail
+*** Fixed the build: Experiment left uncommented
+    I left some experimental code in the previous commit without putting into a comment.  After breaking the build twice, I should look at automating the running of tests locally.  It has given me a reason to go and look at the [[https://github.com/clojure/core.specs.alpha/blob/master/src/main/clojure/clojure/core/specs/alpha.clj#L209-L216][clojure.core.spec.alpha]] specifications.
+
+*** Namespace requires and aliases
+Required libraries should be given a contextually meaningful name as an alias, helping to identify the purpose of functions defined outside of the namespace.
+
+Giving meaningful context helps code to be understood by any person reading the code.  It is also easier to search for usage of functions from that context in the current project.
+
+Aliases are rarely typed more than once in full as Clojure editors have auto-complete, so there is no benefit to short of single character aliases.
+
+#+BEGIN_SRC clojure
+(ns status-monitor.handler
+  (:require [hiccup.page :refer :as web-page]
+            [hiccup.form :refer :as web-form]))
+#+END_SRC
+
+In very commonly used libraries or very highly used functions through out the code, refer those functions explicitly
+
+#+BEGIN_SRC clojure
+(ns naming.is.hard
+  (:require [compojure.core :refer [defroutes GET POST]]
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+#+END_SRC
+
+
+*** Refactor namespace alias - compojure.core
+    The compojure template required the compojure.core library by referring all functions from that namespace.  While this does give convienience of just using the function name without a namespace, it does mean many functions not used are included.
+
+#+BEGIN_SRC clojure
+(ns status-monitor.handler
+  (:require [compojure.core :refer :all]))
+#+END_SRC
+
+Using this form also raises a warning from the Joker linting tool that I have running in Spacemacs.
+
+To be more specific when using the compojure.core library, I changed the require to refer the specific functions / macros used, defroutes and GET
+
+#+BEGIN_SRC clojure
+(ns status-monitor.handler
+  (:require [compojure.core :refer [defroutes GET]]))
+#+END_SRC
+
+Stating exactly which functions you are using from each library helps with maintaining the code as well as minimising unknown conflicts.
+
+*** Updated Hiccup requires alias and function calls
+
+Changed requires for ~hiccup.page~ and ~hiccup.form~ to use a specific alias name, rather than using ~:refer :all~
+
+Thinking of the intent of each library, I chose the following alias names
+
+#+BEGIN_SRC clojure
+[hiccup.page :refer :as web-page]
+[hiccup.form :refer :as web-form]
+#+END_SRC
+
+The monitor-dashboard function was updated to use the new alias on functions from these two libraries.
+
+No functions are actually used from hiccup.core, it only includes ~html~ and ~h~ anyway, so the ~hiccup.core~ require has been removed.
+
+*** Broke the build again, spec driven error from lein test
+    In my eagerness to update the hiccup libraries with a meaningful alias, I forgot to remove the ~:refer~ directive.  I also forgot to run the tests before committing the change.  So when I pushed the commit to Github, I got the following error from CircleCI.
+
+   The most interesting parts of the error message were these two lines showing that ~clojure.alpha.spec~ library is being used to test namespace definitions:
+
+#+BEGIN_SRC
+Exception in thread "main" clojure.lang.ExceptionInfo: Call to clojure.core/ns did not conform to spec:
+
+fails spec: :clojure.core.specs.alpha/ns-form at:
+
+[:args] predicate: (cat :docstring (? string?)
+                        :attr-map (? map?)
+                        :clauses :clojure.core.specs.alpha/ns-clauses),
+#+END_SRC
+
+    The ~ns-clauses~ specification is define in ~clojure.alpha.spec~ as
+
+#+BEGIN_SRC clojure
+(s/def ::ns-clauses
+  (s/* (s/alt :refer-clojure ::ns-refer-clojure
+              :require ::ns-require
+              :import ::ns-import
+              :use ::ns-use
+              :refer ::ns-refer
+              :load ::ns-load
+              :gen-class ::ns-gen-class)))
+#+END_SRC
+
+    The ~ns-clauses~ spec looks for the ~:require~ keyword and compares its value to the spec for ~::ns-require~ which is defined ass
+
+#+BEGIN_SRC clojure
+(s/def ::ns-require
+  (s/spec (s/cat :clause #{:require}
+                 :body (s/+ (s/alt :libspec ::libspec
+                                   :prefix-list ::prefix-list
+                                   :flag #{:reload :reload-all :verbose})))))
+#+END_SRC
+
+    The ~::ns-require~ checks for a library name using ~:libspec~ which is defined by the spec ~::libspec~
+
+
+#+BEGIN_SRC clojure
+(s/def ::libspec
+  (s/alt :lib simple-symbol?
+         :lib+opts (s/spec (s/cat :lib simple-symbol?
+                                  :options (s/keys* :opt-un [::as ::refer])))))
+#+END_SRC
+
+    This is where I believe the error is being detected as I was using both ~::as~ and ~::refer~ in my namespace definition.
+
+
+    The full error message was reported in [[https://circleci.com/gh/jr0cket/webapp-status-monitor/13][CircleCI status-monitor build #13]], which I formatted for easier reading:
+
+#+BEGIN_SRC
+Exception in thread "main" clojure.lang.ExceptionInfo: Call to clojure.core/ns did not conform to spec:
+
+In: [1] val:
+((:require [compojure.core :refer [defroutes GET]]
+           [compojure.route :as route]
+           [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+           [hiccup.page :refer :as web-page]
+           [hiccup.form :refer :as web-form]
+           [status-monitor.svg-components :as svg-components]))
+
+fails spec: :clojure.core.specs.alpha/ns-form at:
+
+[:args] predicate: (cat :docstring (? string?) :attr-map (? map?) :clauses :clojure.core.specs.alpha/ns-clauses),
+
+Extra input
+
+#:clojure.spec.alpha
+  {:problems
+   [{:path [:args],
+     :reason "Extra input",
+     :pred (clojure.spec.alpha/cat :docstring (clojure.spec.alpha/? clojure.core/string?)
+                                   :attr-map (clojure.spec.alpha/? clojure.core/map?)
+                                   :clauses :clojure.core.specs.alpha/ns-clauses),
+     :val
+     ((:require [compojure.core :refer [defroutes GET]]
+                [compojure.route :as route]
+                [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+                [hiccup.page :refer :as web-page]
+                [hiccup.form :refer :as web-form]
+                [status-monitor.svg-components :as svg-components])),
+     :via [:clojure.core.specs.alpha/ns-form],
+     :in [1]}], :spec #object[clojure.spec.alpha$regex_spec_impl$reify__2436 0x4565a70a "clojure.spec.alpha$regex_spec_impl$reify__2436@4565a70a"],
+   :value (status-monitor.handler
+           (:require [compojure.core :refer [defroutes GET]]
+                     [compojure.route :as route]
+                     [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+                     [hiccup.page :refer :as web-page] [hiccup.form :refer :as web-form]
+                     [status-monitor.svg-components :as svg-components])),
+   :args (status-monitor.handler
+          (:require [compojure.core :refer [defroutes GET]]
+                    [compojure.route :as route]
+                    [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+                    [hiccup.page :refer :as web-page]
+                    [hiccup.form :refer :as web-form]
+                    [status-monitor.svg-components :as svg-components]))},
+
+compiling:(status_monitor/handler.clj:1:1)
+
+#+END_SRC
+
+
+
+
+
+* 20081020 - Day 36:
+** Thoughts for today
+  Joined the People's Vote march today and it was huge, one of the biggest gathering of people I have ever experienced.  Over 700,000 people as a rough estimate on the day, however, it felt like more than 1 million people.  It took around 4 hours for everyone to make it from Park Lane to Parliament Square, which is normally a 30 minute stroll.  It was a wonderful day and everyone was very supportive and friendly.  It restored my faith in humanity and wiped away the depression that Brexit had induced in me.
+
+I did some coding on the ClojureBridge User Guide for Spacemacs.
+
+** Code from today
+*** [[https://github.com/practicalli/spacemacs-gitbook/commits/master][ClojureBridge London workshop repository]]
+
+** Activities in detail
+***
+
+
+* 20081019 - Day 35: Preparing some Coaching code
+** Thoughts for today
+   How do you break out of an iteration in Clojure, when you are iterating over a large data set and you realise you no longer want the results.
+
+   I had a play with my Clojure Through Code examples and experimented with a Palindrome checker.
+
+** Code from today
+*** https://github.com/practicalli/clojure-through-code
+
+** Activities in detail
+***
+
+
+
 * 20081018 - Day 34: Spacemacs Videos for Helm and Magit
 ** Thoughts for today
   Today is Cosmic Cuttlefish day, the release of Ubuntu 18.10.  I've been using Ubuntu 18.10 and its pretty snappy as a desktop and uses less memory.  Will wait a few weeks before updating my main laptop.
