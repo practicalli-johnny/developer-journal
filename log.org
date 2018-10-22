@@ -1,6 +1,66 @@
 # 100 Days Of Code - Log
 
 
+
+* 20081022 - Day 38: Event organising and Status Monitor locations
+** Thoughts for today
+   Organising ClojureX free workshops for the 2nd December.  We have an ~clojure.spec~ from the ground up confirmed and I am planning on giving an intro to Clojure CLI and figwheel.main for building (and testing) ClojureScript applications.  This would be based on the [[https://figwheel.org/tutorial][Figwheel Tutorial]].
+
+   Reached out to ClojureBridge Bilbao chapter today and offered to mentor them through their first event, https://www.magnet.coop/clojure-bridge-bilbao.
+
+   Started planning ClojureBridge London events for 2019, the first hopefully at the end of January or early February and the second event for mid-May.
+
+   Worked on the Status monitor, adding a simple drop-down and then form to select a specific data centre location.
+
+** Code from today
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/c3df99858da11eabb4ef3f35118ab7c8606dda31][Added welcome page]]
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/fb24954394ff6d590fc02c9954021f8445ac9d8f][Added a drop-down to select data centre locations]]
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/ea9a1bb7eff6c70844fe9fe27ee920224c7bcdcd][Changed data centre location to form]]
+
+
+** Activities in detail
+*** Added welcome page
+    A basic welcome page for the default route, /.  Welcome pages is an hiccup html5 page that uses bootstrap for style.
+
+*** Added a drop-down to select data centre locations
+   Using hiccup ~drop-down~ function I hard coded a drop-down component with two locations for data centres.
+
+#+BEGIN_SRC clojure
+    [:div {:class "jumbotron"}
+       [:h1 "Mock Status Monitor Dashboard"]]
+
+     ;; Key systems to monitor displayed in a single bootstrap row, with 3 columns.
+     [:div {:class "row"}
+      [:div {:class "col-md-12"}
+       [:h2 "ACME Infrastructure Locations"]
+       (web-form/drop-down ["London" "New York"] ["London" "New York"]) ]]
+#+END_SRC
+
+*** Changed data centre location to form
+    Changed the hard coded drop down to be a generated form. Defined a collection of data centre locations to generate the form from.
+
+#+BEGIN_SRC clojure
+  ;; Data centre locations
+  (def data-centre-locations
+    [{:name "London"    :latitude 42 :longtitude 24}
+     {:name "New York"  :latitude 42 :longtitude 24}
+     {:name "Singapore" :latitude 42 :longtitude 24}])
+
+   ;; Main page for application
+
+    [:div {:class "row"}
+      [:div {:class "col-md-12"}
+        [:h2 "ACME Infrastructure Locations"]
+        (web-form/drop-down ["London" "New York"] ["London" "New York"]) ]]
+        [:form {:action "/dashboard"}
+          [:td
+            [:select
+              (for [location data-centre-locations]
+                [:option {:value (:name location)} (:name location)])]
+            [:input {:type "submit"} "Monitor Location"]]]]]
+#+END_SRC
+
+
 * 20081021 - Day 37: Spacemacs Videos for Helm and Magit
 ** Thoughts for today
   Finally [[https://circleci.com/gh/jr0cket/webapp-status-monitor/tree/master][fixed the build]] on the Status Monitor app and continued to work on the SVG library.
@@ -12,7 +72,7 @@
 
 ** Code from today
 *** [[https://github.com/jr0cket/webapp-status-monitor/commit/31240db79552b15f4d6f29e6db0e395136eec314][Fixed the build: Experiment left uncommented]]
-*** Fix ns requires - compojure.core
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/7b8c3a8dfed6bf7983c9e27f82c8197efc0861b5][Fix ns requires - compojure.core]]
 *** [[https://github.com/jr0cket/webapp-status-monitor/commit/704e409a45933a26fe5c6902fd7829d930a8c58f][Updated Hiccup requires alias and function calls]]
 *** [[https://github.com/jr0cket/webapp-status-monitor/commit/c83e4699149634dbbecdbf36a5ce050c604388a8][Fix Build - remove :refer from hiccup require]]
 
@@ -185,7 +245,7 @@ compiling:(status_monitor/handler.clj:1:1)
 
 
 
-* 20081020 - Day 36:
+* 20081020 - Day 36: Marching for democracy
 ** Thoughts for today
   Joined the People's Vote march today and it was huge, one of the biggest gathering of people I have ever experienced.  Over 700,000 people as a rough estimate on the day, however, it felt like more than 1 million people.  It took around 4 hours for everyone to make it from Park Lane to Parliament Square, which is normally a 30 minute stroll.  It was a wonderful day and everyone was very supportive and friendly.  It restored my faith in humanity and wiped away the depression that Brexit had induced in me.
 
@@ -196,7 +256,6 @@ I did some coding on the ClojureBridge User Guide for Spacemacs.
 
 ** Activities in detail
 ***
-
 
 * 20081019 - Day 35: Preparing some Coaching code
 ** Thoughts for today
@@ -209,7 +268,6 @@ I did some coding on the ClojureBridge User Guide for Spacemacs.
 
 ** Activities in detail
 ***
-
 
 
 * 20081018 - Day 34: Spacemacs Videos for Helm and Magit
