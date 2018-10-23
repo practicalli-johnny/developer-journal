@@ -1,6 +1,71 @@
 # 100 Days Of Code - Log
 
 
+* 20081023 - Day 39: Applying Bootstrap to the Status Monitor
+** Thoughts for today
+  Looking at some Hiccup tips to improve the way I use the library.  Adding a better look to the Status monitor front page with some Bootstrap magic.
+
+** Code from today
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/bc09dde1ebaec0fa791293463f9c4319100172e6][Fixed tests for status monitor]]
+*** [[https://github.com/jr0cket/webapp-status-monitor/commit/94c301a8495c1b48eb4a2f495bf47a656df930ce][Add Bootstrap styles to data centre location form]]
+
+** Activities in detail
+*** Hiccup in action
+    Hiccup is a very easy to use library and I find it so much better than writing HTML directly.  As Hiccup is defined as a data structure it is very easy to edit and manipulate using the structured editing tools that come with Clojure editors.  As Hiccup is just data structures its also easy to generate them with Clojure code.
+
+    The [[https://weavejester.github.io/hiccup/][Hiccup library API]] is clearly defined, the documentation could do with examples though.  Luckily the Internet has lots of examples.  There is also a selection of [[https://lispcast.com/hiccup-tips/][Hiccup tips]] from PurelyFunctional.tv.
+
+*** Adding Bootstrap to the front page
+    Updated the form to use BootStrap to make it more usable and have a better aesthetic.
+
+    Although Hiccup is a little short on examples, it is generating HTML so its fairly easy to figure out what needs to be created.  This holds true for Bootstrap too.  Much of the time its a simple case of just adding the right style in the right place.  Styles are just a map so its easy enough to just copy the name from Bootstrap documentation and add that style to your tags.
+
+   Just using a simple form works okay, but doesnt look very nice.
+
+[[status-dashboard-data-centre-location-form-dropdown-basic.png]]
+
+
+    By adding some Bootstrap styles, the page looks a lot better.
+[[image/status-dashboard-data-centre-location-form-dropdown-bootstrap.png][Simple drop-down form in bootstrap]]
+
+    Inside the form I added a ~div~ with the style ~form-group~ as there are multiple form elements, a label and a select (drop-down).
+
+    The button is using the ~hiccup.form/submit-button~ function with the style ~btn-outline-primary~ applied.  Without the ~form-group~ div there would not be any space between the button and the select drop-down.
+
+#+BEGIN_SRC clojure
+   [:body
+    ;; An invisible container to create a default margin at each side of the web page
+    [:div {:class "container"}
+
+     ;; Page Header using a large central banner, called a Jumbotron
+     [:div {:class "jumbotron"}
+      [:h1 "Mock Status Monitor Dashboard"]]
+
+     ;; Key systems to monitor displayed in a single bootstrap row, with 3 columns.
+     [:div {:class "row"}
+      [:div {:class "col-md-12"}
+       [:h2 "ACME Infrastructure Locations"]
+       [:form {:action "/dashboard"}
+        [:div {:class "form-group"}
+         [:label "Choose data centre location to view"]
+         [:select {:class "form-control"}
+          (for [location data-centre-locations]
+            [:option {:value (:name location)} (:name location)])]]
+        (web-form/submit-button {:class "btn btn-outline-primary" :name "submit"} "View Dashboard")
+        ]]]
+
+     ] ;; End of :div container
+    ] ;; End of :body
+#+END_SRC
+
+
+*** Fixed tests for status monitor
+    As I updated the resulting page from the ~/~ route, then I updated the tests to reflect the new content.  I also remembered to run the tests before committing and pushing to CircleCI.  My build is now passing on CircleCI, yay!
+
+    Add tests to check for body title and that the page includes Bootstrap style sheets and a Jumbotron.
+
+    These tests are more about how to write tests than what should be tested, so may be a little brittle.
+
 
 * 20081022 - Day 38: Event organising and Status Monitor locations
 ** Thoughts for today
@@ -59,7 +124,6 @@
                 [:option {:value (:name location)} (:name location)])]
             [:input {:type "submit"} "Monitor Location"]]]]]
 #+END_SRC
-
 
 * 20081021 - Day 37: Spacemacs Videos for Helm and Magit
 ** Thoughts for today
@@ -240,7 +304,6 @@ Extra input
 compiling:(status_monitor/handler.clj:1:1)
 
 #+END_SRC
-
 
 
 
