@@ -1,6 +1,47 @@
 # 100 Days Of Code - Log
 
 
+* 20181024 - Day 40: Coaching, ClojureBridge and orgmode fun
+** Thoughts for today
+   Coaching a new student today using the [[https://clojurebridgelondon.github.io/workshop][ClojureBridge workshop]].  Just an hour for the first session in which I gave an overview of Clojure and supported them through some simple exercises.
+
+   Testing out how well org-mode images display when pushed to Github.
+
+  Discovered ~SPC n +~ and ~SPC n -~ to increment and decrement numbers.  When creating a new journal entry I copy from a previous day and paste it as the current day so I have the same structure (I should use a snippet instead).  To update today's entry from day 39 to day 40, rather than changing the word with ~cw~ and typing in 40, I jumped to 39 (~SPC j j 9~) and used ~SPC n +~ to update the number.
+
+** Code from today
+*** Refactor: Exercise time to numbers - clearer wording
+
+** Activities in detail
+*** ClojureBridge London workshop - refactor: Exercise time to numbers - clearer wording
+    Refactored the descriptions for the challenges to remove some ambiguity
+
+
+*** Adding images in orgmode and defining their size
+
+    I am using more images in the log so its handy to see them displayed rather than just as links.
+
+    ~, T i~ will toggle the display of images in Spacemacs
+
+    ~. i l~ pops up a prompt to create link from either a web address or a local file name, followed by a prompt for the link text.  Selecting text before calling ~org-insert-link~ will use that as the default link text.
+
+    Any previously used links will be remembered and presented in a helm list, so you can easily narrow down to the link you wish.
+
+*** Defining images size in orgmode
+    The ~att_org~ attribute can be used to add meta data to your image, including the ~:width~ or ~:height~ of an image.
+
+    So if an image is 400 pixels but is too small, you could set the display size for the image to 80 pixels using ~#+attr_org: :width 800~
+
+#+attr_org: :width 800
+[[./images/circleci-clojure-start-build.png]]
+
+
+    It will be interesting to see if the meta data is picked up by Github when it renders the orgmode file.
+
+    If the ~attr_org~ does not work then there is also ~attr_html~ which I assume is used when exporting an org-mode file to HTML.
+
+
+
 * 20081023 - Day 39: Applying Bootstrap to the Status Monitor
 ** Thoughts for today
   Looking at some Hiccup tips to improve the way I use the library.  Adding a better look to the Status monitor front page with some Bootstrap magic.
