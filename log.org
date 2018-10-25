@@ -1,6 +1,24 @@
 # 100 Days Of Code - Log
 
 
+* 20181025 - Day 41: Spacemacs videos - narrowing, iedit, yasnippets
+** Thoughts for today
+   I had a few issues with the Internet connection today, so I created some short screencasts on using Spacemacs.  I am back on line and the videos are being uploaded.  I am getting more comfortable doing short videos without the need for a lot of preparation.  When ever I see a situation that suits a video, I make one (and avoid pontificating about it).
+
+  Added to the Spacemacs book, an overview of the Sayid debugger and Vim tips for Clojure developers, especially around simulation of basic structured editing using surround.
+
+** Code from today
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/55d05b9b885b278635067af282f55d6f86d6e67b][Spacemacs - Add: More Vim keybindings and tips]]
+*** [[https://github.com/practicalli/spacemacs-gitbook/commit/00b77e9d1d340724fe7e2bf4ea2885f79ef90804][Spacemacs - Add: Sayid debugger overview]]
+
+** Activities in detail
+*** Youtube Videos
+- [[https://www.youtube.com/watch?v=51as0UrssLM][Spacemacs Yasnippet for boilerplate code and often repeated text]]
+- [[https://www.youtube.com/watch?v=4bVMXXxPiQs][Spacemacs narrowing and iedit magic]]
+
+
+
+
 * 20181024 - Day 40: Coaching, ClojureBridge and orgmode fun
 ** Thoughts for today
    Coaching a new student today using the [[https://clojurebridgelondon.github.io/workshop][ClojureBridge workshop]].  Just an hour for the first session in which I gave an overview of Clojure and supported them through some simple exercises.
