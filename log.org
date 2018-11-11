@@ -1,5 +1,315 @@
 # 100 Days Of Code - Log
 
+* 20181111 - Day 58: ClojureBridge editor user guides - Spacemacs
+** Thoughts for today
+   Writing the Spacemacs editor guide for ClojureBridge.
+
+   Updating the study plan for the Clojure Virtual Study Group (Virtualli Clojure? or just make it part of Practicalli).
+** Activities in detail
+*** Spacemacs editor user guide
+    Embed the YouTube video created previously on how to use the Clojure REPL in Spacemacs.
+
+    Described the actions in the video, along with the most used keybindings for starting a REPL, evaluating code and changing namespaces.
+
+    Added links to Spacemacs documentation and to Practicalli Spacemacs.
+*** ClojureBridge content updates - improving clarity of exercises
+    After a recent run through with a new student, some of the exercise descriptions seemed vague, as did some of the explanations in the answers.
+
+    Updated the time to numbers exercise in simple-values section
+    Updated description of reading values from a sequence in collections section
+    Updated average age of languages exercies in collections section
+
+* 20181110 - Day 57: ClojureBridge editor user guides - Atom & ProtoREPL
+** Thoughts for today
+   Broadcasting the second virtual study group for Clojure.
+
+   Writing the editor guides for ClojureBridge London to describe what I did in the videos and provide a simple reference.
+** Activities in detail
+*** Organised Gitbook plugins alphabetically
+    Arrange the plugins in alphabetically order within book.json making it easier to review.
+
+    A standard alphabetical order provides easier to use diffs when compared to the book.json configuration in Gitbook book projects I am developing.
+*** Atom and ProtoREPL editor guide
+    Providing an embedded view of the YouTube video I created a couple of days ago.
+
+    Described how to start a Clojure REPL for ProtoREPL, the most common ways to evaluate code and changing to a different namespace.
+
+    Keybindings for ProtoREPL are provided as a quick reference.
+
+    Added images for MacOSX install, missing from the deployment guide commits.
+
+* 20181109 - Day 56: MeetAMentor exercises and YouTube broadcasting solved
+** Thoughts for today
+   Preparing the ClojureBridge London exercises into the REPL in order to review them in the next hangout for MeetAMentor Clojure study group.
+
+   Finally figured out how to manage events and start hangouts in YouTube.  Realised its not possible to change the type of streaming, so for now just using hangouts rather than my own streaming software.  Will try [[https://obsproject.com/][Open Broadcaster System (OBS)]] at some point.
+** Code from today
+*** ClojureBridge exercises in the REPL
+** Activities in detail
+*** YouTube Live Streaming with Hangouts on Air
+**** Open YouTube Creator classic Live Streaming Events
+     https://www.youtube.com/my_live_events
+**** Create an event to either start now or schedule
+     Click on the New live event button
+
+     Enter the basic info about the event
+***** Do not change the event Type (default Quick)
+      Once the event has been created, you cannot change the event Type (and there is no way to delete an event it seems)
+**** Getting the hangout link
+     In the Live Streaming events list, click the Start Hangouts On Air button.  This opens the hangout but does not start broadcasting.
+
+     In the hangout popup window, click the person icon to get a link to join the hangout.
+
+**** Start broadcasting
+     Only start broadcasting once you are ready, as once you stop the broadcast it cannot be started again.
+
+* 20181108 - Day 55: DevRelCon London
+** Thoughts for today
+   Its DevRelCon London conference today and a chance to catch up with some friends in that community.
+
+
+
+** Code from today
+
+** Activities in detail
+*** DevRelCon: Getting Intentional about educating developers
+    The award wining Joe Nash gave a great talk on how developers learn today, discussing why they are looking for a complete learning experience.
+
+    Developers have always been self learning, even if they went to University.  Self-learning is a requirement for a developing your career and keeping things interesting.  When learning you want a great experience and developers are investing in online courses and learning via video tutorials has seen a huge growth.
+
+    So what is a great experience?
+
+    The learning should =connect= to the individual learner.  They should know what they are going to learn, what they should know before they start learning (pre-requisites) and where to learn that.  They should also gain a sense of mastery once they have finished the learning lesson, in that they know what they can do with their new skill.  That skill should be clearly connected to the overall think you are trying to teach the developer.
+
+    =Organise= content into easily digestible pieces that allow developers to learn specific aspects of the topic.  Developers will learn at their own pace and can have quite different goals that are relevant.  Each learning path should be self-contained in that it can be completed with a reasonable amount of effort, in a reasonable amount of time and without additional requirements (except the pre-requisites).
+
+    Developers learn by doing, so =practice= is vital part of the learning tools.  With online courses this practice should be built in and the most effective courses are learning by exercises.  This practice should be tightly coupled with fast and relevant feeback to ensure that the developer is making progress.  Without timely and useful feedback it is likely that a developer will get frustrated and either change what they are learning or move to another approach to learning (eg. if they are externally motivated to still learn)
+
+    Practice builds up confidence and moments to =Reflect= help to cement the wider picture of all the things you have learnt.  So exercises to pull from individual learning steps into a larger exercise can be valuable to demonstrate the big picture.
+
+* 20181107 - Day 54: ClojureBridge London basic editor use videos
+** Thoughts for today
+   Created two videos showing the very basics of how to use editors for REPL driven development in Clojure, for Spacemacs and Atom & ProtoREPL
+
+   Feeling quite unwell most of today, so didnt get any time for coding
+
+** Code from today
+*** ClojureBridge London
+** Activities in detail
+*** ClojureBridge London basic editor use videos
+    To make it easier for the attendees (and coaches) for ClojureBridge London, I'm creating minimal guides on how to use the recommended editors.
+
+    The guides are kept small so they do not overwhelm those new to coding and cover just the essential actions, opening a Clojure file / project, starting a REPL and evaluating code.  I also included how to change to the namespace of a project, as editors typically start in the `user` namespace.
+
+**** Atom & ProtoREPL basic user guide
+**** Spacemacs basic user guide
+
+* 20181106 - Day 53: ClojureBridge London Editor install guides ?
+** Thoughts for today
+
+** Code from today
+   ***
+** Activities in detail
+   ***
+
+* 20181105 - Day 52: YouTube Channel Banner design and Design Journal discussion
+** Thoughts for today
+   Getting creative with images and visuals today.  As I have been creating more video content on my YouTube Channel, it was time for a visual update. So I fired up Inkscape and got creative.
+
+   In the past I have created some [[http://jr0cket.co.uk/developer-guides/][infographics as developer guides]] to Git and Heroku, to help people learn those tools.
+
+** Code from today
+*** [[https://github.com/practicalli/imagery-design][Imagery Design Github repository]]
+** Activities in detail
+*** Designing a new banner image for my YouTube channel
+    Imagery, banners and logos for the [[https://practicalli.github.io/][Practicalli series of books]] and other communication channels where Clojure is taught by [[https://twitter.com/jr0cket][John Stevenson]].
+
+    I am not a graphic designer, however, with the use of [[https://inkscape.org/][Inkscape]] and Scalable Vector Graphics, I can create some nice visualisations of information and themes.
+
+    ## YouTube channel banner
+    [[https://www.youtube.com/playlist?list=PLy9I_IfUBzKIC9I3iUcxCyL-i1hlJfYRp][Practicalli Spacemacs playlist]] contains the all the videos created for the [[https://practicalli.github.io/spacemacs][Practicalli Spacemacs book]].
+
+    I have also started running a Clojure study group via the [[https://meetamentor.co.uk/][MeetAMentor community]], using [[https://support.google.com/youtube/answer/7083786][Hangouts On Air]], which uses my Youtube account and imagery.  So I have updated my YouTube banner from a nice picture of my cat, to a simple representation of the topics I cover in my channel.
+
+    YouTube can be viewed on different devices and each one is supposed to have a different size (although when actually testing this, it seems that YouTube uses pretty much the same part of the banner image regardless of media).
+
+    Initially I just created a design with the Logo's, however, this felt a little too simplified and would not have said anything to those who didnt recognise the logos.
+
+    The design was refactored to place the names the logos represented under each logo.  The font used was Ubuntu as its an elegant font to use.  The colour of each name was taken from the predominant colour of the logo it describes.  There was not much difference between the Green and Blue of the Clojure logo but Green seemed to work better for the text.
+
+    The finished banner design can be seen via the [[Imagery Design Github repository]] and on my [[https://www.youtube.com/channel/UCelY2sic3hsIiSeAhWt640g][YouTube channel]].
+
+*** Design Journal discussion from my REPL Driven Development article
+   On day 49 I published an article on [[http://jr0cket.co.uk/2018/11/REPL-driven-development-with-Clojure.html][REPL Driven Development]] and had some interesting comments, so I replied this morning.
+
+   Juraj Martinka left the following feedback:
+   The idea of Design Journal sounds interesting.
+   However, it seems there can be a lot of clutter eventually and that those examples can easily get out of sync.
+   Do you really use this idea in your production code?
+   How do other programmers/colleagues react to such code?
+   Do you think it's really the right medium for capturing design decisions (and 'roads not taken')?
+
+   My reply to Juraj's feeback was:
+
+   A design journal is also talked about by Stuart Halloway in the "Running with Scissors talk" I believe and certainly in the apropos_cast podcast. It was good to hear I am not the only one doing this.
+
+   As I continually use these examples for further development of any code base and as REPL based tests for my understanding of what the code does, then the examples are always in sync. If something is part of a road not travelled, then it is documented so, at the point that it happens. Lazyness is for sequences, not developers :)
+
+   If sections become less relevant, it is an option to transfer these examples to a separate design document and simply include a link to the relevant section as a comment in the source code.
+
+   I dont consider the journal clutter, although this is quite a subjective point I agree. No one has raised this point when I used these technique until now, however, it is a good point that the design journal should be well written.
+
+   What code goes into production is defined by the team I work with, as yet though I havent come across any reasons why not to include this in what is shipped.
+
+   I would say the design journal is a very useful and interactive approach for capturing design decisions. What the right approach actually is will be up to the team working on the code base. I suggest this approach is more correct than not capturing these decisions at all.
+
+   Certainly this information could be moved into a design document, assuming the team were prepared to constantly update such a document. Literate programming design documents using Klipse or Org-mode babel would give live documentation that included an active repl, allowing you to get the feedback from code without having to switch back and forth between documentation and code editor (switching like this is one of the reasons documentation goes stale).
+
+
+
+* 20181104 - Day 51: Over half way there
+** Thoughts for today
+
+** Code from today
+   ***
+** Activities in detail
+   ***
+
+* 20181103 - Day 50: London Clojurians events update and Practicalli Clojure
+** Thoughts for today
+   First MeetAMentor Clojure study group hangout went pretty well, although I had problems with YouTube initially as I couldnt open the YouTube website in Chrome.
+
+** Code from today
+   *** [[https://repl.it/@jr0cket/Clojure-In-15-minutes][repl.it clojure in 15 minutes]]
+
+** Activities in detail
+   *** First MeetAMentor Clojure study group hangout
+
+* 20181102 - Day 49: Practicalli Clojure
+** Thoughts for today
+** Code from today
+   ***
+** Activities in detail
+*** My approach to REPL driven development
+
+**** [[http://jr0cket.co.uk/2018/11/REPL-driven-development-with-Clojure.html][jr0cket.co.uk blog - REPL Driven Development with Clojure]]
+**** [[https://dev.to/jr0cket/repl-driven-development-ano][dev.to - REPL driven development with Clojure]]
+
+* 20181101 - Day 48: Practicalli Clojure
+** Thoughts for today
+
+** Code from today
+***
+** Activities in detail
+***
+
+* 20181031 - Day 47: Working on MeetAMentor Study group content
+** Thoughts for today
+  Assembling the Clojure study group content for the first week.
+** Code from today
+*** [[https://github.com/practicalli/clojure-through-code/commit/0787f69def0118fe923d516bf10bdff94fd366df][Clojure Syntax in 15 minutes]]
+** Activities in detail
+*** MeetAMentor Clojure study group content
+    The first hangout will be used to give an overview of Cljoure, how its used by companies and a quick tour of the basic syntax.
+
+    Created an overview of the Clojure syntax, with some relatively simple Clojure code examples.
+
+* 20181030 - Day 46: Clojure dojo
+** Thoughts for today
+   In the dojo this evening, one group hacked on Scalable Vector Graphics with Clojure, using my Tic-Tac-Toe game as a basis.
+** Code from today
+*** Update: Added Helm Transient state to Buffer tidy up section
+** Activities in detail
+*** Update: Added Helm Transient state to Buffer tidy up section
+    Added section suggesting Helm Transient state should you have many buffers to work on.
+
+    Tweaked the state Keybinding and the suggested Gnome keybinding on the Helm Transient State section.
+
+* 20181029 - Day 45: New Tannus Tyres and Clojure Study group curriculum
+** Thoughts for today
+  Defined a curriculum for a Clojure Study Group, as part of the Meet A Mentor community.
+
+  Collected the [[https://photos.app.goo.gl/TiVAyt8bvs78xkJCA][Tannus tyres for my Brompton bike]] and fitted them ready for riding to the Clojure dojo tomorrow at Thoughtworks.
+
+  Some more hacking on Spacemacs book.
+
+** Code from today
+*** [[https://github.com/practicalli/clojure-practicalli-content][Practicalli Clojure repository]]
+
+** Activities in detail
+*** Defining a plan for the Clojure Study Group (Meet A Mentor community)
+    I suggest the followng schedule for the Clojure study group and would appreciate your feedback, especially as to the topics and level of the plan.  Start date is either 3rd or Sunday 4th November (based on your feedback)
+
+    Week1:  Overview of Clojure - covers the syntax, a few common functions, how to start learning Clojure and REPL driven development.  Homework: practice writing some simple Clojure.
+
+    Week2: Tooling and practising - briefly covers the different editors that give a good Clojure experience, resources for practising Clojure (4Clojure, Exorcism, CodeWars).  Homework:  some 4Clojure exercises
+
+    Week3: Data Structures and Immutability - understanding how to model the world with immutable data (values)  Homework: writing a simple encoder/decoder challenge and more 4Clojure exercises
+
+    Week4-8: Thinking Functionally - writing your own (pure) functions, using sequences, lisp comprehension, higher order functions, functional composition.  Homework: various small challenges and 4Clojure exercises.
+
+    If there is interest, we can also start a project to build a web application in Clojure (or a full stack app with Clojure/ClojureScript) at any point after the first week.
+
+*** New: Git Blame to review commit history
+    ~SPC g b~ opens a buffer showing the commit history of the current file, by author of each commit.
+
+    ~RET~ will show the details of the commit under the cursor.
+* 20181028 - Day 44: Spacemacs book improvements
+** Thoughts for today
+  Stocking up on healthy food for the winter and Brexit fallout.  Ordered lots of chickpeas, soyabeans, mung beans, butter beans, black rice, apricots, dates, and spices to make sauces with.
+
+  Then hacked on the Spacemacs book some more.
+
+** Code from today
+*** Added: Version control change highlighting
+*** Update:  Magit section and status refresh keybinding
+** Activities in detail
+*** Added: Version control change highlighting
+    Described two methods of highlighting changes, fringe and smeargle.
+
+*** Update:  Magit section and status refresh keybinding
+    Updated the section names in Magit for clarity
+
+    Added `g r` keybinding to refresh the magit status buffer.
+
+* 20181027 - Day 43: Spacemacs book improvements
+** Thoughts for today
+   Some quick hacking on the Spacemacs book
+
+** Code from today
+*** Update: Vim tips for developers & Speaking Vim
+*** Update: Used Spacemacs keybindings for Clojure Inspector
+** Activities in detail
+   Update: Vim tips for developers & Speaking Vim
+
+   Moved the more-vim section to vim-tips-for-developers, defining keybindings and tips specifically useful for working with code.
+
+   Added surround to speaking-vim action section and put actions, modifiers and text objects in alphabetical order to make them easier to learn.
+
+*** Update: Used Spacemacs keybindings for Clojure Inspector
+   Noticed the Inspector was using the ~M-RET~ keybinding form, rather than ~SPC~.
+
+* 20181026 - Day 42: Funding London-Clojurians via OpenCollective and hacking on Spacemacs book
+** Thoughts for today
+  A tweet by Martin ... who created Clojureverse let me know about OpenCollective, a way to fund open source and community based organisations.  So I set up an [[https://opencollective.com/london-clojurians][OpenCollective for London Clojurians]].
+
+
+** Code from today
+***
+** Activities in detail
+*** Update: Vim quick reference and tips pages
+    Refactor the grouping of keybindings and tips into a logical order, to make them easier to discover and hopefully learn.  This curating of Vim keybindings and tips will be put into a video (or small series) on getting the most out of Vim style editing in Emacs.
+
+
+*** Precursor - a ClojureScript app for collaborative design
+    Used [[https://precursorapp.com/][Precursor app]] to create a simple sketch of the Status Monitor app I am building.  Precursor is a collaborative sketch tool that feels very modern and looks great, its also pretty easy to use.  I would still use [[https://inkscape.org/][Inkscape]] for infograms, [[http://jr0cket.co.uk/developer-guides/][developer guides]] and other single page graphics as there are many more features, however, Precusor seems much more effective for sketching out ideas and of course collaborating in real time.
+
+    Precursor is also written in ClojureScript and there was a short but interesting article from its author about [[https://precursorapp.com/blog/clojure-is-a-product-design-tool][ClojureScript as a product design tool]].
+
+*** Funding London Clojurians community
+    Created a [[https://opencollective.com/london-clojurians][London-Clojurians]] meetup on [[https://opencollective.com/london-clojurians][OpenCollective]] as a first step to providing a facility for people and companies to donate to the [[https://www.meetup.com/London-Clojurians/][London Clojurians community]].
+
+    A budget has been added of $300 to cover basic expenses for the year, which breaks down as Meetup.com expenses and stickers for LondonClojurians and ClojureBridge.
 
 * 20181025 - Day 41: Spacemacs videos - narrowing, iedit, yasnippets
 ** Thoughts for today
@@ -15,8 +325,6 @@
 *** Youtube Videos
 - [[https://www.youtube.com/watch?v=51as0UrssLM][Spacemacs Yasnippet for boilerplate code and often repeated text]]
 - [[https://www.youtube.com/watch?v=4bVMXXxPiQs][Spacemacs narrowing and iedit magic]]
-
-
 
 
 * 20181024 - Day 40: Coaching, ClojureBridge and orgmode fun
@@ -57,8 +365,6 @@
     It will be interesting to see if the meta data is picked up by Github when it renders the orgmode file.
 
     If the ~attr_org~ does not work then there is also ~attr_html~ which I assume is used when exporting an org-mode file to HTML.
-
-
 
 * 20081023 - Day 39: Applying Bootstrap to the Status Monitor
 ** Thoughts for today
@@ -124,7 +430,6 @@
     Add tests to check for body title and that the page includes Bootstrap style sheets and a Jumbotron.
 
     These tests are more about how to write tests than what should be tested, so may be a little brittle.
-
 
 * 20081022 - Day 38: Event organising and Status Monitor locations
 ** Thoughts for today
@@ -365,8 +670,6 @@ compiling:(status_monitor/handler.clj:1:1)
 #+END_SRC
 
 
-
-
 * 20081020 - Day 36: Marching for democracy
 ** Thoughts for today
   Joined the People's Vote march today and it was huge, one of the biggest gathering of people I have ever experienced.  Over 700,000 people as a rough estimate on the day, however, it felt like more than 1 million people.  It took around 4 hours for everyone to make it from Park Lane to Parliament Square, which is normally a 30 minute stroll.  It was a wonderful day and everyone was very supportive and friendly.  It restored my faith in humanity and wiped away the depression that Brexit had induced in me.
@@ -390,7 +693,6 @@ I did some coding on the ClojureBridge User Guide for Spacemacs.
 
 ** Activities in detail
 ***
-
 
 * 20081018 - Day 34: Spacemacs Videos for Helm and Magit
 ** Thoughts for today
