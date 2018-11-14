@@ -1,5 +1,61 @@
 # 100 Days Of Code - Log
 
+* 20181114 - Day 61: Practicalli Clojure updates
+** Thoughts for today
+   Updated the Practicalli Clojure book to use Version 3 of gitbook.  Tweaked the styles to use a similar style to the improved ClojureBridge London styles.
+** Activities in detail
+*** Updated Gitbook configuration to version 3 and tweaked plugins
+    Updated the book.json configuration of Gitbook to use version 3 and above.
+
+    Removed older plugins no longer used - exercises, quizzes, sunlight-highlighter.
+
+    Added plugins
+    - simpletabs - for tab sections with in a page, eg. for operating system specific instructions in the developer tools section
+    - youtube - adding embedded YouTube videos by just specifying the URL
+    - wide-page - set the page width to be wider (narrower margin either side of each page).  This is very useful for larger and wide screen displays.
+
+    Ran ~gitbook install~ to update the plugins in the Gitbook directory.
+*** Updated to match latest Practicalli CSS styles on website
+    The ClojureBridge London workshop has been used to improve the style used by the Practicalli series of books.  Bringing Practicalli Clojure in line with this style.
+
+* 20181113 - Day 60: 4Clojure code from dojo
+** Thoughts for today
+  Expanded on the code created during the Coding dojo, detailing the design decisions that went into solving the problems.
+** Activities in detail
+*** 4Clojure #18 Sequences - understanding filter function
+    4Clojure problem #18 can be easily solved by evaluating the filter expression in the REPL.
+
+    I describe how the filter function works and compare it to other functions that have related behaviour.  This gives a more complete understanding of the filter function.
+*** 4Clojure #26 - Fibonacci Sequence
+    Analysis of the classic problem of generating the Fibonacci Sequence.  The approach taken was to add the last two values of the sequence to create the next number, starting with a seed value of [1 1].
+
+    Detailed how the design was evolved using a simple loop recur iteration, showing the incremental changes in the design until an answer was found.
+
+    The local names in the code base were kept of reasonable size to be meaningful, but could have been converted to single characters to get a slightly lower golf score (although that isn't important).
+*** 4Clojure #61 - Map Construction - decomposing zipmap
+    I like the 4Clojure problems where you have a restriction, as its a great opportunity to learn about the restricted function (or functions).
+
+    In this example, zipmap is restricted as it is the exact function that would solve the problem.
+
+    By looking at the implementation of zipmap and analysing the problem, a design was evolved that solved the challenge and helped us understand how zipmap works.  This will be useful in understanding when to apply zipmap.
+
+    The incremental steps taken in this design show how conj and reduce functions can work together as well as how they can be substituted by the into function.
+
+* 20181112 - Day 59: Practicalli Clojure updates
+** Thoughts for today
+   Started on the update process of the Practicalli Clojure book, there is a lot of work to do to get it where I want it to be.
+
+   Clojure dojo at uSwitch, working on some interesting [[http://4clojure.com/][4Clojure]] challenges
+** Activities in detail
+*** Added study guide for the virtual study group I run
+    Study guide is evolving, although covers the first few weeks specific sessions. There is also suggestions of topics to be covered in the future.
+
+    Included logos for YouTube Live broadcasts, hangouts and recorded broadcasts.
+*** New version of Development Tools for Clojure development
+    Using the content developed for ClojureBridge London the development tools section has been completely overhauled and should be much simpler to follow.
+
+    Moved the existing content to the end in case there is something extra that is worth factoring into the new content.
+
 * 20181111 - Day 58: ClojureBridge editor user guides - Spacemacs
 ** Thoughts for today
    Writing the Spacemacs editor guide for ClojureBridge.
@@ -21,7 +77,7 @@
 
 * 20181110 - Day 57: ClojureBridge editor user guides - Atom & ProtoREPL
 ** Thoughts for today
-   Broadcasting the second virtual study group for Clojure.
+   Broadcasting the second virtual study group for Clojure and created a logo for Live broadcasts and hangouts, using Inkscape.
 
    Writing the editor guides for ClojureBridge London to describe what I did in the videos and provide a simple reference.
 ** Activities in detail
@@ -37,6 +93,12 @@
     Keybindings for ProtoREPL are provided as a quick reference.
 
     Added images for MacOSX install, missing from the deployment guide commits.
+*** YouTube logos with Inkscape
+    I wanted to add a graphical image to the [[http://practicalli.github.io/clojure/study-guide.html][Virtual Study Guide section]] of [[http://practicalli.github.io/clojure/study-guide.html][Practicalli Clojure]], so students could easy find the recordings, live broadcasts and hangout links.
+
+    In the spirit of broadcasting my work, I recorded a video of [[https://www.youtube.com/watch?v=Ki7C17FPPnQ&t=36s][how I created the first logo using Inkscape]] and some images found on WikiMedia.
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ki7C17FPPnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 * 20181109 - Day 56: MeetAMentor exercises and YouTube broadcasting solved
 ** Thoughts for today
