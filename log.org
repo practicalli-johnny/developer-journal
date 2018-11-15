@@ -1,5 +1,14 @@
 # 100 Days Of Code - Log
 
+* 20181115 - Day 62: Redis Days conference
+** Thoughts for today
+   Applying for jobs today as well as being at the Redis Days conference.  No time for code today.
+** Activities in detail
+*** Applying for several jobs
+    Still using Google docs for my CV as it generates a nice looking PDF file and I can always find the documents easily, regardless of which computer I am using (so long as there is Internet access).
+
+    Eventually I will write my CV in org-mode and get that to generate some really nice PDF and Latex output files.  I can then keep everything on Github (although not sure about sharing this sort of thing publicly in case dodgy recruitment consultancies try and abuse it.  I think that is low risk, but will think more about it.
+
 * 20181114 - Day 61: Practicalli Clojure updates
 ** Thoughts for today
    Updated the Practicalli Clojure book to use Version 3 of gitbook.  Tweaked the styles to use a similar style to the improved ClojureBridge London styles.
