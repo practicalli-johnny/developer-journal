@@ -1,5 +1,18 @@
 # 100 Days Of Code - Log
 
+* 20181116 - Day 63: Practicalli Clojure updates
+** Thoughts for today
+   Working on the Thinking Functionally section of the [[http://practicalli.github.io/clojure/][Practicalli Clojure book]]
+** Activities in detail
+*** Updated Thinking Functionally section to use Klipse
+    Use Klipse to enable live example code for the Thinking Functionally section, allowing the reader to experiment with the code examples in the page.
+*** Updated recursion page in Thinking Functionally section
+    Discussed the constructs available in Clojure for recursion, loop and recur, named function calling itself, map reduce etc, for
+
+    Added examples of these approaches to recursion.
+*** Very rough notes on Transducers
+    Transducers are a very efficient way to transform data, especially complex transformations.
+
 * 20181115 - Day 62: Redis Days conference
 ** Thoughts for today
    Applying for jobs today as well as being at the Redis Days conference.  No time for code today.
