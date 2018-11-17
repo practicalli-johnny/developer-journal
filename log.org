@@ -1,5 +1,22 @@
 # 100 Days Of Code - Log
 
+
+* 20181117 - Day 64: Clojure Study group and Zulip signup
+** Thoughts for today
+   Third broadcast of the Clojure virtual study group, covering structural editing and the first 15 problems from 4Clojure.
+
+   Joined the Clojurians community on Zulip, an open source version of Slack.  Zulip makes conversations more effective by adding the concept of topics to streams (streams are channels in Slack).  Discussions within a Stream are all within a topic, helping focus those conversations and making it much easier to catch up with those conversations after they have happened.
+** Code from today
+*** Structural editing example - clojure->code
+** Activities in detail
+*** Zulip open source chat alternative to Slack - Spacemacs stream
+    I signed up to the clojurians.zulipchat.com community and I really like the UI, especially the concept of putting messages in a stream within a topic.  Streams are channels in Slack.  When you post a message in a stream, you supply a topic for the message.  The message displays in chronological order in the stream, however clicking on the topic name in the left hand navigation, you can view only the messages for that topic.
+
+*** Virtual Clojure Study Group #3 - Structural editing and 4Clojure
+    Covered the basics of structural editing using Spacemacs.
+
+    Discussed the first 15 [[http://4clojure.com/][4Clojure]] problems and discussed how to help solve problems by looking at the `clojure.core` function documentation and source code.
+
 * 20181116 - Day 63: Practicalli Clojure updates
 ** Thoughts for today
    Working on the Thinking Functionally section of the [[http://practicalli.github.io/clojure/][Practicalli Clojure book]]
