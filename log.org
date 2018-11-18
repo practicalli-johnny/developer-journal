@@ -1,5 +1,26 @@
 # 100 Days Of Code - Log
 
+* 20181118 - Day 65: Coaching and Practicalli Clojure book
+** Thoughts for today
+   Coaching this evening, revisiting the Hoplon project but unfortunate it doesnt seem to run from CIDER. Not sure why its broken.
+
+   Discussed the libraries that have been moved into the [[https://clj-commons.github.io/][clj-commons Github organisation]] and submitted an issue to add the Github pages link to the description of the clj-commons.github.io repository.
+
+   Discussed Finite state machines in Clojure and libraries that help define finite state machines.  Finite state machines libraries include:
+   * http://jedahu.github.io/spaghetti/
+   * https://github.com/ztellman/automat
+
+   A new idea for a future coaching session is to try the [[https://github.com/duct-framework/duct][Duct project]] for building a server side application and also use a Finite State Machine to model the UI. Inspiration comes from the blog: [[http://blog.cognitect.com/blog/2017/5/22/restate-your-ui-using-state-machines-to-simplify-user-interface-development][Restate your UI using state machines to simplify user interface development]]
+
+  More work on the Practicalli Clojure book.
+
+** Activities in detail
+*** Added Clojure naming conventions
+    Described with examples the common naming conventions used in Clojure.
+*** Added Clojure overview in 10 big ideas
+    Added Stuart Halloway's 10 big ideas (although there are 11) as a way to think about the fundamental concepts that underpin Clojure.
+*** New: Clojure in 15 minutes
+    Covering the syntax of the Clojure language with some relatively simple examples.
 
 * 20181117 - Day 64: Clojure Study group and Zulip signup
 ** Thoughts for today
@@ -33,11 +54,20 @@
 * 20181115 - Day 62: Redis Days conference
 ** Thoughts for today
    Applying for jobs today as well as being at the Redis Days conference.  No time for code today.
+   Day 62 - at RedisDay conference
+
+   Submitted Emacs talk to Linux In London community.
 ** Activities in detail
 *** Applying for several jobs
     Still using Google docs for my CV as it generates a nice looking PDF file and I can always find the documents easily, regardless of which computer I am using (so long as there is Internet access).
 
     Eventually I will write my CV in org-mode and get that to generate some really nice PDF and Latex output files.  I can then keep everything on Github (although not sure about sharing this sort of thing publicly in case dodgy recruitment consultancies try and abuse it.  I think that is low risk, but will think more about it.
+*** Day 62 - at RedisDay conference
+    Lots of interesting talks and some very interesting people to talk to.
+
+    Applied for a few jobs, mostly Clojure and one Developer Relations role.
+
+    Submitted Emacs talk to Linux In London community.
 
 * 20181114 - Day 61: Practicalli Clojure updates
 ** Thoughts for today
