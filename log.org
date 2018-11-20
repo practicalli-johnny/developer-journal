@@ -1,5 +1,20 @@
 # 100 Days Of Code - Log
-* 20181119 - Day 66: Clojure->Code exercises
+* 20181120 - Day 67: Clojure->Code exercises
+** Thoughts for today
+  Continuing to practice Clojure code by working through and organising my Clojure Through Code examples.
+** Activities in detail
+*** Defining and generating ascii codes for an alphabet
+    Examples of how to define a collection that represents the ascii codes for an alphabet.
+
+    Generating ascii codes given a starting reference.
+*** Update: ascii code generator - simplified
+    Use of a for loop is not required as map can be used to join two collections together, in this case the collection that is the English language alphabet and the generated range of ascii characters.
+
+    The range of ascii characters is a sequential whole number series, starting from the given ascii code.  So to generate the ascii number collection, range function is provided the start code value and a calculation of the end code value.
+***  Add: Palindrome checker in functional concepts section
+    Various approaches to writing a palindrome checker.
+
+* 20181119 - Day 66: Practicalli Clojure - core.async ideas
 ** Thoughts for today
   More work on the Practicalli Clojure book, this time some thoughts on what to include for a core.async section.
 ** Activities in detail
