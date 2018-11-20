@@ -1,4 +1,15 @@
 # 100 Days Of Code - Log
+* 20181119 - Day 66: Clojure->Code exercises
+** Thoughts for today
+  More work on the Practicalli Clojure book, this time some thoughts on what to include for a core.async section.
+** Activities in detail
+*** New: core.async section - very basic start and brain dump
+    Started a new section on core.async
+
+    Several example projects come to mind in order to explain how to use core.async
+    - Bike assembly line - some tasks can be done in parrallel, but not all
+    - Toy car assembly - summary of ideas from PurelyFunctional.tv
+    - Clacks messenger - visualise the Clack towers using the light patterns encoder-decoder code from earlier sections.
 
 * 20181118 - Day 65: Coaching and Practicalli Clojure book
 ** Thoughts for today
