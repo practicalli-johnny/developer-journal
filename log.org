@@ -1,4 +1,18 @@
 # 100 Days Of Code - Log
+
+* 20181121 - day 68: Interviews
+** thoughts for today
+   Today is the first job interview I have had for 15 months and only the fourth interview in the last 6 years, so will be interesting to see how prepared I am.
+
+   Turns out it was a great interview, I really enjoyed it.  There are still a few more steps in the process, but a very good way to start and helps build my confidence.
+
+   More work on the code examples in the Clojure->Code repository to support the Practicalli Clojure book and a first draft of the chapter on Macros.  There is much more I can add to the discussion of macros and how to write them, but for now its important to define when to use them and the constraints around their use.
+** activities in detail
+*** ClojureBridge London exercises and solution discussions
+    Exercises from the ClojureBridge London workshop and a discussion on how those exercises were solved.
+*** Add: Section on Macros
+    A brief explanation of macros and suggestions of where to use them.
+
 * 20181120 - Day 67: Clojure->Code exercises
 ** Thoughts for today
   Continuing to practice Clojure code by working through and organising my Clojure Through Code examples.
