@@ -1,4 +1,27 @@
 # 100 Days Of Code - Log
+* 20181122 - day 69: Interviews and clojure.test basics
+** thoughts for today
+Second interview
+
+London Clojurians meetup at Funding circle
+
+Wrote a quick overview of the testing libraries and test runners available for Clojure.
+
+Added a quick introduction into ~clojure.test~, to be expanded on soon.
+
+** activities in detail
+*** New: Working with maps
+    The basics of working with hash-map collections, including techniques for iterating over the maps.
+*** New: Overview of testing in clojure - initial draft
+    Create a quick overview of the libraries and test runners available for Clojure. Will extend this section in future to identify commonly used libraries and tools.
+*** New: Simple introduction to testing with clojure.test
+A simple introduction to testing with clojure.test, covering assertions, testing
+function, naming of test function and namespaces.
+
+Clojure.test is the most commonly used test framework as it is shipped with
+Clojure already.
+
+
 
 * 20181121 - day 68: Interviews
 ** thoughts for today
