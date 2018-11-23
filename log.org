@@ -1,4 +1,13 @@
 # 100 Days Of Code - Log
+* 20181123 - Day 70: Prepare talks for LJC and Virtual Study group
+** Thoughts for today
+  Created code examples for a Clojure talk at the LJC conference.
+** Code from today
+   ***
+** Activities in detail
+*** Clojure loves data talk for the LJC conference
+    Its the LJC conference tomorrow, so I created some code examples to hack on for my talk.  The talk will be walking through the code, evaluating it to show the results and discussing how Clojure takes a functional and data focused approach to design.
+
 * 20181122 - day 69: Interviews and clojure.test basics
 ** thoughts for today
 Second interview
