@@ -1,4 +1,17 @@
 # 100 Days Of Code - Log
+* 20181124 - Day 71: London Java Community conference
+** Thoughts for today
+   Attended the excellent London Java Community conference, which is an unconference style event.  The event started with a talk from [[https://twitter.com/speakjava][Simon Ritter]] on Java 11 whilst I worked with the other organisers to assemble the schedule from the talk suggestions.  There was a great selection of talks which were grouped into the themes Architecture, AI & Machine Learning, Core Java, JVM languages, agile practices and self improvement.
+
+[[./images/london-java-community-conference-2018-schedule.png]]
+
+
+I had the chance to broadcast two talks from the Conference, a lightning talk on broardcasting and a live Clojure hacking session called *Clojure loves data*
+- [[https://www.youtube.com/watch?v=nOfR_OCuZZo][broadcasting virtual study groups with YouTube live]]
+- [[https://www.youtube.com/watch?v=Ja63rOa2MFA][Clojure loves data]]
+
+
+
 * 20181123 - Day 70: Prepare talks for LJC and Virtual Study group
 ** Thoughts for today
   Created code examples for a Clojure talk at the LJC conference.
