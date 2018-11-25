@@ -1,4 +1,21 @@
 # 100 Days Of Code - Log
+
+* 20181125 - Day 72: Virtual Clojure study group & Coaching
+** Thoughts for today
+   Ran the fourth virtual study group, discussing *apps with maps* as a way to think about how to model information with Clojure
+
+   Caught up with my friend in the east coast USA for some coaching.  Today we looked at the Duct library from James Reeves.  The nice thing about Duct is that it is very data focused.  We got a duct website up an running from Spacemacs very easily, its just lein new duct project-name, open the source file in Spacemacs and then run cider-jack-in, ~,'~
+** Code from today
+  ***
+** Activities in detail
+*** Apps with Maps - Clojure study group
+
+    Looked at defining data structures using Clojure maps (hash-map) which is a key-value pair data structure (like json but much more flexible in the type of content you can use as keys and values.
+
+    Discussed how to get information out of maps, using the ~get~ and ~get-in~ functions.  Also showed that keywords and maps can be used as functions, which can sometimes be useful when writing short inline functions, eg. conditional functions with ~map~ or ~filter~ functions.
+
+   See the video: [[https://www.youtube.com/edit?o=U&video_id=ikW6Qk73K1s][Clojure Study group #4 - working with data in Clojure hash-map]]
+
 * 20181124 - Day 71: London Java Community conference
 ** Thoughts for today
    Attended the excellent London Java Community conference, which is an unconference style event.  The event started with a talk from [[https://twitter.com/speakjava][Simon Ritter]] on Java 11 whilst I worked with the other organisers to assemble the schedule from the talk suggestions.  There was a great selection of talks which were grouped into the themes Architecture, AI & Machine Learning, Core Java, JVM languages, agile practices and self improvement.
