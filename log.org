@@ -1,5 +1,35 @@
 # 100 Days Of Code - Log
 
+* 20181126 - Day 73: Coaching, dojo and 4Clojure
+** Thoughts for today
+   Face to face coaching in Wagamama today, covering some of the 4Clojure exercises
+
+   Went to the Thoughtworks Clojure dojo and worked on some more 4Clojure exercises.  Got a bit entrenched in #30 Compress a sequence.
+
+** Code from today
+   ***
+** Activities in detail
+*** Solving 4Clojure number 30 - compress a sequence
+   The 4Clojure challenge 30 is to compress a sequence with three tests.
+
+   http://www.4clojure.com/problem/30
+
+   Write a function which removes consecutive duplicates from a sequence.
+
+   (= (apply str (__ "Leeeeeerrroyyy")) "Leroy")
+   (= (__ [1 1 2 3 3 2 2 3]) '(1 2 3 2 3))
+   (= (__ [[1 2] [1 2] [3 4] [1 2]]) '([1 2] [3 4] [1 2]))
+
+
+#+BEGIN_SRC clojure
+(apply str ( #(reduce (fn [reslist listvalue]
+                        (if (not= (last reslist) listvalue)
+                          (conj reslist listvalue)
+                          reslist))
+               [] %)
+               "Leeeeeerrroyyy"))
+#+END_SRC
+
 * 20181125 - Day 72: Virtual Clojure study group & Coaching
 ** Thoughts for today
    Ran the fourth virtual study group, discussing *apps with maps* as a way to think about how to model information with Clojure
