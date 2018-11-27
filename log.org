@@ -1,4 +1,134 @@
 # 100 Days Of Code - Log
+* 20181127 - Day 74: Refactor 4Clojure Compress a sequence using partition
+** Thoughts for today
+   Although we had a solution for the 4Clojure challenge 30, compressing a sequence, I felt there was a different approach using a function called ~partition~.  So today I refactored the code and found a nice elegant alternative.
+** Activities in detail
+*** Refactored 4Clojure #30 using partition-by identity
+   Created a much more elegant and idiomatic solution to 4Clojure #30, Compress a sequence challenge.  Rather than try to iterate over the collection and only return the unique values, if you partition by identity then all values are grouped together, so you only need to take one of each to create the correct result.
+
+   Analyse the problem.
+
+   I thought that I could divide up the pattern as a way to identify duplicates. ~partition~ by two creates pairs but doesnt help with identifying duplicates
+
+#+BEGIN_SRC clojure
+(partition 2 [1 1 2 3 3 2 2 3])
+;; => ((1 1) (2 3) (3 2) (2 3))
+#+END_SRC
+
+partition by 2, but only stepping through by 1 creates all the possible sequence of pairs its now easy to see the duplicates
+
+#+BEGIN_SRC clojure
+(partition 2 1 [1 1 2 3 3 2 2 3])
+;; => ((1 1) (1 2) (2 3) (3 3) (3 2) (2 2) (2 3))
+#+END_SRC
+
+so if we filter out the duplicates then we should be close
+
+#+BEGIN_SRC clojure
+(filter
+ #(not= (first %) (second %))
+ (partition 2 1 [1 1 2 3 3 2 2 3]))
+;; => ((1 2) (2 3) (3 2) (2 3))
+#+END_SRC
+
+The structure is not quite right, so lets flatten it
+
+#+BEGIN_SRC clojure
+(flatten
+ (filter
+  #(not= (first %) (second %))
+  (partition 2 1 [1 1 2 3 3 2 2 3])))
+;; => (1 2 2 3 3 2 2 3)
+#+END_SRC
+
+Oh, thats not right.  It feels close, but how to merge correctly?
+
+changing track a little lets use a variation of ~partition~ called ~partition-by~ and use the ~identity~ function to create a sequence for each value
+
+#+BEGIN_SRC clojue
+(partition-by identity [1 1 2 3 3 2 2 3])
+;; => ((1 1) (2) (3 3) (2 2) (3))
+#+END_SRC
+
+Then we can get the first value from each sequence
+
+#+BEGIN_SRC clojure
+(map
+ first
+ (partition-by identity [1 1 2 3 3 2 2 3]))
+;; => (1 2 3 2 3)
+#+END_SRC
+
+This works for the vector of vectors test too
+
+#+BEGIN_SRC clojure
+(map
+ first
+ (partition-by identity [[1 2] [1 2] [3 4] [1 2]]))
+;; => ([1 2] [3 4] [1 2])
+#+END_SRC
+
+But it doesnt quite work for a string, but its so close
+
+#+BEGIN_SRC clojure
+(map
+ first
+ (partition-by identity "Leeeeeerrroyyy"))
+;; => (\L \e \r \o \y)
+#+END_SRC
+
+so it seems we need to treat the results slightly differently two results are a collection, one is a sequence of characters.  If we test the result to see if it contains characters then we can post-process the result, reducing it to a string.  So lets put the result of our partition into a local name then process the result if it contains chars.
+
+#+BEGIN_SRC clojure
+((fn [pattern]
+   (let [compressed (map
+                     first
+                     (partition-by identity pattern))]
+     (if (char? (first compressed))
+       (reduce str compressed)
+       compressed)))
+ "Leeeeeerrroyyy")
+;; => "Leroy"
+#+END_SRC
+
+Now try the function the the other two tests.
+
+#+BEGIN_SRC clojure
+((fn [pattern]
+   (let [compressed (map
+                     first
+                     (partition-by identity pattern))]
+     (if (char? (first compressed))
+       (reduce str compressed)
+       compressed)))
+ [1 1 2 3 3 2 2 3])
+;; => (1 2 3 2 3)
+
+
+((fn [pattern]
+   (let [compressed (map
+                     first
+                     (partition-by identity pattern))]
+     (if (char? (first compressed))
+       (reduce str compressed)
+       compressed)))
+ [[1 2] [1 2] [3 4] [1 2]])
+;; => ([1 2] [3 4] [1 2])
+#+END_SRC
+
+   The test that uses a string type, also has a call to the result that will convert it from a sequence of characters into a string.  So there is no need for a particular test for the type so we can simplify the result.
+
+#+BEGIN_SRC clojure
+(fn [pattern]
+  (map first (partition-by identity pattern)))
+#+END_SRC
+
+Submitted answer to 4Clojure
+
+#+BEGIN_SRC clojure
+(fn [pattern]
+  (map first (partition-by identity pattern)))
+#+END_SRC
 
 * 20181126 - Day 73: Coaching, dojo and 4Clojure
 ** Thoughts for today
