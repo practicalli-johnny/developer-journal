@@ -1,4 +1,12 @@
 # 100 Days Of Code - Log
+* 20181128 - Day 75: Working on books & VR games in Playstation 4
+** Thoughts for today
+   Wow, I just got a PS4 with VR headset and oh my is it emersive.  I got the game [[http://www.minotaurproject.co.uk/Virtual/Polybius.php][Ploybuis]] from Llamasoft and it is amazing playing it just on the TV, but in VR it is unbelievably awesome.  Watch the video on the website for just a small taste of how amazing this game is.  Please do not watch the video if you suffer illness from strobing lights.
+
+   Also fitted my Beeline smart navigation device to the Brompton, so just need to get out of the house and try it.  It has a decent sized display for a bike and shows you the general direction you are heading.  Its linked to Strava and Google maps, so you can set a pre-defined route or you can set a destination and let the Beeline suggest turns you can talk along the route.  Hopefully this is a bit less annoying than the Google maps voice directions updates when I take alternative turns than suggested.
+
+   Added some more content to the books.
+
 * 20181127 - Day 74: Refactor 4Clojure Compress a sequence using partition
 ** Thoughts for today
    Although we had a solution for the 4Clojure challenge 30, compressing a sequence, I felt there was a different approach using a function called ~partition~.  So today I refactored the code and found a nice elegant alternative.
