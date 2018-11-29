@@ -1,4 +1,38 @@
 # 100 Days Of Code - Log
+* 20181129 - Day 76: ClojureX and CIDER debugging practice
+** Thoughts for today
+   Catching up with the volunteers giving the Clojure workshops this week.  Also confirming the venue is equipped with everything required.  I will be taking some power extensions (20 sockets).
+
+   Suggested a topic for the ClojureX panel: *Spreading the spirit of Clojure* to the other conference organisers, along with some suggested people to have on the panel.
+
+   Starting to get into the Cider debugger which is a very simple to use tool to trace value changes as you step through a function call.  This debugger is especially useful for iterative and recursive functions.
+
+** Code from today
+*** [[https://gist.github.com/jr0cket/3bef332bc8565f59086af1863e0a8b15][Cleaner version of my .spacemacs configuration]]
+
+** Activities in detail
+*** Cleaned my ~.spacemacs~ configuration file
+    My ~.spacemacs~ configuration file was a little messy, especially the ~dotspacemacs/user-config~ section.
+
+    I moved all the older configuration sections and Emacs style custom keybindings to the bottom of the user-config section.  Eventually these will all go once they are documented in the reference section of my [[https://practicalli.github.io/spacemacs/][Practicalli Spacemacs book]].
+
+   Published the [[https://gist.github.com/jr0cket/3bef332bc8565f59086af1863e0a8b15][cleaned up version of the ~.spacemacs~ configuration file]] to my Github gists.
+
+*** Cider debugger practice
+   CIDER includes a debugger that allows you to instrument a single function or all functions in a namespace.
+
+   [[http://www.cider.mx/en/latest/images/cider_debugger.gif][Cider debugging in action]]
+
+   ~, d b~ instruments a function for debugging, creating breakpoints so you can step through each evaluation and value in the function when it is called.
+
+  Call the instrumented function as normal and a menu appears above the function definition.
+
+  ~n~ steps the cursor through the function, showing the value of each symbol or expression evaluation in turn.  You can step through the whole execution of the function or stop using ~q~.
+
+  Juraj Martinka has a nice video showing [[https://www.youtube.com/watch?v=jHCch3-Yuac][the cider debugger in action]].
+
+   The also a fledgling project called [[http://clojure-emacs.github.io/sayid/][Sayid]] that adds even more detailed debugging, however, the CIDER debugger is a really useful place to start debugging Clojure.
+
 * 20181128 - Day 75: Working on books & VR games in Playstation 4
 ** Thoughts for today
    Wow, I just got a PS4 with VR headset and oh my is it emersive.  I got the game [[http://www.minotaurproject.co.uk/Virtual/Polybius.php][Ploybuis]] from Llamasoft and it is amazing playing it just on the TV, but in VR it is unbelievably awesome.  Watch the video on the website for just a small taste of how amazing this game is.  Please do not watch the video if you suffer illness from strobing lights.
