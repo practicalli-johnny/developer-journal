@@ -1,4 +1,14 @@
 # 100 Days Of Code - Log
+* 20181130 - Day 77: Coaching and Spacemacs cheatsheet
+** Thoughts for today
+  Spend a couple of hours coaching on hangouts today, guiding the installation of Spacemacs, enhancing the Clojure experience and how to start learning to use Vim-style editing.  Added a [[https://practicalli.github.io/spacemacs/clojure-cheatsheet.html][Clojure Cheatsheet]] to the [[http://practicalli.github.io/spacemacs][Practicalli Spacemacs book]].
+
+** Activities in detail
+*** Added a Clojure Cheatsheet to practicalli spacemacs
+    Learning Spacemacs does take a little time, as there are so many really useful features.  To help focus the learning and not drown in features, I created a very terse [[https://practicalli.github.io/spacemacs/clojure-cheatsheet.html][cheatsheet]] to cover what I believe to be the absolute basics of using Spacemacs for Clojure development.
+*** Updated Virtual Clojure study guide
+    Updated week 5 of the [[http://practicalli.github.io/clojure/study-guide.html][Clojure study guide]].  For the fifth week we will do some Test Driven Development.
+
 * 20181129 - Day 76: ClojureX and CIDER debugging practice
 ** Thoughts for today
    Catching up with the volunteers giving the Clojure workshops this week.  Also confirming the venue is equipped with everything required.  I will be taking some power extensions (20 sockets).
