@@ -1,4 +1,19 @@
 # 100 Days Of Code - Log
+
+* 20181201 - Day 78: Clojure Study group - TDD Clacks
+** Thoughts for today
+  The fifth Clojure study group broadcast today was live coding a Test Driven Development approach to solving the Clacks encoder/decoder.
+
+  Also had another VR experience with Polybius on the PS4.
+
+** Code from today
+*** [[https://github.com/practicalli/clacks][Clacks encoder/decoder - TDD approach]]
+** Activities in detail
+*** Clacks encoder/decoder - TDD approach
+   Broadcast a live coding session where the Test Driven Development approach was taken to write an encoder / decoder using the Clacks notation.
+
+   [[https://www.youtube.com/watch?v=LvissLmUNho][Clojure study group #5 broadcast]]
+
 * 20181130 - Day 77: Coaching and Spacemacs cheatsheet
 ** Thoughts for today
   Spend a couple of hours coaching on hangouts today, guiding the installation of Spacemacs, enhancing the Clojure experience and how to start learning to use Vim-style editing.  Added a [[https://practicalli.github.io/spacemacs/clojure-cheatsheet.html][Clojure Cheatsheet]] to the [[http://practicalli.github.io/spacemacs][Practicalli Spacemacs book]].
