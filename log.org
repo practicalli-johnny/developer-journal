@@ -1,5 +1,26 @@
 # 100 Days Of Code - Log
 
+* 20181202 - Day 79: London Clojurians workshop - Kafka and Spec
+** Thoughts for today
+  At the Clojure workshop today for a Kafka and ~clojure.spec~ workshop.
+
+  The kafka workshop showed us how to send information via a publisher and pull information from kafka using a consumer, all from within Clojure using the [[https://github.com/weftio/gregor][gregor]] library
+
+  The [[https://github.com/djtango/spec-from-the-ground-up][spec from the ground up workshop]] was a very detailed journey with lots of examples and exercises, for both defining and testing specs.
+
+** Code from today
+*** [[https://github.com/djtango/spec-from-the-ground-up][spec from the ground up]]
+*** [[https://github.com/dotemacs/clojurex2018-kafka][kafka with Clojure]]
+** Activities in detail
+*** London Clojurians workshop
+    I organised a workshop the day before the ClojureX conference in London, to give a chance to work with Clojure developers outside of London.
+
+    There was a great turn out, especially as it was a Sunday.  The venue provided by uSwitch was lovely, very posh and very comfy.  It was just big enough for everyone and it was a very collaborative day.
+
+    Aleksandar ran an excellent Kafka session, first covering the essential theory, then diving into coding examples with Clojure driving Kafka producers and consumers.  A Kafka instance was provided in a self-contained docker file and the [[https://github.com/dotemacs/clojurex2018-kafka][code examples were on Github]].
+
+    Deon ran a very detailed workshop on Clojure spec, the new library that provides a detailed and testable contract around you functions and data structures.  Deon gave a brief introduction to Spec and then provided a series of challenges (in GitHub branches) to help us build up a series of different contracts and tests using spec.  All the challenges and their solutions are on GitHub, in the [[https://github.com/djtango/spec-from-the-ground-up][spec from the ground up]] repository.
+
 * 20181201 - Day 78: Clojure Study group - TDD Clacks
 ** Thoughts for today
   The fifth Clojure study group broadcast today was live coding a Test Driven Development approach to solving the Clacks encoder/decoder.
@@ -255,7 +276,6 @@ I had the chance to broadcast two talks from the Conference, a lightning talk on
 - [[https://www.youtube.com/watch?v=Ja63rOa2MFA][Clojure loves data]]
 
 
-
 * 20181123 - Day 70: Prepare talks for LJC and Virtual Study group
 ** Thoughts for today
   Created code examples for a Clojure talk at the LJC conference.
@@ -286,7 +306,6 @@ function, naming of test function and namespaces.
 
 Clojure.test is the most commonly used test framework as it is shipped with
 Clojure already.
-
 
 
 * 20181121 - day 68: Interviews
@@ -626,7 +645,6 @@ Clojure already.
    Certainly this information could be moved into a design document, assuming the team were prepared to constantly update such a document. Literate programming design documents using Klipse or Org-mode babel would give live documentation that included an active repl, allowing you to get the feedback from code without having to switch back and forth between documentation and code editor (switching like this is one of the reasons documentation goes stale).
 
 
-
 * 20181104 - Day 51: Over half way there
 ** Thoughts for today
 
@@ -785,7 +803,6 @@ Clojure already.
 *** Youtube Videos
 - [[https://www.youtube.com/watch?v=51as0UrssLM][Spacemacs Yasnippet for boilerplate code and often repeated text]]
 - [[https://www.youtube.com/watch?v=4bVMXXxPiQs][Spacemacs narrowing and iedit magic]]
-
 
 * 20181024 - Day 40: Coaching, ClojureBridge and orgmode fun
 ** Thoughts for today
@@ -1128,7 +1145,6 @@ Extra input
 compiling:(status_monitor/handler.clj:1:1)
 
 #+END_SRC
-
 
 * 20081020 - Day 36: Marching for democracy
 ** Thoughts for today
