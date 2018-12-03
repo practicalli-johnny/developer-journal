@@ -1,5 +1,21 @@
 # 100 Days Of Code - Log
 
+* 20181203 - Day 80: ClojureX day 1
+** Thoughts for today
+   Lots of small challenges to face today with the ClojureX conference, the most noticeable issue being the stage placement which blocked the view of the screen by the speaker for the audience on the left hand side.
+
+   Started day one of Advent of Code and completed the first part.
+
+** Code from today
+*** Advent of Code day one, part one
+** Activities in detail
+*** Advent of Code day one, part one
+    I like the [[https://adventofcode.com/][Advent of Code]] challenges as they have a nice engaging story to read as you try solving the problem.  For the first part of the first day I did spend more time reading the problem description though, as it turns out the answer was very simple.
+
+    In part one, it sets the scene that you are falling through time and space with only a little device to help stabalise you.  The device needs to be tuned to a particular frequency, but you dont know what.  So the challenge gives you 100 frequency adjustments, unique to your own login to Advent of Code.  The first part of the challenge is simply to total all those values together.
+
+    To solve the problem, I copied all the numbers into a vector and added them all up using ~reduce +~.
+
 * 20181202 - Day 79: London Clojurians workshop - Kafka and Spec
 ** Thoughts for today
   At the Clojure workshop today for a Kafka and ~clojure.spec~ workshop.
