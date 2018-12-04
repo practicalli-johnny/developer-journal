@@ -1,5 +1,17 @@
 # 100 Days Of Code - Log
 
+* 20181204 - Day 81: ClojureX day 2
+** Thoughts for today
+   Everything ran much smoother today at the conference and I finally got my line-up for the panel.
+
+   Overall the conference went well.  Unfortunately SkillsMatter mis-communicated that this was our biggest conference to date, this was incorrect as although we were well over 160 people, we did not break the 220 record from a few years ago.
+
+   All the videos from day one are already published on the SkillsMatter website and most of day two videos are there as well.
+
+   Had a great catch up with the speakers at the end of the day at the 'speakers drinks and nibbles' area.  Some comments about this making the speakers a lot less accessible, which was obvious.
+
+   No time for coding today as I was exhausted after running the conference and cycling home.
+
 * 20181203 - Day 80: ClojureX day 1
 ** Thoughts for today
    Lots of small challenges to face today with the ClojureX conference, the most noticeable issue being the stage placement which blocked the view of the screen by the speaker for the audience on the left hand side.
