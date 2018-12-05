@@ -1,5 +1,20 @@
 # 100 Days Of Code - Log
 
+* 20181205 - Day 82: Organising my 4Clojure solutions
+** Thoughts for today
+  Not a lot of energy today after 3 full days of events and 126km on the Brompton.
+
+  Started a repository for [[http://4clojure.com/][4Clojure]] solutions, discussing the different ways they can be solved and any interesting approaches.
+
+** Code from today
+*** jr0cket/4Clojure repository
+** Activities in detail
+*** Created a new 4Clojure repository
+    ~lein new four-clojure~
+
+    Added solution and discussion around challenge #1 - Nothing but the truth
+
+
 * 20181204 - Day 81: ClojureX day 2
 ** Thoughts for today
    Everything ran much smoother today at the conference and I finally got my line-up for the panel.
