@@ -1,5 +1,21 @@
 # 100 Days Of Code - Log
 
+* 20181206 - Day 83: Interview and 4Clojure
+** Thoughts for today
+   Meeting with the founders of All Street Research, a very interesting Financial services company, developing Artificial Intelligence systems in Clojure.
+
+   Documenting some interesting 4Clojure challenges.
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure][4Clojure challenges 2, 3 and 4]]
+** Activities in detail
+*** 4Clojure challenges
+    Described in detail the possible solutions to challenges 2 to 4.
+
+    https://github.com/jr0cket/four-clojure
+
+    Challenge 4 had an interesting sideline investigation of calling a keyword with arguments.  Its assumed that calling the keyword :a has the same function signature as calling the function called ~keyword~.  So when calling ~(:a :b :c)~ the ~:b~ argument is taken as a namespace and the ~:c~ argument is the name of the keyword, which is then returned as the result.
+
+
 * 20181205 - Day 82: Organising my 4Clojure solutions
 ** Thoughts for today
   Not a lot of energy today after 3 full days of events and 126km on the Brompton.
@@ -13,7 +29,6 @@
     ~lein new four-clojure~
 
     Added solution and discussion around challenge #1 - Nothing but the truth
-
 
 * 20181204 - Day 81: ClojureX day 2
 ** Thoughts for today
