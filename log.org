@@ -1,5 +1,19 @@
 # 100 Days Of Code - Log
 
+* 20181207 - Day 84: Preparing for Virtual Study group
+** Thoughts for today
+   Really impressed with the first day of [[https://www.twitch.tv/timpote][live streaming advent of code by Tim Pote]].  Tim took the opportunity to not just solve the problem, but discuss the different ways to approach the problem in Clojure: recursion, reduction and sequence operators.
+
+   Created and advertise the virtual study group for this weekend.
+
+   Prepare Advent of Code challenges for the Virtual Study group on Saturday
+
+** Code from today
+***  [[https://github.com/jr0cket/four-clojure][4Clojure challenges 5, 6, 7]]
+** Activities in detail
+*** 4Clojure challenges
+    Discussed the solutions to 4Clojure challenges 5, 6 and 7.  Useful to remember that collection types are less important when comparing values as its the values inside those collections that are being compared.  Often just returning a list or a vector makes no difference to the result.
+
 * 20181206 - Day 83: Interview and 4Clojure
 ** Thoughts for today
    Meeting with the founders of All Street Research, a very interesting Financial services company, developing Artificial Intelligence systems in Clojure.
@@ -14,7 +28,6 @@
     https://github.com/jr0cket/four-clojure
 
     Challenge 4 had an interesting sideline investigation of calling a keyword with arguments.  Its assumed that calling the keyword :a has the same function signature as calling the function called ~keyword~.  So when calling ~(:a :b :c)~ the ~:b~ argument is taken as a namespace and the ~:c~ argument is the name of the keyword, which is then returned as the result.
-
 
 * 20181205 - Day 82: Organising my 4Clojure solutions
 ** Thoughts for today
