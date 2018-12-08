@@ -1,5 +1,28 @@
 # 100 Days Of Code - Log
 
+* 20181208 - Day 85: MeetAMentor Clojure Study group
+** Thoughts for today
+   Inspired by the broadcasting by Tim Pote of his solutions to Advent of Code, I did my own spin of the first day of challenges.
+** Code from today
+*** [[https://github.com/jr0cket/advent-of-code-2018][Advent of Code 2018]]
+** Activities in detail
+*** Advent of code day one
+    A new Leiningen project created with the default template. Updated licence to Creative Commons.
+
+    ~lein new advent-of-code-2018~
+
+    The first part of day one is a simple ~reduce +~ over the specific data set of frequency adjustments. Added the unique data set for day one using a different namespace as its a long data set.
+
+    To see if there was any performance difference with using either apply or reduce functions, gathered timing and bench marking results using the advent of code data set. Results show that apply is faster in this instance.
+
+    Part two was tricky as we need to manage state while we process the frequency-changes.  We need to keep track of the frequencies that we adjust the device to each time.
+
+    I tried out the imperative and mutable solution (DONT DO THIS AT HOME!) that Tim Pote discussed in his broadcast and it worked, although did not feel at all like Clojure.
+
+    Then I took a functional approach with recursion, using ~loop~ and ~recur~ at a pretty low level of abstraction. Again that worked, although the code is a little procedural and certainly not getting the most out of Clojure.
+
+    The design was evolved to using reduce and then further to use reductions to create all the intermediary results of the reduce.  This made a pretty great abstraction on the design and a really simple expression.  One thing that was missing was a function similar to ~distinct~ except we wanted to keep just the duplicates, so a simple helper function was added.
+
 * 20181207 - Day 84: Preparing for Virtual Study group
 ** Thoughts for today
    Really impressed with the first day of [[https://www.twitch.tv/timpote][live streaming advent of code by Tim Pote]].  Tim took the opportunity to not just solve the problem, but discuss the different ways to approach the problem in Clojure: recursion, reduction and sequence operators.
