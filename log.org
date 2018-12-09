@@ -1,5 +1,13 @@
 # 100 Days Of Code - Log
 
+* 20181209 - Day 86: Coaching and advent of code challenges
+** Thoughts for today
+   Cleaned up the code from the first days Advent of Code challenge.
+
+   Mentoring my Clojure friend in the USA.
+** Code from today
+*** [[https://github.com/jr0cket/advent-of-code-2018][Advent of Code 2018]]
+
 * 20181208 - Day 85: MeetAMentor Clojure Study group
 ** Thoughts for today
    Inspired by the broadcasting by Tim Pote of his solutions to Advent of Code, I did my own spin of the first day of challenges.
