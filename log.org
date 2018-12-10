@@ -1,5 +1,27 @@
 # 100 Days Of Code - Log
 
+* 20181210 - Day 87: Coaching and uSwitch dojo
+** Thoughts for today
+   Another coaching session in Wagamama, very healthy and relaxing way to learn and teach Clojure.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/blob/master/src/four_clojure/041_drop_every_nth_item.clj][Four-clojure challenge #41]]
+*** [[https://github.com/jr0cket/advent-of-code-2018/commit/81dd6f1025610a146048fa324b63e50248f4e521][Clojure dojo - Advent of Code day 9]]
+** Activities in detail
+*** Coaching session - 4Clojure #41
+    Challenge #41 is quite a fun one.  Looking at the first and last test of the challenge we are given a sequential set of numbers, so it seems you could just write a ~filter~ function (or ~remove~) and a specific function to only return the right values.
+
+    The middle test uses keywords, so there is no uniform way of removing elements of the collection based on their value.  So instead we have to do remove elements by position (so following the spirit of nth).
+
+    Once you discover the ~partition~ function the problem becomes much easier to solve, as you can group the elements by their position in the collection.  You can also step through a collection at a size different to the partition size you want to create.  So with a partition of 2 and a step of 3 we can quickly get the shape of data we wanted.  Then its just a case of tidying up the data to match the result using the ~flatten~ function.
+
+    https://github.com/jr0cket/four-clojure/blob/master/src/four_clojure/041_drop_every_nth_item.clj
+
+*** Clojure dojo - Advent of Code day 9
+    Collective approach to solving the day 9 challenge of the Advent of Code.  There was a lot of discussion around what the challenge actually was and the different ways to solve it.  There were possibly a few too many people in our group and although this did lead to some very interesting discussions, we didnt get around to actually solving the problem fully.
+
+    Two versions of the solution were added to the [[https://github.com/jr0cket/advent-of-code-2018/commit/81dd6f1025610a146048fa324b63e50248f4e521][jr0cket/advent-of-code-2018 repository]]
+
 * 20181209 - Day 86: Coaching and advent of code challenges
 ** Thoughts for today
    Cleaned up the code from the first days Advent of Code challenge.
@@ -327,7 +349,7 @@ Submitted answer to 4Clojure
    Went to the Thoughtworks Clojure dojo and worked on some more 4Clojure exercises.  Got a bit entrenched in #30 Compress a sequence.
 
 ** Code from today
-   ***
+*** [[https://github.com/jr0cket/four-clojure/][4Clojure #30]]
 ** Activities in detail
 *** Solving 4Clojure number 30 - compress a sequence
    The 4Clojure challenge 30 is to compress a sequence with three tests.
