@@ -1,5 +1,19 @@
 # 100 Days Of Code - Log
 
+* 20181211 - Day 88: Clojure driven finance startup and 4Clojure
+** Thoughts for today
+   A lunch with a another company with Clojure roles, cycling to and from the meeting on the Bromptom.  This time its Be-Social, a finance startup that is building an app to make spending money a more social activity and enabling friends and colleagues to share bills and other expenses.
+
+   Another 4Clojure challenge, this time #8 an introduction to sets.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/blob/master/src/four_clojure/008_intro_to_sets.clj][4Clojure Challenge #8 introduction into sets]]
+** Activities in detail
+*** 4Clojure Challenge #8 introduction into sets
+    A quick bit of coding to experiment a little with sets.  A set in Clojure represents a unique set of values, the order is not guaranteed and is actually not important, its the uniqueness that is important.  You could always pull the values out and sort them if you needed something with there.
+
+    The ~contains?~ function is useful to return a boolean result as to if a value is within the set, or you can simply use the set as a function which returns the value if its present in the set or nil if not.
+
 * 20181210 - Day 87: Coaching and uSwitch dojo
 ** Thoughts for today
    Another coaching session in Wagamama, very healthy and relaxing way to learn and teach Clojure.
