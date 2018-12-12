@@ -1,4 +1,20 @@
 # 100 Days Of Code - Log
+* 20181212 - Day 89: Meeting Clojure data science company
+** Thoughts for today
+   A second meeting with Cervest, a very interesting data science company supported by Clojure tooling.
+
+   Also met with All Street Research who are looking to disrupt the financial industry and building systems in Clojure.
+
+   Did some 4Clojure on the train home.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/9e458582cf87b6b365620bc46f8d41ca45cdad17][4Clojure Challenge #9 Conj with sets]]
+*** [[https://github.com/jr0cket/four-clojure/commit/7d153f3187ab3d7339aea2159db29237275b119c][4Clojure Challenge #10 Intro to maps]]
+** Activities in detail
+*** 4Clojure Challenge #9 Conj with sets
+    A very simple challenge using conj to add values to a set.
+*** 4Clojure Challenge #10 Intro to maps
+    A quick look at creating and extracting values from a map.
 
 * 20181211 - Day 88: Clojure driven finance startup and 4Clojure
 ** Thoughts for today
