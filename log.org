@@ -1,4 +1,15 @@
 # 100 Days Of Code - Log
+
+* 20181213 - Day 90: What will be my next role?
+** Thoughts for today
+   Considering my options for my next role.  There have been a lot of really interesting roles I have interviewed for.  There is one that seems to require the widest use of my skills.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/c0c720e033ec9cf28bae7c9feeec6af3eae6fa36][4Clojure Challenge #11 - conj with maps]]
+** Activities in detail
+*** 4Clojure Challenge #11 - conj with maps
+    Exploring the joining of maps and vectors into a map.  Also explored some possible error conditions that can occur when using maps, such as incomplete pairs of keys and values.
+
 * 20181212 - Day 89: Meeting Clojure data science company
 ** Thoughts for today
    A second meeting with Cervest, a very interesting data science company supported by Clojure tooling.
