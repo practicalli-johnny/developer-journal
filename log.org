@@ -1,5 +1,18 @@
 # 100 Days Of Code - Log
 
+* 20181214 - Day 91: Chasing references and 4Clojure #16
+** Thoughts for today
+  Chasing references for my next potential employers
+
+  Quick write up about 4Clojure exercise #16 - Hello world.
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/639cf76e7901809413eb01f9c5a2f07187764ae0][4Clojure challenge #16 Hello World]]
+** Activities in detail
+*** 4Clojure challenge #16 Hello World
+    Discussing the ~str~ function to join values into a string.
+
+    Also covering how to write a simple function definition with ~fn~ and call that function inline.  For completeness, added the short form for a function definition using the reader macro ~#()~
+
 * 20181213 - Day 90: What will be my next role?
 ** Thoughts for today
    Considering my options for my next role.  There have been a lot of really interesting roles I have interviewed for.  There is one that seems to require the widest use of my skills.
