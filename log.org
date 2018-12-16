@@ -1,5 +1,14 @@
 # 100 Days Of Code - Log
 
+
+* 20181216 - Day 93: Clojure Study group - ClojureScript reagent website with SVG
+** Thoughts for today
+   Extremely tired today.
+** Code from today
+*** [[https://github.com/practicalli/example-clojurescript-reagent-svg-website][Simple ClojureScript front end website with reagent]]
+** Activities in detail
+*** Simple ClojureScript front end website with reagent
+   Walking through the basic concepts of building a front-end website using ClojureScript and reagent, a react-style library.
 * 20181215 - Day 92: Clojure Hack day
 ** Thoughts for today
    Clojure Hack day was quite a small event however it gave us a chance to work on our own projects.  Worked with Mani on some basic Clojure skills.  Als worked on building a simple ClojureScript React style website with our primary school student (accompanied by her mom)
