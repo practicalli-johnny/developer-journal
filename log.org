@@ -1,6 +1,21 @@
 # 100 Days Of Code - Log
 
 
+* 20181218 - Day 95: Team Lunch - 4Clojure exercises
+** Thoughts for today
+  Team winter lunch with the team I will be working with in the new year.  The venue was a very basic restaurant but with nice food.  There are some interesting dynamics in the team, so will need to figure out how to work with them.
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/ecb0b8a098daa580623aae39fe92eabac58bcf04][4Clojure #49 Split a sequence]]
+** Activities in detail
+*** Team Lunch
+    Some awkwardness from the team as most people were meeting for the first time.  I asked lots of questions and tried to make connections...
+
+*** 4Clojure exercises
+    Carried on adding to the 4Clojure repository of solution write-ups.  Discussing challenge #49 Split a sequence.
+
+    There was a fairly easy solution using take and drop.  However, with a little digging into the `clojure.core` the `juxt` function was a great way to show some abstraction over the drop and take.
+
+
 * 20181217 - Day 94: Coaching and Emacs talk at Linux in London
 ** Thoughts for today
    Cycled into London today on the Brompton and my Tannus tyres still going strong.  I finally got a moment to clean them too.
