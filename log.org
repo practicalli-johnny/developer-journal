@@ -1,6 +1,17 @@
 # 100 Days Of Code - Log
 
 
+* 20181219 - Day 96: User Feedback session & 4Clojure exercises
+** Thoughts for today
+   User feedback session for an interesting AI product.  It was useful to hear from one of the users of the tool.  However, a lot of distraction came from the team, especially in random discussions and discussions about how the tool should be used.  This seemed a little about face, as we should be focusing more on how the user is working and fitting the tool around them.  The more training we need to give to the users, the greater barrier there would be to adoption.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/b3a1724bbcacc8e26da621bbd791307792f924be][4Clojure exercises #50]]
+** Activities in detail
+*** 4Clojure exercises
+    As I was travelling on the train, I carried on documenting the solution to 4Clojure exercises.
+
+
 * 20181218 - Day 95: Team Lunch - 4Clojure exercises
 ** Thoughts for today
   Team winter lunch with the team I will be working with in the new year.  The venue was a very basic restaurant but with nice food.  There are some interesting dynamics in the team, so will need to figure out how to work with them.
