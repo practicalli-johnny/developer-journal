@@ -1,6 +1,18 @@
 # 100 Days Of Code - Log
 
 
+* 2018120 - Day 97: Planning 2019 and 4Clojure
+** Thoughts for today
+   Planning activities for 2019, including ClojureBridge London events.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/003fcabec954eed8005feff989136681a36b7026][4Clojure exercise #51]]
+** Activities in detail
+*** 4Clojure exercise #51 - advanced destructuring
+    Another chance to read up about destructuring.  Destructuring is a great way to reduce the amount of code you need to write by using pattern matching.  We use destructuring to define local names from data structures, both in ~let~ functions and function definitions.
+
+    The challenge itself was fairly straight forward, just demonstrating a nested destructuring example.
+
 * 20181219 - Day 96: User Feedback session & 4Clojure exercises
 ** Thoughts for today
    User feedback session for an interesting AI product.  It was useful to hear from one of the users of the tool.  However, a lot of distraction came from the team, especially in random discussions and discussions about how the tool should be used.  This seemed a little about face, as we should be focusing more on how the user is working and fitting the tool around them.  The more training we need to give to the users, the greater barrier there would be to adoption.
