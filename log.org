@@ -1,6 +1,22 @@
 # 100 Days Of Code - Log
 
 
+* 20181221 - Day 98: Coaching
+** Thoughts for today
+   Took Poppy to the vets for a checkup on her teeth, apart from a bit of plaque build up, they are fine.  More teeth brushing for Poppy.
+
+   Cycled into Wagamama Southbank for another coaching session, getting my teeth stuck into 4Clojure challenge #53, a tricky one eventually solved with partition and partition-all.
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/846c62fa2b95a844368d72011f0cc1d361bb4470][4Clojure #53 solution]]
+** Activities in detail
+*** Coaching - 4Clojure #53
+    Ouch, this was quite a tricky problem and very easy to get caught up in imperative thinking.
+
+    Trying to do this using loop/recur and reduce approach became very complex and we didnt get that working in the end.
+
+    I started a more functional approach along the right lines with partitioning up the data set so each combination of pairs could be compared to see if the second value was higher than the first.  It took a bit of experiementing to realise I could also partition again using a function that grouped the pairs until the pairs stopped increasing.  This second partitioning really put the data in to a shape that made it easy to process.  Redundant data was removed and then the remaining partiions sorted by size (~count~) and the largest continuous sequence found.  Then the partitions just needed to be flattened to get the right shape of data as a result.
+
 * 2018120 - Day 97: Planning 2019 and 4Clojure
 ** Thoughts for today
    Planning activities for 2019, including ClojureBridge London events.
