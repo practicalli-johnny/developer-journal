@@ -2,6 +2,22 @@
 
 
 * 20181221 - Day 98: Coaching
+* 20181222 - Day 99: Clojure study group
+** Thoughts for today
+   Walked through 4Clojure challenges number 16 to 22 in the Clojure virtual study group broadcast today.
+
+   https://youtu.be/8u8y73zh0w0
+
+** Code from today
+*** [[https://github.com/jr0cket/four-clojure/commit/a4f7ca69f24ad1cb231c95d20c26136c06ce27dc][4Clojure #12]]
+*** [[https://github.com/jr0cket/four-clojure/commit/56c87fdca748adb7464df33a387be6591ef76cf1][4Clojure #13]]
+*** [[https://github.com/jr0cket/four-clojure/commit/53d671dc6453a66d2d7119547a1a969389e09cc7][4Clojure #14]]
+*** [[https://github.com/jr0cket/four-clojure/commit/6a612beaf26a050eb56f6fbcaa0e1be16c2ed0c1][4Clojure #15]]
+** Activities in detail
+*** Wrote up previous 4Clojure solutions, #12 to #15
+   Lots of fun with sequences and sequence related functions.  Also included two exercises on defining your own functions.
+
+* 20181221 - Day 98: Coaching and 4Clojure 53
 ** Thoughts for today
    Took Poppy to the vets for a checkup on her teeth, apart from a bit of plaque build up, they are fine.  More teeth brushing for Poppy.
 
