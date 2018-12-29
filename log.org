@@ -1,6 +1,41 @@
 # 100 Days Of Code - Log
 
 
+* 20181229 - Day 106: TicTacToe for Virtual Study Group
+** Thoughts for today
+  Walking through a nicely functional approach to the TicTacToe game for the Clojure study group.
+
+  https://youtu.be/_eO7EsXO2XE
+
+** Code from today
+*** [[https://github.com/practicalli/tictactoe-cli/commit/7340a474e1c7d25a65f22383b6a3848ed055b0bd][Uppercase player names]]
+*** [[https://github.com/practicalli/tictactoe-cli/commit/cef31c50181b6e7af16e586f9946b10672dc6f9d][Display board with a grid]]
+*** [[https://github.com/practicalli/tictactoe-cli/commit/c0ed5b42124540b0ad2d6dc21fa54e6127237dd6][Refactor play-game to pure function]]
+** Activities in detail
+*** Functional TicTacToe for Clojure virtual study group
+   Added a few changes to the original code I saw in the videos by Brian Wills to make the board and players easier to read.
+
+   Also make the play-game function the required arguments of board and player-sequence, so that the function explicitly uses arguments rather than shared values.  Using arguments also means that ~play-game~ can be called with different board states, this is useful for testing especially if a computer opponent was added as an option to the game play.
+
+   It would be cool to make an AI for both players and get the output from the game of two AI players shown.  Would like to build a simulation like that seen at the end of the [[https://en.wikipedia.org/wiki/WarGames][War Games movie]], although this would look better as a web page rather than command line.
+
+* 20181224 - Day 101: An extra day of code
+** Thoughts for today
+   Added some more 4Clojure solutions
+
+   Got a Logitech MX Ergo trackball mouse today and it is so nice to use.  It is a trackball, so the mouse itself stays static on the desk meaning I dont need to move my hand around and reducing RSI.  It also means I dont need a lot of space to use the mouse either.  The trackball is tilted so my hand is in more comfortable position, the same position I maintain with my tented Model01 keyboard.
+
+  Just noticed that ~def~ supports a doctring, just like ~defn~.  Adding a string after the name in the ~def~ expression will be used as the docstring, assuming there is another value after the string (otherwise the name is just bound to the string).
+
+** Code from today
+*** 4Clojure
+** Activities in detail
+*** 4Clojure
+*** Running tests and test report buffer
+    I use ~, t a~ to run all tests and the test report buffer will display in place of an existing buffer if the test buffer is not already showing.  This is normal behaviour as I understand it.  The test buffer should be the active window (has the cursor) so pressing q will quit the test report and show you the buffer that was in the window previously (eg. your repl).  If you have the test report buffer shown in a window, then any new test report should always appear there.
+
+If you find this behaviour not to your liking, you could look into [[https://github.com/bmag/spacemacs-config/tree/master/layers/window-purpose][Spacemacs Window Purpose layer]] to define a configuration to guide Emacs placement of windows (this is not something I have tried yet)
+
 * 20181223 - Day 100: 4Clojure
 ** Thoughts for today
    100 days of code challenge completed.  Was it worth it?  Well yes, it got me coding almost every day, and overall I certainly achieved more than 100 hours of coding, probably more like several 100 hours of coding.  The only thing I didnt do was work on a specific project every day, but that would have felt like work and I enjoyed having a break from that routine.
