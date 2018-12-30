@@ -1,5 +1,9 @@
-# 100 Days Of Code - Log
-
+#+TITLE:       100 days of code challenge 2018
+#+SUB_TITLE:   A design journal will be created along side the code, so it is easier to see how the design has unfolded.
+#+AUTHOR:      John Stevenson
+#+DATE:        <2018-09-14 Sun>
+#+EMAIL:       john@jr0cket.co.uk
+#+LANGUAGE:    en
 
 * 20181229 - Day 106: TicTacToe for Virtual Study Group
 ** Thoughts for today
@@ -112,7 +116,6 @@ If you find this behaviour not to your liking, you could look into [[https://git
 *** 4Clojure exercises
     As I was travelling on the train, I carried on documenting the solution to 4Clojure exercises.
 
-
 * 20181218 - Day 95: Team Lunch - 4Clojure exercises
 ** Thoughts for today
   Team winter lunch with the team I will be working with in the new year.  The venue was a very basic restaurant but with nice food.  There are some interesting dynamics in the team, so will need to figure out how to work with them.
@@ -126,7 +129,6 @@ If you find this behaviour not to your liking, you could look into [[https://git
     Carried on adding to the 4Clojure repository of solution write-ups.  Discussing challenge #49 Split a sequence.
 
     There was a fairly easy solution using take and drop.  However, with a little digging into the `clojure.core` the `juxt` function was a great way to show some abstraction over the drop and take.
-
 
 * 20181217 - Day 94: Coaching and Emacs talk at Linux in London
 ** Thoughts for today
