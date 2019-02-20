@@ -1,0 +1,194 @@
+#+TITLE:       Developer Journal - February 2019
+#+AUTHOR:      John Stevenson
+#+DATE:        <2019-02-01 Fri>
+#+EMAIL:       john@jr0cket.co.uk
+#+LANGUAGE:    en
+
+* 20190220 Consolidate journals
+** Thoughts for today
+   The UK government sees to be lost, 3 more Conservative MPs have left the party, I wonder how many more will join them.
+
+   Took the cats to the Vets for the annual checkup. They are a little over-weight but then it is still winter.  Mowgli was quite stressed today, which is a bit unusual.  I bought some new higher quality dried cat food and as I got two 7kg bags they gave me a 12kg storage tub for free (I shall have to get at least one more tub I think).
+
+   Keeping up my healthy vegan diet today with Thai black rice and chickpeas.  Both were slow cooked yesterday, so quickly heated them in the ceramic pan and added a little balsamic vinegar
+
+** Activities
+*** Merged Journal repositories
+    Merged the 100 days of Clojure journal with 2019 developer journal.  I had not committed any entries in the developer journal repository, so it was easy just to drop them into the existing 100 days of Clojure repository (after I renamed it and cleaned it up).
+
+* 20190219 ClojureBridgeLondon editor guides & Bootstrap
+** Thoughts for today
+   The documentation for Cursive feels a bit sparse
+** Code
+   - [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/81ab2952634ddcda7df8b8bc59e016761df4cdc4][Updated Proton user guide]]
+   - [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/9eaf20660f433a65e5f5470fb24de807592fa1d6][Added quick Cursive install guide]]
+   - [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/commit/94084e52cc0ea4f9859fe621c708b6b37a9aaf31][Completed the Spacemacs install guide]]
+** Activities
+*** Updated ClojureBridgeLondon user guides
+- Atom and Proton - configured styles for Atom using ~.atom/styles.less~
+- Completed Spacemacs - added table of questions to answer when first running Spacemacs
+
+*** Bootstrap codecadamy
+    [[https://www.codecademy.com/courses/learn-bootstrap/l][Bootstrap codecadamy free course]]
+
+    I have a better understanding of breakpoints and setting different column widths for based on device size.  This will be useful for the Clojure study group website, where the Bootstrap carousel was displayed quite squashed on a tablet form factor.
+
+*** Updated Spacemacs
+ Issue with org-mode Easy templates - tab not completing ~<s~ but indenting instead.  Could be due to my aggressive intending.  Disable that for org-mode?  Or just enable it for clojure & lisp.  Updated to latest Spacemacs and Emacs packages fixed the problem (seems to be a change in org-mode, so upgrading has fixed it)
+
+*** Org-mode syntax
+ https://orgmode.org/worg/dev/org-syntax.html
+ - noted that a single ~*~ surrounding text makes it bold.
+
+* 20190218 ClojureBridgeLondon
+  Started updating Atom and Proton install and user guides. Trying to figure out how to set font size for Atom UI components (tab-bar, status-bar and tree-view), preferably in some configuration file.
+
+  Took a quick look at [[https://www.codecademy.com/courses/learn-bootstrap/l][Bootstrap codecadamy free course]].
+
+* 20190217 Ring and Compojure fun
+  Continuing to explore the finer details of Ring and Compojure and updating [[https://practicalli.github.io/clojure-webapps/][Practicalli Clojure Webapps]] update
+
+** Code
+   - [[https://github.com/practicalli/clojure-webapps-content/commit/aa2a14d0f72be11ea9f4efd0d6f2fdf11eea5973][Updated section to callouts syntax]] and 7 other similar commits
+
+* 20190216 Ring and Compojure fun
+** Thoughts from today
+   Its very interesting to start from the real basics of building a website in Clojure, without using any templates.  It also gave me an opportunity to update my [[https://practicalli.github.io/clojure-webapps/][Practicalli Clojure Webapps]].
+
+** Code
+   - [[https://github.com/practicalli/clojure-webapps-content/commit/a5c5ebacf9d5dfd11b394b2041d25a1c76ea60fd][Updated gitbook plugins and description]]
+   - [[https://github.com/practicalli/clojure-webapps-content/commit/dcfc9d37714054216404f7be74fd2c02b592a6ca][Added the webpage style for practicalli books]]
+   - [[https://github.com/practicalli/clojure-webapps-content/commit/bf5ef4a62bb9694b1ede7d0e7f472d4958ffaec6][ring version 1.7.1]]
+** Activities
+*** Update Practicalli Clojure WebApps
+    Not many updates to [[https://practicalli.github.io/clojure-webapps/][Practicalli Clojure Webapps]] since October 2016, so although the main concepts have not changed, the library versions were quite behind so have been updating and testing them.
+
+*** Running Ring application from Spacemacs
+    Setting the ~:main~ keyword to a namespace will set that namespace when running ~cider-jack-in~, ~, '~.
+
+    Evaluating the functions in the namespace allow them to be called.  Setting the ~:main~ namespace does not automatically load the functions of that namespace into the REPL.
+
+    Call the ~-dev-main~ or ~-main~ function to start the jetty application server and load in the Clojure app.  The webapp is now available on localhost on what ever port was specified.
+
+    As jetty is a continually running process, the REPL will continually be running (you can see from the moving === in the REPL buffer mode line).  This may be one reason that its more optimal to run the Jetty process externally (~lein run~ or ~lein ring server~) and just include the ~wrap-reload~ middleware to inject new versions of the code into the running jetty service.
+
+* 20190213 Discussing a new opportunity
+** Thoughts for today
+   Met up with very interesting people to talk about building a Clojure startup
+
+   Discovered my new favorite dish at Wagamama, the [[https://www.wagamama.com/our-menu/vegan][Vegatsu curry]] ([[https://veganuary.com/blog/vegatsu-vegan-version-wagamamas-iconic-katsu-curry/][review]]).  Its just like a Chicken Katsu curry, but vegan and even tastier.  I had tried the other vegetarian version of the Katsu curry, but it wasnt that nice.
+
+* 20190211 Clojure dojo and YouTube API hacking
+** Thoughts for today
+   Using the YouTube Java SDK is a reminder of how redundant some Java code can be.
+** Code from today
+*** Asked Christian for the code
+** Activities in detail
+*** Setting up a Google account for API hacking
+    I dont really want to use my email account for hacking on the YouTube API, so I created a hackingwithclojure Google account.  I also created a Chrome profile to make it easier to manage logins for multiple Google accounts.  It seems you need to create a project on the Google console to get started, so a new Chrome profile will be very useful.
+
+*** Google API overview
+    There are lots of APIs but we do not need them all.  For hacking with the YouTube API, we only need
+**** YouTube Data API v3
+     The YouTube Data API v3 is an API that provides access to YouTube data, such as videos, playlists, and channels.
+     https://developers.google.com/youtube/?hl=en_GB
+
+**** YouTube Analytics API
+     Retrieves your YouTube Analytics data.
+     https://developers.google.com/youtube/analytics/?hl=en_GB
+
+**** Freebase API
+     Acording to the
+*** Accessing YouTube API's
+    Followed the article [[https://developers.google.com/youtube/v3/getting-started][YouTube API Data Overview]] and created a project in the [[https://console.developers.google.com/][Google Developers Console]].  A project is a grouping of API's from Google, so you can tailor each project to only include the API's you need to use.
+
+    Created a project called youtube-data-api (it seems to take a while to create the project).  I think the UI just stalled, as I clicked on the notification in the Console and it took me to the details page of that project.
+
+* 20190210 More workshop footage and PolyBius videos
+** Thoughts for today
+   Taking a break from code and putting together move videos to share on YouTube.  Also have the most successful go at PolyBius, getting close to 10 million points and getting much further in the levels that before.
+
+   [[https://www.youtube.com/watch?v=SjFoHZXt9Zw][Archive: Clojure workshop JAX London 2015]]
+   [[https://www.youtube.com/watch?v=uUBuem-GV3U][Polybius - Levels 1 to 9 (incomplete) - flashing imagery warning!]]
+
+* 20190209 Clojure study group - functional composition
+** Thoughts for today
+   Had a good week of heads down on Clojure coding, updating many 4Clojure challenges with higher abstractions of code.  Rounding off all this coding today with functional composition and exploring the workings of the ~comp~ function.
+
+   Converted several hours of video footage from my earlier clojure workshops and started publishing them on YouTube.
+
+   Found the **Share** button on my PS4 controller which lets you record and share the footage from your game play.
+** Activities
+*** Clojure study group - functional composition
+    broadcast discussing functional composition and explaining the workings of the ~comp~ function.  Also revisited a few of the 4Clojure exercises and used ~comp~ as one possible answer.
+   https://www.youtube.com/watch?v=dhGAXISqra8
+
+   [[https://gist.github.com/e703478b4e4dc2a20a86a4cd8a143343][Code examples from the study group]]
+
+*** Archive workshop footage
+    Found video footage recorded by my GoPro camera of several Clojure workshops given at conferences.
+    [[https://www.youtube.com/watch?v=DssQg6rg-JQ][Devoxx uk 2017 clojurescript workshop part1]]
+    [[https://www.youtube.com/watch?v=MJXQhVTdzQ4&t=3426s][Clojure - Thinking Functionally workshop at Devoxx UK 2016]]
+    [[https://www.youtube.com/watch?v=R-VDPOAtgtM&t=610s][Archive Footage: Agile workshop - DesignIt, BuiltIt conference - part1]]
+
+*** Recording Playstation4 games
+    The Playstation4 controller has a Share button, well I say button, actually is a tiny recessed button next to the trackpad.  Although this button takes some skill to be able to press, it can be used to share and record video from the PS4.  So as I play my current favorite game, PolyBius, a psychodelic shoot-em-up style game that has an obsession with cows, I can record my games and share them on YouTube or broadcast them on Twitch.
+
+    In the Playstation4 settings, I linked my YouTube and Twitch accounts (the Twitch link UI being much nicer to use that YouTube).  Now when I press the **Share** button on the PS4 controller I get a menu that will allow me to share the current video (or any video I have taken) with YouTube.
+
+    To record game play, I can simply double press the **Share** button.  I say simply, pressing this button once is a bit fiddly, twice is even more so and trying to do this when I am wearing the Virtual Reality headset proved almost impossible at first (because I cant see the controller or my thumb.  After a bit of practice I eventually got the hang of double pressing the **Share** button.  I cant day double-click, because the button makes no sound when you press it.
+
+    I published a test video (with really bad game play) up to YouTube to see how well it all worked https://www.youtube.com/watch?v=4CgWUA4GazI
+
+* 20190208 4Clojure write up continued
+* 20190207 4Clojure write up continued
+* 20190206 4Clojure #53 update
+** Thoughts for today
+   Continuing to write up 4Clojure exercises as a way to help others understand my thought processes as I go through solving each of them.
+** Code for today
+*** 4Clojure #53 update
+*** [[https://github.com/ldnclj/londonclojurians.org-content/commit/6856eff451bac1b55faa648a69ebc7019461147c][LdnClj website - how to run a clojure dojo]]
+** Activities today
+*** Writing up the approaches taken for 4Clojure #53
+    I left the solution to 4Clojure #53 as solved a while ago, using partioning and filter functions as a nice abstraction over the loop recur approach.
+
+    I never did the the loop recur approach to work and as it was bugging me, I decided to fix it.  I have become comfortable using the CIDER debugger, `, d b` in Spacemacs, so I instrumented the loop recur solution and identified the bug fairly quickly.
+
+    It turns out the bug was pretty trivial, as I was trying to count the value of the temporary-sub collection, however, I had neglected to return the new temporary-sub value as a collection in the ~cond~ statement.
+
+    Running the fixed code with the other tests showed that the 3rd test failed.  The loop recur didnt return the last value added to the sub-collection as the test for the empty collection terminated the loop too soon.  Adding a nested if statement to put another check of count for the temporary-sub and sub-collection returns the correct result.
+
+    The final 4Clojure test still failed though, so I swapped the nested if statement for a cond.  I kept the conditions from the two if statements and added a third to return an empty vector, ~[]~, if the temporary-sub and sub-collection were both the count of 1.  With this last change, the code successful passes all the 4Clojure tests.
+
+    I was please to have got a working version of the code using loop recur.  Although I would not use this approach in production, it is a useful way to demonstrate the different levels of abstraction in Clojure code.  It also clearly demonstrates that higher levels of abstractions can make Clojure code much more elegant and easier to work with.
+
+*** Wrote a new guide on running a Clojure dojo
+    We have some new uSwitch people helping out with the coding dojo events, so I wrote much clearer details on [[http://www.londonclojurians.org/coding-dojos/how-to-run-a-london-clojurians-coding-dojo.html][how to run the event]].
+
+* 20190202 Clojure study group
+** Thoughts for today
+   Another Clojure study group, this time covering Sequences in Clojure.  We also walk through the solutions to 4Clojure exercises #23, #24, and #25.
+
+   https://youtu.be/vehRrNqgVbQ
+
+* 20190202 Clojure Study group
+** Summary
+   Posted the study group video to the #announcements channel of the Clojurians Slack community.  Have got quite a few more subscribers to the channel now.
+
+   Broadcast covered sequences and the 4Clojure challenge #23 - reverse a sequence
+
+   Fixed my Github personal access token for whitestar2, configuring the token to be able to create Gists.  I think the token created by Gist.el was overwritten by Magithub in the ~.gitconfig~ file.  For some reason neither access token had access to create Gists.
+
+** Code from today
+
+* 20190201 Coaching in Wagamama
+  Coaching in Wagamama, meeting up with Brian at 10.30am and working through to nearly 5pm.
+
+  Horrible weather outside so just took the train.
+
+** Coaching
+   Fixed Spacemacs setup with Magit and Github.  Needed a new SSH Key.
+
+   Discussed some project ideas.
+
+   Worked on 4Clojure challenge #62 - re-implement iterate function
