@@ -1,21 +1,18 @@
 * My developer journal
 
-I took a little break in 2018 and started the #100-Days-Of-Clojure-Code Challenge, to focus on improving my skills and also help me understand what parts of software development I enjoy the most.  Part of that challenge was to keep a daily journal of activities and interesting things learnt.  Although the challenge is over, I have decided to continue with a developer journal as its a great way to retain things I have learnt and also useful material for blogs, videos and public speaking ideas.
+  I took a little break in 2018 and started the #100-Days-Of-Clojure-Code Challenge, to focus on improving my skills and also help me understand what parts of software development I enjoy the most.  Part of that challenge was to keep a daily journal of activities and interesting things learnt.  Although the challenge is over, I have decided to continue with a developer journal as its a great way to retain things I have learnt and also useful material for blogs, videos and public speaking ideas.
 
 ** Developer Journal 2019
 - February
 - January
 
 ** 100 Days of Code
+   From the 15th September 2018 I spent a minimum of 1 hour per day writing Clojure code for 100 days, taking me up to the 24th December.  I did a few days extra during the holidays too.
 
-From the 15th September 2018 I spent a minimum of 1 hour per day writing Clojure code for 100 days, taking me up to the 24th December.  I did a few days extra during the holidays too.
-
-Read my journey in the [100-days-of-clojure](100-days-of-clojure.org) and via the [Clojurians Slack #100-days-of-code channel](https://clojurians.slack.com/) - [self sign-up](https://clojurians.net/), [archive](https://clojurians-log.clojureverse.org/).
+   Read my journey in the [[100-days-of-clojure.org][100 days of clojure journal]] and via the [[https://clojurians.slack.com/][Clojurians Slack community]] in the #100DaysOfCode channel - [[https://clojurians.net/][(self sign-up to Clojurians Slack)]], [[https://clojurians-log.clojureverse.org/][(Clojurians slack archive)]].
 
 **** References
-
-- [Log - click here to see my progress](log.md)
-- [Resources](resources.md)
-- [Another 10days of Clojure example](https://github.com/natenka/100-days-of-Clojure)
-- [The #100DaysOfCode Official Site](http://100daysofcode.com/)
-- [#100DaysOfX Challenges Project](http://100daysofx.com/)
+- [[./100-days-of-clojure.org][100 days of Clojure - journal]]
+- [[Another 10days of Clojure example][https://github.com/natenka/100-days-of-Clojure]]
+- [[The #100DaysOfCode Official Site][http://100daysofcode.com/]]
+- [[#100DaysOfX Challenges Project][http://100daysofx.com/]]
