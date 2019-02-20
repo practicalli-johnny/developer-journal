@@ -1,0 +1,195 @@
+#+TITLE:       Developer Journal - January 2019
+#+AUTHOR:      John Stevenson
+#+DATE:        <2019-01-06 Sun>
+#+EMAIL:       john@jr0cket.co.uk
+#+LANGUAGE:    en
+
+* 20190130 Setup ClojureBridge event pages
+* 20190125 last day at startup
+* 20190122 Concerned at the lack of direction
+* 20190116 More AWS woes
+  Investigating deployment issues, not a good day.  All I learnt is that using AWS, especially someone elses poorly documented setup is problematic at best.
+
+* 20190115 AWS further investigation
+  Sizing the AWS ECS cluster in terms of vCPU and units.
+
+  Setting the default CPU reservation for all the applications would allow 60% more containers to be deployed.  So currently there are 20 containers deployed across the 3 instance cluster.
+
+** PR: CPU Reservation to 100
+   Using custom deployment code, set the default CPU reservation to 100 units, which would allow more than 21 docker containers to be deployed.
+
+* 20190114 AWS CPU Reservation blocking deployment
+** Dealing with the custom deployment app - CPU reservations issues
+  Deleted some of the docker containers from the companies ECS cluster, freeing up the CPU reservation enough so that the custom deployment application would deploy new versions of the applications.
+
+* 20190113 Clojure Study Group broadcast
+  Discussed solutions to generating the Fibonacci sequence in Clojure
+
+  https://youtu.be/-Vr62lNtsgs
+
+* 20190112 Internet issues
+  Thought it was Virgin Broadband, but probably just the router.  I rebooted the router and everything came back soon after.
+
+  Had postponed the Clojure study group until Sunday as it was taking too long to diagnose the root cause of the Internet issue.
+
+* 20190111 Document and Planning of Amazon AWS infrastructure
+** Capacity limitations in AWS infrastructure
+   Deploying new instances is not possible due to the archaic use of 3 fixed size virtual machines placed into a cluser.  The Virtual machines have a finite allocation of CPU's
+** Massive under utilisation of the AWS infrastructure
+   Although we can only deploy 21 containers due to the our CPU and memory useage of the infrastructure are tiny.  CPU usage is averaging 0.03% and memory is around 20% peak.
+
+   NOTE: later on I discovered that this was because no one is actually using the application, and therefore there is no load.  As we have large fixed instances the company is paying for resources its simply not using.
+
+* 20190110 Review Amazon AWS infrastructure
+** AWS consultancy Review
+*** AWS Education
+*** Existing Infrastructure issues
+*** Fargate Education
+*** Migrating to Container system managed by Fargate
+*** Divised plan for future infrastructure
+*** Use tags to include dev team information to systems like promethius
+
+* 20190109 Amazon access and work prioritisation
+** Website redirection - no indexing
+   Now that the company website has been redirected to the company application website, an error is being produced that says search engines cannot index the new site. As the company application has no content to index then a ~norobots.txt~ file has been added to that site at some point by the developers.
+
+   Its obvious by looking at the company application site that it is not effective as a placeholder for which to redirect the company website.  I have suggested the founders update the copy on the existing company website (although there was no positive feedback from them regarding this suggestion).
+
+** Amazon AWS account details
+   The Amazon AWS account details were found buried in the teams emails, forwarded by the previous tech lead.
+
+** AWS Consultancy Contact
+   For the AWS Review work, the CTO connected me to the  AWS consultancy company for whom we have an existing contract with.
+
+   TODO: Confirm the details of how much time we are allocated with AWS consultancy team.
+
+** Gave JIRA access to Product Owner
+   A content owner joined the company but in the time it took them to join the company had changed their role, so they ended up being the product owner.  As they didnt know the product and there was very little documentation, then this was quite challenging.
+
+   I added the product owner to the company JIRA project (so need to fix how we assign users at some point), so they can raise issues they find with the product and we can all try and figure out if the product should work that way.
+
+* 20190108 Local dev environment
+** Setup local development environment
+   A Google hangout with the remote helped me get a local development environment of company applications running on my machine with a mongodb instance in a  docker container.
+
+   To run the project for the company applications, access was required to AWS as a custom dependency was placed into an Amazon S3 bucket, acting like a remote artefact repository.  This library was only used for testing, so initially I just commented out the dependency with a reader macro comment in the ~project.clj~ file.
+** AWS work deferred until later
+   Consultancy company was planning to do some work but as no one sent me the plan, then I blocked the work for now.  Need to evaluate if the work is actually worth doing or if we are adding more complexity.
+
+   TODO: Get a handle on what work has been scheduled.
+
+** Getting to grips with JIRA cloud
+   We have the Cloud edition of JIRA and as yet no Confluence, although there is a free trial.  Will need to investigate to see if Confluence is worth the cost.
+
+   Its not clear how we are supposed to add users to JIRA, as all the existing users are not listed under Project > Project Settings > People.  I assume there is some overall administrator of the JIRA organisation.
+
+   TODO: Investigate how to administrate the companies JIRA cloud correctly.
+
+** Discusses the scalability of the current infrastructure
+   It isn't very scalable. Or is it?  No one knows. We have monitoring of instances in a cluster, but need access to Amazon AWS dashboard in order to understand what is going on.
+
+   There is a lot of custom Clojure code built to deploy containers and not clear why this is.  There seems to be little value.
+
+* 20190107 First planning meeting
+** Planning meeting
+   Not sure what was going on with the planning meeting.  We spent too much time talking about a feature that was in the end not that critical.  Had to stop the discussion multiple times and bring it back to tangible things needed to be done that week.  There was a lot of uncertanty as to what was supposed to be done.
+
+   The CTO left at lunch time and this was the first I knew that they only worked 50% of the time.  I got dragged into lots of conversations that afternoon and had little context as to what was important.  The founders were focused on work they had been putting off for months.
+
+   Started reviewing the JIRA configuration and making it effective for the planning meetings.  The configuration was pretty much out of the box and using the 2 week sprint model.  There were a number of Epics defined, although it was not clear which ones of those were important.  There were also a number of stories and tasks in the backlog that no one seemed to care much about.  Some time will need to be carved out to figure this out.
+
+** Updated install of Company Laptop
+   Download Ubuntu 18.10 from Ubuntu.com
+   Create USB installer
+   Configure Laptop BIOS to boot from USB
+   Install Ubuntu with secure boot configuration
+   Set WiFi password for the install
+   Install full Ubuntu distribution
+
+   Had to google to find the BIOS key after reboot, it was F2.  Setting Boot priority doesn't stay after reboot.
+
+   Laptop does not work well with secure boot, finally gave up trying to get it to work.
+
+   Laptop graphics card does not work well with the free nvidia drivers.  The X.org software is freezing quite often.  Managed to install the nVidia commercial drivers and so far its much more stable.
+
+** Deployment of new instance
+   Cloned the cecil repository and reading the deployment docs locally.  Noticed a few errors, so fixed as I worked through the docs.
+* 20190106 Setup Accounts and create journal
+** Created this Journal repository and notes from last week
+   Created the Journal repository on the startup GitHub organisation.
+
+   Added notes about setting up accounts
+
+** Managing separate Google accounts with Chrome profiles
+   The startup is using Google G-Cloud for email accounts and document sharing, so its useful to set up an additional profile on Chrome to help manage which Google account you are using.  The companies application also uses a Chrome extension to track certain actions on the web, so a profile should also help to enusre that the Chrome extension is used when using the application.
+
+   To add a profile open Chrome and click on the current Profile icon at the top right.
+
+   Click Manage people > Add person.
+
+   Choose a name and a photo and click Save.
+
+   A new window will open and ask you to turn on sync.  Select and login with the company Google account.
+
+** Installed LastPass chrome plugin
+   Manage passwords with LastPass (so I dont have to remember them).
+
+   Using my existing LastPass account, creating a section called by the companies name.
+
+** Join company slack community
+   CTO sent an invite link to Slack
+   Created password and added it to LastPass
+   Added community to Slack desktop app on the laptop and mobile phone.
+
+   I use the Slack app as I am on lots of other slack communities and its the only sane way to use Slack in that case.
+
+** JIRA admin access seems to be unknown
+   CTO not familiar enough with JIRA, so figured it out together.  The company uses JIRA Cloud, which is nice but no one seems to know the password for the account that set everything up in the first place.
+
+* 20190105 Clojure Study Group - Study group website
+** Summary
+   Continued talking about building front-end websites with ClojureScript, this time building a website to showcase videos from the Clojure study group.  YouTube does a pretty terrible job for discovery, preferring randomness over organised content.
+** Code
+*** [[https://github.com/practicalli/clojure-study-group-website][ClojureScript website for study group]]
+
+* 20190104 On-boarding
+** Issue: company website out of date
+   Founder wanted to stop publishing the main website as they company had pivoted in a new directly, but the new site currently being build is a long way from being ready.
+
+   Some failed attempts at redirecting the main site to the application website occured, until a redirect on the original company website was finally decided as the right solution, once all the requirements were known.
+
+   TODO: Ensure this kind of work is part of the prioritisation discussion with the founders.  Any work should be discussed to understand the goal, before changing anything, so time was not wasted making changes that were not suitable.
+
+   TODO: Investigate how the existing routing works as there seems to be additional complexity and certain pages are routing to the login page rather than the main page.
+** Lunch with new developer joining the team
+   Walked over to Whitecross market for a lovely falafel from Hoxton Beach stall.  Discussed the opportunities and challenges with the new developer, as much as I could for day two at the company.
+** On-boarding with remote developer
+   High-level walk through of the Editor component
+   TODO: Review existing documentation and ensure on-boarding information is captured.
+* 20190103 First day
+** Setup equipment
+*** done Power extensions
+    CLOSED: [2019-01-04 Mon 09:09]
+*** done WiFi for Laptop and mobile
+    CLOSED: [2019-01-04 Mon 09:59]
+    Set WiFi password using ExcelSystems zendesk (details were emailed)
+*** done Arm
+    CLOSED: [2019-01-04 Mon 10:58]
+*** done Monitor
+    CLOSED: [2019-01-04 Sun 12:04]
+** Onboard with dev team
+*** Overview of all the components in the current architecture
+    TODO: Write up an overview of the components if it does not exist (include diagrams)
+    TODO: Need a solution for authentication across the application components (recreate a single page app with authentication, authorisation (individual, corporate)
+
+** Meeting with Natural Language Processing team
+   Very negative relationship between Natural Language Processing developer (self-described NLP academic and not a developer) and the CTO that caused disruption during the initial meeting.  Will need to work on finding a way to keep focus on the discussions in future.
+
+   NLP developer seems to be best used as a technical advisor directly to the development team in the long run as they do not wish to engage as a developer or commit to any work schedule from the CTO.  It would seem the current NLP solution should be migrated into the main product if delivery of new features is to be managed.  Trying to incorporate the NLP developer into the team as anything other than a technical advisor seems to be of little value.
+
+   TODO: Work with David to migrate the NLP solution into the application stack, starting with the model builder.
+
+** Overview of Synonyms NLP solution
+   TODO: Document information on use of WordNet and Glove.
+* 20190102 VR games - Polybius
+  Enjoying myself before work starts by playing Polybius in VR mode and capturing lots of cows.
