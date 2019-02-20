@@ -634,7 +634,6 @@ I had the chance to broadcast two talks from the Conference, a lightning talk on
 - [[https://www.youtube.com/watch?v=nOfR_OCuZZo][broadcasting virtual study groups with YouTube live]]
 - [[https://www.youtube.com/watch?v=Ja63rOa2MFA][Clojure loves data]]
 
-
 * 20181123 - Day 70: Prepare talks for LJC and Virtual Study group
 ** Thoughts for today
   Created code examples for a Clojure talk at the LJC conference.
@@ -665,7 +664,6 @@ function, naming of test function and namespaces.
 
 Clojure.test is the most commonly used test framework as it is shipped with
 Clojure already.
-
 
 * 20181121 - day 68: Interviews
 ** thoughts for today
@@ -2807,3 +2805,28 @@ name.
 ** Link to work
    [[https://practicalli.github.io/spacemacs][Practicalli Spacemacs]]
    [[https://github.com/jr0cket/100-days-of-clojure-code][My Github repository for 100 Days Of Clojure Code]]
+* Basic Plan for the 100 days of Clojure challenge
+  An initial plan for the 100 days challenge
+** Day 1:
+ - Clojure syntax and basic language use
+
+** Day 2-42:
+   One or more exercises from the following websites
+   - [4Clojure challenges](http://www.4clojure.com/)
+   - [Awesome kata exercises](https://github.com/gamontal/awesome-katas) with `clojure.test`
+   - [ClojureBridge London exercises](https://clojurebridgelondon.github.io/workshop/)
+
+** Day 43-75:
+  -	[Exercisim.io](https://exercism.io/)
+  -	[CodeWars](https://www.codewars.com/)
+  -	Clacks cryptography – other more advanced cyphers
+  -	Game of Life basics / clojurescript
+  -	Tic-tac-toe clojurescript
+  -	Othello clojurescript
+  -	Connect 4 - clojurescript
+  -	Space-wars in Clojurescript / svg – quil.info ?
+  -	Some projects with spec
+
+** Day 77-100:
+  - [Advent of code](https://adventofcode.com/)
+  - [24 pull requests](https://24pullrequests.com/)
