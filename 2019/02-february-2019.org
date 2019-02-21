@@ -4,6 +4,26 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+
+* 20190221 Coach training
+  Updated the coach training presentation, borrowing some slides from the ClojureX talk Yolina and myself gave in 2017.
+
+  [[https://docs.google.com/presentation/d/e/2PACX-1vR_RYp1Vq9O75hmjG-SWRjtr8zezF8CUXicIOSkJqJf-U512u9E7SZm0UCzcIxqbia1VWObchTx9e-L/pub?start=false&loop=false&delayms=3000][Published presentation]]
+
+  Tried to get a Bluetooth headset working, one I bought for the Playstation 3 a long time ago.  It would not pair with my Android phone  and was not even recognised by the laptop.  So I had a look through Amazon and [[https://www.amazon.co.uk/Bluetooth-Upgraded-Handsfree-Wireless-Earpiece-Black-blue/dp/B07GSPTBM9][found a suitable Bluetooth headset earpiece with microphone]].  Although I have wired headset with microphone for the broadcasts, it is useful to have a bluetooth single ear headset (ear piece really) for presentations.
+
+  Cleaned up the kitchen and ordered [[https://www.amazon.co.uk/Pyroflam-Borosilicate-Clear-Steamer-Basket/dp/B003C1NH36][3 glass steamer baskets]] to fit with my ceramic pots.  If all goes well I can get rid of the metal steamers which build up limescale very easily.
+
+*** Thoughts for today
+    Its nice weather so time to get back out on the bicycle again.  Took the Brompton into London for the ClojureBridgeLondon coach training session.
+** Activities
+*** Coach training
+    Caught up with David from Signal to discuss the running of ClojureBridge on the day and everything is in place for the event.
+
+    Updated the coach training presentation, using some of the content from the talk I did with Yolina on how to run a ClojureBridge event.
+
+    Broadcast the coach training live onto YouTube using the LiveBroadcasts and Google hangouts, all seemed to go well and the  [[https://www.youtube.com/watch?v=cZdo_vYvd8M][broadcast recording]] is up already.
+
 * 20190220 Consolidate journals
 ** Thoughts for today
    The UK government sees to be lost, 3 more Conservative MPs have left the party, I wonder how many more will join them.
