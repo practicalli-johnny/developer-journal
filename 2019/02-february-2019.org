@@ -5,6 +5,62 @@
 #+LANGUAGE:    en
 
 
+* 20190222 Compojure API fun
+** Thoughts for today
+   Very happy with the coach training session last night (apart from loosing my cycling gloves).  The [[https://docs.google.com/presentation/d/e/2PACX-1vR_RYp1Vq9O75hmjG-SWRjtr8zezF8CUXicIOSkJqJf-U512u9E7SZm0UCzcIxqbia1VWObchTx9e-L/pub?start=false&loop=false&delayms=3000][presentation]] is much better now and the introduction of practical exercises really engaged the volunteer coaches.  The [[https://www.youtube.com/watch?v=cZdo_vYvd8M][broadcast recording]] for the event seems to have worked too and we had at least one person on during the event.
+
+   Org-mode doesn't seem to want to tab expand ~<s~ for a source block again.  Instead a source block can be created using ~org-bable-demark-codeblock~ or its keybinding ~, b d~.
+
+   The Google Maps disappearing bug is still haunting me, but on only on Chrome Beta.  I cleared the cache as fixed the issue previously, I deleted cookies from the padlock in the URL so now am going to see if I can install a newer version of Chrome beta, I am currently using Version 73.0.3683.27 (Official Build) beta (64-bit).  I've downloaded version 73.0.3683.46-1 from [[https://www.google.com/intl/en_uk/chrome/beta/]].
+
+   Have a bit of flu and coughing quite a lot by the end of the day.  Postponing the weekly Clojure study group broadcast until Sunday.
+** Code
+*** Status monitor: [[https://github.com/jr0cket/webapp-status-monitor/commit/006fafcd525f1c006eed361f9b222338fbabeb0a][Commented out HTML svg code for cider logo]]
+*** Statue monitor: [[https://github.com/jr0cket/webapp-status-monitor/commit/77b5e6690826aff327beb9fbbf44344ed8d702aa][Added missing path of CIDER logo, changed viewbox size]]
+*** compojure-api: [[https://github.com/jr0cket/compojure-api-experiment-my-api/commit/6faa2661798fc08e3e99deae0b906a745dd53030][Initial compojure-api project with clojure-test]]
+*** compojure-api: [[https://github.com/jr0cket/compojure-api-experiment-my-api/commit/2432bdeffaaa0ccf978a089e4cf6d65db4a41bc0][Documentation and formatting]]
+** Activities
+*** Status monitor: fixed the build and added path to cider logo
+    I broke the CircleCI build as I neglected to comment the HTML SVG code for the cider logo. Commenting the HTML code fixed the build.
+
+    While I was there, I had a look at the CIDER logo I create, adding ~svg-components/cider-logo~ to the dashboard page.  Starting the project with ~lein ring server~ I saw that one of the SVG paths of the logo was missing (the left side of the glass).  So copied the path from the original HTML code and put it into the Clojure Hiccup code.  The path is now showing, however, it does seem to need tweaking a bit, as the top curve is missing as is a little of the bottom.  I will fix another day and then possibly use it for
+
+*** Preparing for study group: trying out compojure-api
+    Metosin are a very active company in the Clojure community running a number of events and publishing a lot of content and libraries for Clojure development.  Possibly the most used library is ~clojure-api~.
+
+    Create a new project using the ~clojure-api~ leiningen template.
+
+#+BEGIN_SRC shell
+lein new compojure-api my-api
+#+END_SRC
+
+Its also possible to include tests with your new project, by adding ~+clojure-test~ or ~+midge~ as an option to the ~compojure-api~ leiningen template, for example:
+
+#+BEGIN_SRC shell
+  lein new compojure-api my-api +clojure-test
+#+END_SRC
+
+The project this template creates is relatively simple in terms of dependencies in the project.clj file
+
+#+BEGIN_SRC clojure
+  (defproject my-api "0.1.0-SNAPSHOT"
+    :description "Experimenting with the compojure-api"
+    :dependencies [[org.clojure/clojure "1.8.0"]
+                   [metosin/compojure-api "1.1.11"]]
+    :ring {:handler my-api.handler/app}
+    :uberjar-name "server.jar"
+    :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]
+                                   [cheshire "5.5.0"]
+                                   [ring/ring-mock "0.3.0"]]
+                    :plugins [[lein-ring "0.12.0"]]}})
+#+END_SRC
+
+Interesting things to note are its using the ~lein-ring~ plugin, so we should run the application with ~lein ring server~.  When we want to deploy the application then we should use the ~lein ring uberjar~ command to create an uberjar (a java archive file that includes our Clojure application and the ~clojure.core~ library, so we can just run it as a java library).
+
+In the ~:dev~ profile, dependencies include [[https://github.com/ring-clojure/ring-mock][~ring/ring-mock~]] library to help us test our server-side web application.  I'll probably cover testing a web app in a follow on broadcast.  There is also the [[https://github.com/dakrone/cheshire][~cheshire~]] library to help us work with JSON data in an efficient way.
+
+
+
 * 20190221 Coach training
   Updated the coach training presentation, borrowing some slides from the ClojureX talk Yolina and myself gave in 2017.
 
