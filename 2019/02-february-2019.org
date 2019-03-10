@@ -4,8 +4,49 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190228 ClojureBridge user guides
+** Thoughts for today
+   Time to investigate the images not loading on pages hosted on Github pages.
 
-* 20190222 Compojure API fun
+   Finish off the user guide for VSCode and Calva. Thinking of adding Joker to the ClojureBridge install instructions as an option.
+
+   Test the install and user guides on the Windows machines.
+
+   Cats having a bit of a rampage today, maybe I shouldn't have fuelled them up with that string...
+
+* 20190227 Started Calva user guide
+** Thoughts for today
+   Really impressed by the motivation and openness of the Calva developer (VSCode extension for Clojure/Script).  The Calva project seems to be evolving very quickly and already is a very good tool for Clojure development.
+
+
+** Activities
+*** Started user guide for Calva
+    Discussed some of the details around the current user guide with author of the Calva extension for VSCode, the extension that is building a CIDER like experience.  The developer is very active and very responsive to questions on Slack.
+
+    I got some updated dependencies, which are currently required to connect to a REPL run from Leiningen.  This is the currently supported way of using Calva, although there is a beta of a ~jack-in~ function that will inject these dependencies (just like CIDER).
+
+*** New talk night for London Clojurians
+    G
+* 20190225 Tidying the Kitchen
+** Thoughts for Today
+   Took a bit of a break today and organised the kitchen better.  I bought glass steamer trays to make a ceramic and glass steamer combo for cooking my kale and other vegetables.  The metal steamers were okay, but as I am in a hard water area then limescale easily builds up on the metal.  Now I just need to donate my unused steamer.
+   Bought a pot rack for my ceramic pots, to make them more accessible and take up less space in the kitchen.
+
+* 20190224 Clojure Study group broadcast
+** Thoughts for today
+** Code
+*** [[https://github.com/jr0cket/compojure-api-experiment-my-api/commit/2432bdeffaaa0ccf978a089e4cf6d65db4a41bc0][Compojure-api-experiments-my-api]] - first 10 commits
+** Activities
+*** Clojure study group broadcast - create a simple API
+    Today I walked through building a simple API using the ~compojure-api~ library.
+
+    [[https://www.youtube.com/watch?v=cZdo_vYvd8M][Recorded broadcast]]
+
+* 20190223 More Compojure API fun
+** Thoughts for today
+   Worked on a ~compojure-api~ based project for the study group.  Focused on explaining what is created from the ~compojure-api~ Leiningen template with the ~+clojure-test~ option.
+
+* 20190222 Started Compojure API fun
 ** Thoughts for today
    Very happy with the coach training session last night (apart from loosing my cycling gloves).  The [[https://docs.google.com/presentation/d/e/2PACX-1vR_RYp1Vq9O75hmjG-SWRjtr8zezF8CUXicIOSkJqJf-U512u9E7SZm0UCzcIxqbia1VWObchTx9e-L/pub?start=false&loop=false&delayms=3000][presentation]] is much better now and the introduction of practical exercises really engaged the volunteer coaches.  The [[https://www.youtube.com/watch?v=cZdo_vYvd8M][broadcast recording]] for the event seems to have worked too and we had at least one person on during the event.
 
@@ -58,8 +99,6 @@ The project this template creates is relatively simple in terms of dependencies 
 Interesting things to note are its using the ~lein-ring~ plugin, so we should run the application with ~lein ring server~.  When we want to deploy the application then we should use the ~lein ring uberjar~ command to create an uberjar (a java archive file that includes our Clojure application and the ~clojure.core~ library, so we can just run it as a java library).
 
 In the ~:dev~ profile, dependencies include [[https://github.com/ring-clojure/ring-mock][~ring/ring-mock~]] library to help us test our server-side web application.  I'll probably cover testing a web app in a follow on broadcast.  There is also the [[https://github.com/dakrone/cheshire][~cheshire~]] library to help us work with JSON data in an efficient way.
-
-
 
 * 20190221 Coach training
   Updated the coach training presentation, borrowing some slides from the ClojureX talk Yolina and myself gave in 2017.
@@ -241,7 +280,7 @@ In the ~:dev~ profile, dependencies include [[https://github.com/ring-clojure/ri
 *** Wrote a new guide on running a Clojure dojo
     We have some new uSwitch people helping out with the coding dojo events, so I wrote much clearer details on [[http://www.londonclojurians.org/coding-dojos/how-to-run-a-london-clojurians-coding-dojo.html][how to run the event]].
 
-* 20190202 Clojure study group
+* 20190203 Clojure study group
 ** Thoughts for today
    Another Clojure study group, this time covering Sequences in Clojure.  We also walk through the solutions to 4Clojure exercises #23, #24, and #25.
 
