@@ -1,0 +1,149 @@
+#+TITLE:       Developer Journal - March 2019
+#+AUTHOR:      John Stevenson
+#+DATE:        <2019-03-01 Fri>
+#+EMAIL:       john@jr0cket.co.uk
+#+LANGUAGE:    en
+
+* 20190310 still have flu
+** Thoughts for today
+   Feeling like crud most of the day.  By the evening I managed to update this journal with a few additional updates.
+
+   I cancelled the Clojure study group this weekend, as I just couldn't focus because of flu.
+
+* 20190309 still very flu-ee
+** Thoughts for today
+   Still full of flu so caught up on lots of sleep.
+
+** Interesting articles
+*** [[http://clojure-goes-fast.com/blog/clojures-slow-start/][Clojure's slow start]] - deconstruction of what happens during startup of Clojure, Leiningen and Boot
+*** [[https://github.com/OlegIlyenko/clojure-icons][Clojure logos]] - nice svg and png Clojure logos
+** Activities in detail
+   Nothing much of merit, simply catching up with Clojurians slack channels.
+
+   I like the [[https://github.com/ogdenwebb/emacs-kaolin-themes][kaolin themes for Emacs]], they are very colourful and have a good contrast so should be good for demos and screencasts.  I simply added ~kaolin-themes~ to the ~dotspacemacs-additional-packages~ configuration in ~.spacemacs~.  Then after reloading the configuration, ~SPC f e R~, I could select these new fonts via ~SPC T s~
+
+   Interesting [[https://github.com/AndreaCrotti/yasnippet-snippets][collection of yasnippets from Andrea Crotti]], including a range for [[https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode][Clojure mode]].  TODO: Evaluate the clojure-mode snippets and see if any are missing from Spacemacs / CIDER.  Consider pull requests if there are useful ones missing.
+
+* 20190308 Call with AI startup
+** Thoughts for today
+   Had a very interesting chat with the CEO of an AI driven education platform.  An initial conversation seemed quite promising and we had general agreement on approach to a CTO role.  The biggest factor for me is that it would require relocation.  Although I like the new location, it is the uncertainty of Brexit that adds to the risk of moving.
+
+   Found an interesting learning resource: [[http://iloveponies.github.io/120-hour-epic-sax-marathon/][Functional Programming in Clojure MOOC]]
+
+   Still full of flu, so went to bed.
+
+* 20190307 Flu started
+   Yes, my shelving finally arrived.  It seems the two packages were not held together very well, which may have caused the delay (or it could have been due to EU countries practising Brexit no-deal scenarios).
+
+   I had applied for Universal Credit, mainly to see what the experience was.  I was told my claim was closed today, as I had too much in savings.  I was not surprised.  Applying for Universal Credit did take a bit of time - trying to figure it its the only option took time, as I wasnt able to claim for job seekers allowance online.  The online application did take about 20 minutes once I had read all the right documemtation.  I then had to verify myself, wich I chose to do using the Post Office mobile phone application.  The app was used to scan my current passport and take a very dodgy picture of myself (bad hair day).
+
+   It does seem that its the people on existing benefits are the ones who are having the biggest issues, as new claims seem to be fairly straight forward (and less of a mess than previous multiple approaches).  The assessment beyond those only claiming for unemployment does sound a real mess though and the claims for those unable to work because of a disability seem worse than cruel.
+
+* 20190306 Lunch with prospective company
+** Thoughts for today
+   Reflecting on my experiences for the last 22 years in the software development industry led to a nice little journey down memory lane.  I have been very lucky to have lots of different experiences, most have been positive although there have been lots of life lessons.
+
+   Whilst thinking about all the companies I have worked for, there have been quite a few involved in mergers and aquisitions, many more than I remembered.  If fact most of the companies I have worked for have been either aquired by another company or have aquired other companies.
+
+*** Objective Alliance
+   My first role after Newcastle University was at a very small consultancy company based in Amsterdam called Objective Alliance.  This company had an interesting tag line: new and proven technology.  I was there for 3 years and in the last year they were aquired by a Dutch company that were doing what we called old but everywhere technology (COBOL mostly).  I didnt see much of the details of the merger, however, many of the technical staff did leave as it wasnt clear what our roles and direction would be.  I was on long term assignment in another part of the country (Neimegen, which was lovely) and so didnt see the day to day changes.  Just after finishing that assignment we an office party involving both companies and its there I realised I didnt really feel a part of the company.  In the end I decided to leave due to the combination of the merger (not knowing what was ahead), always being on assignment (not connected to the people I work with) and the language barrier (everyone worked in English and I had been caught up in the work that I hadnt set aside time to learn Dutch).
+
+*** Valtech
+   Next I worked for Valtech, another consultancy company in London, UK.  I worked there for a year and they didnt get aquired.
+
+*** Proxicom
+   I was head-hunted to a company called Proxicom who had recently aquired Clarity, a small technical design company, to bootstrap their expansion into Europe.  Proxicom was a USA based consultancy company that had seen rapid growth in the USA and wanted to bring that to London.  Initially we were working in separate offices, so there was not much integration between the teams.  Only if people were put on a project together would they have much chance for interaction.  After about 4 months we moved into some new offices together so there was a bit more chance to work with the technical team from Clarity.  For a few months it was a great chance to learn from each others very different skill sets.  I learnt to appreciate the complexities of front-end development.
+
+  A few of us did come together and start to discuss working practices and how we could improve the quality of delivery at client engagements as well as capture lessons learnt.  We presented our thought to management and they created an Architects team (although we didnt care for the name, it did give us a chance to start working on improving practices and capturing lessons learned with many of the teams.
+
+  After nearly about 9 months of working at Dimension data there was talk about an aquisition of the company but very little details.  Someone had mentioned Dimension Data (a South African company I had never heard of before).  A month later the whole company in the UK was brought together for a afternoon off-site meeting where we found out that we were just about to be aquired by Compaq (who to me were a company that made PC's).  There were some very surprised people in the room and it seemed a lot of concern about this aquisition.  Many people thought they would be made redundant or were concerned about being onwed by Compaq.  Reassurances were made about jobs as the process was explained over the next hour.  It was a warm room, perhaps because of the tension in the air.  The presentation also seemed to go on for a long time, perhaps just to calm people down through powerpoint attrition (the slides were very dry and hard to engage with.
+
+  Within a week everything had changed.
+
+  Rather than be aquired by Compaq, Dimension Data had come back to the table and wanted to aquire us.  Within a few days it was all arranged.  Its easy to think in hindsight that the Compaq deal was just to motivate Dimension data to get around the table and sign a lucrative (for Proxicom) deal.
+
+  Within a few week of that, they were handing out redundancies...  They were incredibly generous redundancy packages, so I snapped one up straight away.
+
+*** ObjectCore
+    I had an opportunity to do some consulting work and so set up my own company called ObjectCore, unfortunately no-one aquired my company for 1 million dollars :smile:
+
+*** Q&A Systems
+    In 2004 I worked for what turned out to be a pretty doomed startup company, although looking at companies house it limped on until 2014.  They were never aquired, although we did get the Inland Revenue interested in our product.
+
+*** Docucorp
+    At the start of 2006 I joined a product company called Docucorp who were an American company that had aquired a UK company to drive sales of the product and provide technical pre-sales and technical consultancy.  By mid-2007 Docucorp had been aquired by SkyWire software, another American company rapidly expanding through many aquisitions.
+
+    The fun didnt stop there as within about 4 months of being aquired by SkyWire, then SkyWire themselves were going to be aquired by Oracle.  In order to streamline SkyWire for the Oracle aquisition a dozen redundancies were offered along with a very nice package including career support.  I decided to take redundancy again as I want that keen on what SkyWire were doing and more concerned about Oracle.
+
+*** Brit Insurance
+    After a couple of months break and a well deserved break I was contacted by Brit Insurance, a company who I had worked for during my time at Docucorp.  The wanted me back because no one knew (or perhaps wanted to know) how to use the Docucorp system.  Not that I really knew that much, as there was an extreme amount of trial and error with all of it.  I took the role as it would be a straightforward choice and an okay salary (probably could have asked for more, as I would have been much cheaper than paying for me via Docucorp as a consultant).
+
+    By the start of 2010 Brit Insurance was under performing its competitors by a long way, arguably to the massive redundancy in the the application development teams.  There were 3 main divisions for the business and each had successfully argued that they should have their own development teams (and project managers) even though most of the IT solutions were doing pretty much the same thing.  After asking the CTO at that time about what the differentiator was for Brit Insurance, I was surprised to be told that their was none, specifically "its all just insurance".   That was when I decided to make my exit.
+
+    Within 4 months of leaving Brit Insurance was aquired by Fairfax Financial Holdings and quickly streamlined the company.  The IT department went from around 100 people to around 10 people.
+
+*** The rest of my career has been more stable
+    In terms of being aquired by companies, very little else has happened in my career to date.
+
+    I worked for Atlassian, but left before they went IPO.  I was only there for a year or so and would not have really benefited from that event.
+
+    Salesforce was very interesting.  They were already a public company and it really did give me a good insight into the impact that unexpected quarterly results can have.  The first time I noticed this was the aquisition of Exact Target in 2013 for $2.5 billion and budgets were put on hold very briefly.  A much bigger impact was the UK advisory referendum in 2016 that narrowly voted to leave and caused the UK currency to drop in value massively against the USA dollar.  This immediately killed the budget for our team for the next 3 months and impacted levels for much longer.  There are a number of [[https://www.salesforceben.com/top-5-salesforce-acquisitions-time-now/][large aquisitions by Salesforce over the last 5 years]] that I assume has required a little forward planning.
+
+    After Salesforce I took a job at Citi group.  They had mostly recovered from the financial crisis by the time I had joined.  I found Citi so big (220 million employees) that I didnt really know about any aquisitions they did.
+
+    So my career has seen some very interesting events over the years.  I wonder what will happen over the next 20 years or so...
+
+* 20190305 ClojureBridge London disqus feedback updates
+** Thoughts for today
+   Wondering when my shelving that is coming from Germany will arrive.  As its not Amazon Prime, then the tracking is very vague.  Switched to tracking via the GLS website which then gave me a code to track on Parcelforce.  Its not going to arrive today :unamused:
+
+** Code
+   Just markdown updates today.
+** Activities
+*** Updating ClojureBridge from Disqus feedback
+    7 pieces of feedback were recieved via disqus form at the bottom of each page of the workshop content.  All the issues raised have either been fixed or a ticket on the [[https://github.com/ClojureBridgeLondon/workshop-content-gitbook/projects/1][GitHub project for the workshop content]] has been raised.
+*** Updated the Practialli Spacemacs install page
+    A comment on the disqus form for the Spacemacs install page said about adding a link to download Emacs.  Added a link to the Emacs install section and the "before you start" section to ensure that people read the pre-requisites.
+
+* 20190304 Initial interview
+** Thoughts for today
+   Feeling much better after having a great conversation with a prospective company today.  Gave me a chance to reflect on what I want to do next.  This role and company seem very promising.
+
+   Still feeling a bit down about an accusation that I was trying to commercially exploit ClojureBridge London.  I am still in a bit of shock about that accusation.
+
+* 20190303 Clojure Study Group
+** Thoughts for today
+   Had an okay Clojure study group, although generally feeling a bit down because of the incident on Friday.
+
+** Code
+4Clojure solution discussions
+
+** Activities
+
+* 20190302 ClojureBridge London workshop
+** Thoughts for today
+   Stayed in the background today to avoid any further acusations of trying to exploit ClojureBridge London.  I tried my best to ignore this quite hurtful accusation and not let it affect my interaction with the attendees.
+
+** Code
+*** New Project: Build a ClojureBridgeLondon website
+   Some sample project code for a ClojureBridge London website, to be used as the basis of a project for the students
+   https://github.com/ClojureBridgeLondon/clojurebridge-london-website-example
+
+** Activities
+*** Hack ClojureBridgeLondon Workshop content
+   Some quick fixes for the workshop content and a bit of work on the ClojureBridge London Website project content.
+
+* 20190301 ClojureBridge London Introduction
+** Thoughts for today
+   A very disturbing incident while I was trying to run the introduction for ClojureBridge London.  I was later accused of trying to commercially exploit ClojureBridge London.  Apparently broadcasting the introduction to those few who who couldn't make the event was beneficial commercially to me as a consultant.  However, I am not a consultant and have never had a consultancy role in Clojure or any kind of consultancy role since 2001.  The complaint continued to accuse my company, Practicalli, of benefiting from ClojureBridge London.  However, there is no such company and Practicalli is a collection of freely available books published by myself on GitHub pages to encourage others to learn Clojure and free tools such as Spacemacs.  The complaint moved on to exploiting ClojureBridge London for my own personal brand development.  This is not the case and was pretty devastated to hear that someone would make such an accusation or even think I would do such a thing.
+
+   I do care that the ClojureBridge London event is run well and the experience is as positive as possible.  I hope that some of the students gain some insight into why our community loves developing with Clojure and I try to ensure the coaches have all the support and confidence they need for the event.
+
+   I will think about why a person should consider that I have such ulterior motives with respect to ClojureBridge London and I will need to consider if I should continue being involved.  The person who made these claims is has said they will no longer be involved with ClojureBridge London or the London Clojure community as they have moved on to other things.  But I am concerned that others may have the same concerns, so will reach out to other people that have been active in the community to see what their view is.
+
+** Code
+  Mostly markdown content changes
+
+** Activities
+*** Content change for Friday intro of ClojureBridgeLondon
+    Updated the Friday section to make it more engaging for the students
