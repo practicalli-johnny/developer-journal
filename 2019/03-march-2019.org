@@ -4,6 +4,73 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+
+* 20190311 - missing uSwitch Coding dojo - flu
+** Thoughts for today
+   I still have a bit of flu, but think its just the after effects now.  Will cycle on my brompton into uSwitch and see if that makes me feel fitter.  Actually, I am still feeling a bit rubbish, so I might get the train into London and cycle back.  Update:  I still feel very tired and unable to concentrate, so will have to miss the coding dojo
+
+   Updated some 4Clojure exercises instead of attending the coding dojo.
+
+** Code commits
+*** 4Clojure #27 - Palindrome detector
+*** 4Clojure #29 - All the CAPS
+*** 4Clojure #30 - Compress a sequence
+
+** Activities in detail
+*** 4Clojure exercises - updating discussion
+*** Updated org-mode TODO state colours (faces)
+    I am using TODO states in org-mode much more often now, especially at the head of this developer journal, to ensure I get essential things done and I dont forget about less urgent things I'd like to do.  I didnt like the colours I was using, so thanks to https://en.wikipedia.org/wiki/Web_colors I made them more colourful (without being too strong) using the X11 color names.  This may not work on terminal Emacs if X11 is not installed, but you could use simpler names for the colours.
+
+    The todo state colours were defined in the ~dotspacemacs/user-config~ section of ~.spacemacs~
+
+#+begin_src elisp
+(with-eval-after-load 'org
+    (setq org-todo-keyword-faces
+         '(("todo" . "SlateGray")
+           ("doing" . "DarkOrchid")
+           ("blocked" . "Firebrick")
+           ("review" . "Teal")
+           ("done" . "ForestGreen")
+           ("archived" .  "SlateBlue"))))
+#+end_src
+
+    Re-evaluate the ~.spacemacs~ file using ~SPC f e R~ and the changes will take effect immediately.
+
+    When moving through TODO states in an org-mode file, e.g. using ~M-<right-arrow>~ or ~M-<left-arrow>~, each state has its own colour.
+
+*** Fixing org-mode 9.2 easy templates in Spacemacs develop
+    Up until recently, typing ~<s~ and pressing ~TAB~ would create a source code block in org-mode.  However, since org-mode 9.2 some of the formatting has changes.  Although Spacemacs seems to be okay in general, it is the org-reveal (ox-reveal) package that is not compatible and causing errors.
+
+    Several issues have been raised on the Spacemacs issue tracker on GitHub, however the [[https://github.com/syl20bnr/spacemacs/issues/11935][Request: Use org-re-reveal instead of stale org-reveal]] issue has a fix that worked for my ~develop~ branch of Spacemacs (updated today: [2019-03-11 Mon]).
+
+    Start by disabling org-reveal via the org layer options.  Edit ~.spacemacs~ and configure the org layer as follows
+
+#+BEGIN_SRC emacs-lisp
+(org :variables
+     org-enable-reveal-js-support nil)
+#+END_SRC
+
+    If you do not wish to use org-reveal (or org-re-reveal) to create HTML5 style web page for presentations, then you can just stop here.  You can create source code blocks in org-mode using ~, b d~ to call the ~org-babel-demarcate-block~
+
+| Keybinding | Description                                                                                                               |
+|------------+---------------------------------------------------------------------------------------------------------------------------|
+| ~i b~      | select from a list of block types                                                                                         |
+| ~b d~      | create a code block for a specific language - helm menu to select language.  ~C-c C-,~ in Emacs.                          |
+
+    To generate presentations, go to just below the layer definitions in ~.spacemacs~ and add ~org-re-reveal~ to the ~dotspacemacs-additional-packages~ name.
+
+#+BEGIN_SRC emacs-lisp
+dotspacemacs-additional-packages '(org-re-reveal)
+#+END_SRC
+
+    Finally, in ~dotspacemacs/user-config~ tell Spacemacs to use the ~org-re-reveal~ package, after the org layer has loaded.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-re-reveal :after org)
+#+END_SRC
+
+    So now I can use org-mode templates again and still generate presentations (although I need to test generation still works with my existing org-mode files).
+
 * 20190310 still have flu
 ** Thoughts for today
    Feeling like crud most of the day.  By the evening I managed to update this journal with a few additional updates.
@@ -26,7 +93,7 @@
 
 * 20190308 Call with AI startup
 ** Thoughts for today
-   Had a very interesting chat with the CEO of an AI driven education platform.  An initial conversation seemed quite promising and we had general agreement on approach to a CTO role.  The biggest factor for me is that it would require relocation.  Although I like the new location, it is the uncertainty of Brexit that adds to the risk of moving.
+   Had a very interesting chat with the CEO of an AI driven education platform.  An initial conversation seemed quite promising and we had general agreement on approach to a CTO role.  The biggest factor for me is that it would require relocation.  Although I like the new location, it is the uncertainty of Brexit that adds to the risk of moving.  Having a Cambridge location will also be a challenge to attract developers out of London, even more so if Brexit gets worse (especially if the UK GBP drops further against the Euro) and EU developers decline to come to the UK.  The opportunity is worth investigating, so I have booked a train ticket (trainlinenext) Friday to go and see the directors.  I got an all-day return as the meeting time had not been set.  I also found a potentially interesting talk at the [[https://www.eventbrite.co.uk/e/gene-eating-the-truth-about-diets-tickets-54923010202][Cambridge University on Genes and diet]].
 
    Found an interesting learning resource: [[http://iloveponies.github.io/120-hour-epic-sax-marathon/][Functional Programming in Clojure MOOC]]
 
