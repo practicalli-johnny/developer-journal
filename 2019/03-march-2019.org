@@ -4,6 +4,19 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190312 - final day of flu
+** Thoughts for today
+   Hopefully this is my final day of flu.  I felt really horrible this morning but mostly better this afternoon.
+
+   UK politics is still a mess but at least the terrible withdrawal deal has been voted down a second time.
+
+** Code commits
+*** .
+** Activities in detail
+*** Stopped using Chrome Beta
+    Switched back to Chrome as ironically Chrome Beta just didnt work with Google maps
+
+    Added any useful pages to the TODO section at the top of this journal.
 
 * 20190311 - missing uSwitch Coding dojo - flu
 ** Thoughts for today
