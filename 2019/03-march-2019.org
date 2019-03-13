@@ -4,6 +4,17 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+
+* 20190313 - Interviews and Machine Learning study group
+** Thoughts for today
+   Had a really good time at an interview today, very friendly people and it never really felt too difficult.  Hopefully I didn't give them any remnants of my flu.
+
+   Worked on the info-graphic for how to run a ClojureBridge London event.  I had drawn up the design for the info-graphic on the wall at home (well a dry-wipe sheet on the wall).
+
+   Caught up with a volunteer who wanted to be an organiser for ClojureBridge London.  Went through the organisation tasks in about 20 minutes, using the info-graphic (which worked pretty well).  Discussed doing a `live evaluation` session for the next event, taking an existing code base and explaining what it does by evaluating the code and showing the results.  Also discussed having separate trails to follow based on what students wish to try, which would include a learning path to built a website from scratch as well as create enhancements for a new website
+
+   Attended the ML Study group and learned about [[https://colab.research.google.com/][Google colab]], an online Jupiter Notebooks tool that also supports GPU powered calculations.  It also means you don't have to install lots of python libraries and versions on your laptop.
+
 * 20190312 - final day of flu
 ** Thoughts for today
    Hopefully this is my final day of flu.  I felt really horrible this morning but mostly better this afternoon.
