@@ -5,6 +5,51 @@
 #+LANGUAGE:    en
 
 
+* 20190314 - Prepare for Cambridge interview
+** Thoughts for today
+   Still have a few after effects of the flu, but have a lot more energy now.  Hmm, I spoke too soon and the flu caught up with me again.  I did sort out some of my code and pushed some more commits, but still a lot to organise.
+
+   Had a great conversation with a new friend called Lisa.  Very enjoyable chatting with her and we seem to have similar thoughts on life.  It will be interesting to see where this goes.
+
+** Code commits
+*** .
+** Activities in detail
+*** Using Google Colab
+    Found some interesting tutorials to help get started with Google Colab.
+    - [[https://colab.research.google.com/][Google Colab]]
+    - [[https://medium.com/dair-ai/primer-for-learning-google-colab-bb4cabca5dd6][Primer for Learning Google Colab]]
+    - [[https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c][Getting Started With Google Colab]]
+*** Preparing for Cambridge inteview
+    Reviewing examples of my coding as they company said they would like to see code I am particularly proud of.  As a lot of the Clojure code I am able to share is aimed at teaching people Clojure, I am unsure if its of the level they are looking for.  All of the code I have done for work is not sharable unfortunately.
+
+    Some examples I have come up with include
+**** ClojureBridgeLondon workshop content
+    [[https://clojurebridgelondon.github.io/workshop/][ClojureBridge London website]]
+     Discuss some of the challenges of teaching people a new language, especially when there is mixed experiences in the room.
+     - creating separate learning paths: simple challenges, responsive website, react style website (deployed on GitHub pages).
+**** Clojure web apps
+     -[[http://practicalli.github.io/clojure-webapps/][Practicalli Clojure WebApps]]
+**** 4Clojure discussions
+***** #53 longest sub-sequence
+      Quite a procedural challenge so interesting to see how its done in a more functional way.  Using the Clojure debugger to step through the code helps demonstrate the different approaches.
+
+**** Most common word
+     [[file:~/projects/clojure/clojure-through-code/src/clojure_through_code/hhgttg-book-common-words.clj::;;%20Example%20of%20threading%20macros%20and%20the%20use%20of%20a%20connected%20REPL%20to%20give%20fast%20feedback][HHGTTG - Most Common word]]
+**** SVG library
+     - Monitoring dashboard
+     - SVG component library and examples
+
+**** TicTacToe Reagent & SVG
+
+*** Linking to files in org-mode
+    Linking to files, such as other source code files, is just the same as adding other links.  In Spacemacs that is ~, i l~, adding the path and filename and then the name of the link.
+
+    You can make this easier by getting a link to any file using ~org-store-link~ function, or ~SPC a o l~ (app, org, store-link).  This will get the path and filename of the file as well as append
+
+    ~org-insert-last-stored-link~ will add a link to the file using the information from  ~org-store-link~.
+
+    ~, i l~ will also insert a link and you can use ~C-y~ to paste the link from ~org-store-link~
+
 * 20190313 - Interviews and Machine Learning study group
 ** Thoughts for today
    Had a really good time at an interview today, very friendly people and it never really felt too difficult.  Hopefully I didn't give them any remnants of my flu.
