@@ -5,6 +5,23 @@
 #+LANGUAGE:    en
 
 
+* 20190315 - Interview in Cambridge
+** Thoughts for today
+   Took a bit of time to get myself together this morning, still tired from the flu I guess.  I got myself going and used the Brompton and trains to get to Cambridge with lots of time to spare.  I enjoyed cycling around Cambridge, it is a very nice town (or is it a city?) and much as I remember it.  I have been there for quite a few conferences, mainly Agile Cambridge, where I spoke a few times.  I also did a talk for Functional Cambridge conference on Leiningen.
+
+   The [[https://nextjournal.com/][Next Journal project]] is a Clojure version of Jupiter notebooks, except it also supports several different languages rather than just python.  One of the developres, ..., gave a presetation on ... at ClojureD.  The project looks very interesting, so I will have a go with the getting started guide.is a Clojure version of Jupiter notebooks, except it also supports several different languages rather than just python.  One of the developres, ..., gave a presetation on ... at ClojureD.  The project looks very interesting, so I will have a go with the [[https://nextjournal.com/help/quickstart][getting started guide]].
+
+
+** Code commits
+*** .
+** Activities in detail
+*** Cambridge interview
+   The interview itself seemed to go very well.  It was very interesting to meet and understand the dynamics of the core team.  I met with the 3 founders who had quite different personalities but seemed relatively complementary.  I also met the two main developers and we had lots of interesting conversations.  I did seem to be the one getting asked all the questions, but this was to be expected as they have a lot of questions about how to grow their team and their business.  That is after all what the role would be there to help with.  The interview was getting on for 3 hours although never felt uncomfortable to me.  There may have been one or two questions I deflected and detracted from, but I think that was okay.
+
+   My main concern about the role is moving to Cambridge with brexit uncertainty ever more chaotic.  I dont think I am comfortable making a decision until we have either a peoples vote or article 50 is withdrawn.  If brexit remains uncertain, I may only feel comfortable in commuting, but that is going to be 2 hours door to door each way, so 4 hours commuting each day.  That doesnt seem feasible unless the founders are okay including some of that time as work time.  Even if they are, that could cause tension in the team if I start late and finish early.
+
+   I have not yet seen the product they are building although have had assurance that it is proper AI work and not just the basic stuff that has been around for a few decades.  If I get a strong enough afinity to the product, that could help override the concerns about relocating.
+
 * 20190314 - Prepare for Cambridge interview
 ** Thoughts for today
    Still have a few after effects of the flu, but have a lot more energy now.  Hmm, I spoke too soon and the flu caught up with me again.  I did sort out some of my code and pushed some more commits, but still a lot to organise.
