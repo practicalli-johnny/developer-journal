@@ -5,12 +5,23 @@
 #+LANGUAGE:    en
 
 
+* 20190316 - prepare for study group
+** Thoughts for today
+   Work up early (5am) with a big coughing fit and felt exhausted.  I really felt bad so decided to postpone the study group until Sunday.  This will also give me time to tidy up the code for the study group and add better explanations.
+
+   Helped one of my students from the study group with a bug in their code.
+
+** Code commits
+*** [[https://github.com/jr0cket/advent-of-code-2019/commit/d92af1a44c5aa838f2e58567f3f477ec8671633a][Updated clojure.core.matrix require statement]]
+** Activities in detail
+*** Fixing a bug for Waffles Advent of Code
+   Helped Waffles to fix a code bug, there was a typo that too a while to spot in the :require of the namespace.  Waffles had put ~clojure/core.matrix~ instead of ~clojure.core.matrix~ for the ~net.mikera/core.matrix~ library.  Its a confusing namespace as it makes you think the matrix library is part of clojure.core, which it is not.
+
 * 20190315 - Interview in Cambridge
 ** Thoughts for today
    Took a bit of time to get myself together this morning, still tired from the flu I guess.  I got myself going and used the Brompton and trains to get to Cambridge with lots of time to spare.  I enjoyed cycling around Cambridge, it is a very nice town (or is it a city?) and much as I remember it.  I have been there for quite a few conferences, mainly Agile Cambridge, where I spoke a few times.  I also did a talk for Functional Cambridge conference on Leiningen.
 
    The [[https://nextjournal.com/][Next Journal project]] is a Clojure version of Jupiter notebooks, except it also supports several different languages rather than just python.  One of the developres, ..., gave a presetation on ... at ClojureD.  The project looks very interesting, so I will have a go with the getting started guide.is a Clojure version of Jupiter notebooks, except it also supports several different languages rather than just python.  One of the developres, ..., gave a presetation on ... at ClojureD.  The project looks very interesting, so I will have a go with the [[https://nextjournal.com/help/quickstart][getting started guide]].
-
 
 ** Code commits
 *** .
