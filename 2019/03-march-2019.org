@@ -5,6 +5,18 @@
 #+LANGUAGE:    en
 
 
+* 20190317 - Clojure study group - API part 3
+** Thoughts for today
+   Had a good clojure study group, going through how to create an API for a Game scoreboard.
+
+   Big tidy up and clean of the house as my friend Lisa was coming for a visit.  The house feels huge now.
+
+** Code commits
+*** [[https://github.com/practicalli/game-scoreboard][practicalli/game-scoreboard]]
+** Activities in detail
+*** Creating an API for a game scoreboard
+    Walked through the creation of a game scoreboard using the Leiningen clojure-api
+
 * 20190316 - prepare for study group
 ** Thoughts for today
    Work up early (5am) with a big coughing fit and felt exhausted.  I really felt bad so decided to postpone the study group until Sunday.  This will also give me time to tidy up the code for the study group and add better explanations.
