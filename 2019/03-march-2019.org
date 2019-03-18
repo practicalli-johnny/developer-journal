@@ -5,6 +5,23 @@
 #+LANGUAGE:    en
 
 
+* 20190318 - Organising ClojureBridgeLondon May 2019
+** Thoughts for today
+   Scheduled next study group broadcast for March 24th (as I am on the march to StopBrexit on 23rd)
+
+   Created the event page for ClojureBridgeLondon at Functional Works, using BridgeTroll.
+
+   Caught up with Functional works and discussed the status of the current job opportunities.
+** Interesting stuff
+*** [[http://ventrella.com/Clusters/][Clusters]] - but not in Clojure though :unamused:
+** Code commits
+*** .
+** Activities in detail
+*** Setting up ClojureBridgeLondon on BridgeTroll
+    Caught up with Nola Stowe from ClojureBridge and let her know about the next event, which she will add to the next ClojureBridge newsletter.  We talked about the BridgeTroll event approval process and has put me in touch with someone who will train me up in the event approval process.  This means its now viable to use BridgeTroll for our events.  BridgeTroll is much better than meetup.com and eventbrite for these events, as you can group all three parts of the event onto one page.
+
+    Alex Miller replied to the discussion we were having and said he would like to have ClojureBridge events on the Clojure.org website.  I will do a PR to https://github.com/clojure/clojure-site/tree/master/content/events/2019 and add the event.
+
 * 20190317 - Clojure study group - API part 3
 ** Thoughts for today
    Had a good clojure study group, going through how to create an API for a Game scoreboard.
