@@ -5,7 +5,7 @@
 #+LANGUAGE:    en
 
 
-* 20190318 - Organising ClojureBridgeLondon May 2019
+* 20190318 Organising ClojureBridgeLondon May 2019
 ** Thoughts for today
    Scheduled next study group broadcast for March 24th (as I am on the march to StopBrexit on 23rd)
 
@@ -18,11 +18,13 @@
 *** .
 ** Activities in detail
 *** Setting up ClojureBridgeLondon on BridgeTroll
+    I started creating a Meetup page, but we always have the problem of how many separate events to we create.  So, this time around we are going to try using BridgTroll to manage the sign up process.
+
     Caught up with Nola Stowe from ClojureBridge and let her know about the next event, which she will add to the next ClojureBridge newsletter.  We talked about the BridgeTroll event approval process and has put me in touch with someone who will train me up in the event approval process.  This means its now viable to use BridgeTroll for our events.  BridgeTroll is much better than meetup.com and eventbrite for these events, as you can group all three parts of the event onto one page.
 
     Alex Miller replied to the discussion we were having and said he would like to have ClojureBridge events on the Clojure.org website.  I will do a PR to https://github.com/clojure/clojure-site/tree/master/content/events/2019 and add the event.
 
-* 20190317 - Clojure study group - API part 3
+* 20190317 Clojure study group - API part 3
 ** Thoughts for today
    Had a good clojure study group, going through how to create an API for a Game scoreboard.
 
@@ -34,7 +36,7 @@
 *** Creating an API for a game scoreboard
     Walked through the creation of a game scoreboard using the Leiningen clojure-api
 
-* 20190316 - prepare for study group
+* 20190316 prepare for study group
 ** Thoughts for today
    Work up early (5am) with a big coughing fit and felt exhausted.  I really felt bad so decided to postpone the study group until Sunday.  This will also give me time to tidy up the code for the study group and add better explanations.
 
@@ -46,7 +48,7 @@
 *** Fixing a bug for Waffles Advent of Code
    Helped Waffles to fix a code bug, there was a typo that too a while to spot in the :require of the namespace.  Waffles had put ~clojure/core.matrix~ instead of ~clojure.core.matrix~ for the ~net.mikera/core.matrix~ library.  Its a confusing namespace as it makes you think the matrix library is part of clojure.core, which it is not.
 
-* 20190315 - Interview in Cambridge
+* 20190315 Interview in Cambridge
 ** Thoughts for today
    Took a bit of time to get myself together this morning, still tired from the flu I guess.  I got myself going and used the Brompton and trains to get to Cambridge with lots of time to spare.  I enjoyed cycling around Cambridge, it is a very nice town (or is it a city?) and much as I remember it.  I have been there for quite a few conferences, mainly Agile Cambridge, where I spoke a few times.  I also did a talk for Functional Cambridge conference on Leiningen.
 
@@ -62,7 +64,7 @@
 
    I have not yet seen the product they are building although have had assurance that it is proper AI work and not just the basic stuff that has been around for a few decades.  If I get a strong enough afinity to the product, that could help override the concerns about relocating.
 
-* 20190314 - Prepare for Cambridge interview
+* 20190314 Prepare for Cambridge interview
 ** Thoughts for today
    Still have a few after effects of the flu, but have a lot more energy now.  Hmm, I spoke too soon and the flu caught up with me again.  I did sort out some of my code and pushed some more commits, but still a lot to organise.
 
@@ -107,7 +109,7 @@
 
     ~, i l~ will also insert a link and you can use ~C-y~ to paste the link from ~org-store-link~
 
-* 20190313 - Interviews and Machine Learning study group
+* 20190313 Interviews and Machine Learning study group
 ** Thoughts for today
    Had a really good time at an interview today, very friendly people and it never really felt too difficult.  Hopefully I didn't give them any remnants of my flu.
 
@@ -117,7 +119,7 @@
 
    Attended the ML Study group and learned about [[https://colab.research.google.com/][Google colab]], an online Jupiter Notebooks tool that also supports GPU powered calculations.  It also means you don't have to install lots of python libraries and versions on your laptop.
 
-* 20190312 - final day of flu
+* 20190312 final day of flu
 ** Thoughts for today
    Hopefully this is my final day of flu.  I felt really horrible this morning but mostly better this afternoon.
 
@@ -131,12 +133,14 @@
 
     Added any useful pages to the TODO section at the top of this journal.
 
-* 20190311 - missing uSwitch Coding dojo - flu
+* 20190311 missing uSwitch Coding dojo - flu
 ** Thoughts for today
    I still have a bit of flu, but think its just the after effects now.  Will cycle on my brompton into uSwitch and see if that makes me feel fitter.  Actually, I am still feeling a bit rubbish, so I might get the train into London and cycle back.  Update:  I still feel very tired and unable to concentrate, so will have to miss the coding dojo
 
    Updated some 4Clojure exercises instead of attending the coding dojo.
 
+** Quora answer
+*** [[https://www.quora.com/Which-programming-language-has-the-easiest-syntax/answer/John-Stevenson-12][Which programming language has the easiest syntax?]]
 ** Code commits
 *** 4Clojure #27 - Palindrome detector
 *** 4Clojure #29 - All the CAPS
