@@ -5,20 +5,47 @@
 #+LANGUAGE:    en
 
 * 20190130 Setup ClojureBridge event pages
+* 20190127 4Clojure
 * 20190125 last day at startup
 * 20190122 Concerned at the lack of direction
+* 20190120 Clojure Study Group - Destructuring
+** Thoughts for Today
+** Code
+*** [[https://github.com/jr0cket/four-clojure/commit/cab4bda9a2b45b366267b952dfa87dcab81cc2a9][052 Intro to destructuring]]
+*** [[https://github.com/jr0cket/four-clojure/commit/b8b0c91924a70e9adf7e9a1c9874e285d81abcf4][173 Intro to destructuring part 2]]
+** Activities
+*** Clojure study group - destructuring
+    A [[https://www.youtube.com/watch?v=y-KS2gABnTQ&index=12&list=PLy9I_IfUBzKJSgctCJaRYcnF6kZdiZ5ku][broadcast covering the concept of destructuring in Clojure]]
+
+    Links mentioned in the broadcast today
+
+    Destructuring guides
+    https://clojure.org/guides/destructuring
+    http://blog.brunobonacci.com/2014/11/16/clojure-complete-guide-to-destructuring/
+    http://blog.jayfields.com/2010/07/clojure-destructuring.html
+    https://gist.github.com/john2x/e1dca953548bfdfb9844
+
+    4Clojure exercises
+    http://www.4clojure.com/problem/52
+    http://www.4clojure.com/problem/173
+
 * 20190116 More AWS woes
   Investigating deployment issues, not a good day.  All I learnt is that using AWS, especially someone elses poorly documented setup is problematic at best.
 
 * 20190115 AWS further investigation
+** Practicalli Spacemacs
+   Updated styles and added two plugins, wide-page and simpletabss
+** Work
   Sizing the AWS ECS cluster in terms of vCPU and units.
 
   Setting the default CPU reservation for all the applications would allow 60% more containers to be deployed.  So currently there are 20 containers deployed across the 3 instance cluster.
 
-** PR: CPU Reservation to 100
-   Using custom deployment code, set the default CPU reservation to 100 units, which would allow more than 21 docker containers to be deployed.
+*** PR: CPU Reservation to 100
+    Using custom deployment code, set the default CPU reservation to 100 units, which would allow more than 21 docker containers to be deployed.
 
 * 20190114 AWS CPU Reservation blocking deployment
+** Practicalli Spacemacs
+   Updated section on Linting with Clojure
 ** Dealing with the custom deployment app - CPU reservations issues
   Deleted some of the docker containers from the companies ECS cluster, freeing up the CPU reservation enough so that the custom deployment application would deploy new versions of the applications.
 
@@ -26,6 +53,9 @@
   Discussed solutions to generating the Fibonacci sequence in Clojure
 
   https://youtu.be/-Vr62lNtsgs
+
+** Code
+*** [[https://github.com/jr0cket/four-clojure/commit/f8e6c51026e6b7212b970d94bc78e2eda9965397][4Clojure #26 Fibonacci series]]
 
 * 20190112 Internet issues
   Thought it was Virgin Broadband, but probably just the router.  I rebooted the router and everything came back soon after.

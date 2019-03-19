@@ -286,7 +286,7 @@ In the ~:dev~ profile, dependencies include [[https://github.com/ring-clojure/ri
 
    https://youtu.be/vehRrNqgVbQ
 
-* 20190202 Clojure Study group
+* 20190202 Prepare for Clojure Study group
 ** Summary
    Posted the study group video to the #announcements channel of the Clojurians Slack community.  Have got quite a few more subscribers to the channel now.
 
