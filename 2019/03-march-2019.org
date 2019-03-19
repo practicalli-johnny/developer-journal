@@ -4,6 +4,21 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190319 Hacking on projects
+** Thoughts for today
+   Continuing to chat with Lisa is great fun, keeps me very happy and motivated.  I even got back to a bit of Yoga this morning
+
+   Answered a question on Quora as to why Python is popular opposed to functional languages.  I believe most people are not really concerned with that distinction, especially those coming from a data science background as opposed a computer science or development experience background.
+
+   More work on the Game Scoreboard API and accompanying content in Practicalli Clojure WebApps.
+
+** Quora answers
+***  [[https://www.quora.com/Why-is-a-fundamentally-OOP-language-like-Python-popular-as-opposed-to-a-functional-language-like-Haskell-or-Lisp/answer/John-Stevenson-12][Why is a fundamentally OOP language like Python popular as opposed to a functional language like Haskell or Lisp?]]
+** Code commits
+*** .
+** Activities in detail
+*** Org-mode heading jump - Spacemacs keybinding combo
+   ~g j~ and ~g k~ jumps down and up along org-mode headings of the same level, so with the cursor on level1 you can jump to the next level one heading.  If you reach the end of level2 headings, then the bindings will jump to level1 (child level will jump to parent).  These bindings also jump through the org-mode meta-data, such as that in headings or defining code blocks.
 
 * 20190318 Organising ClojureBridgeLondon May 2019
 ** Thoughts for today
