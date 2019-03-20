@@ -4,6 +4,13 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+
+* 20190320 Yoga, Cycling and other exercises
+** Thoughts for today
+   Cycled down to otford and then my rear derailleur cable snapped, so had to do a bit of bodging to get something better than the hardest gear ratio so I could cycle up all the hills I just cycled down.  Managed to get a top speed of 52.9km/hour and rode for about 1 hour 30 minutes with an average speed of 22.9km/hour.
+
+   Spent a lovely afternoon with Lisa.  Browsed through some more spices and herbs from Forest Whole Foods.
+
 * 20190319 Hacking on projects
 ** Thoughts for today
    Continuing to chat with Lisa is great fun, keeps me very happy and motivated.  I even got back to a bit of Yoga this morning
