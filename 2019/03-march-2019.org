@@ -5,6 +5,36 @@
 #+LANGUAGE:    en
 
 
+* 20190321 Game scoreboard UI
+** Thoughts for today
+   Work on next study group as Friday afternoon and Saturday is going to be very busy.
+
+   BridgeTroll PR for Student RSVP page - minimise question about Operating Systems, add question about recommend editors (or none)
+
+   Clojure.org PR for ClojureBridge Event
+   GitHub project to manage tasks - rename run an event to organise clojurebridgelondon and create project on there
+   Reach out to communities that support under-represented groups
+
+** Code commits
+*** [[https://github.com/syl20bnr/spacemacs/pull/12086][Clojure Layer - updated docs for Cider manual quick start]]
+*** [[https://github.com/practicalli/game-scoreboard-ui][game-scoreboard-ui GitHub project]]
+
+** Activities in detail
+*** BridgeTroll - Clojure course changes
+    It seems all courses on BridgeTroll use a very similar template, especially when it comes to asking about Operating Systems the student has.  This makes the RSVP form seem a bit overwhelming.  I [[https://github.com/railsbridge/bridge_troll/issues/631][raised an issue about this]] on BridgeTroll GitHub repository.
+
+    The clojure course only has one Class level, so suggests you need some experience to attend the course.  This is not the case and I have created a PR to update this.
+
+    Reached out to [[https://github.com/ultrasaurus][Sarah Allen]] for help in getting these things resolved and hopefully some admin training on BridgeTroll.
+
+*** Spacemacs Clojure Layer - Quickstart with Leiningen PR
+    The quickstart with leiningen docs in the Spacemacs clojure layer are out of date. Update leiningen version to 2.9.1, Boot to 2.8.2 and ~cider-connect~ to 0.21.1
+
+*** Game scoreboard UI in Clojurescript
+    Create a new figwheel-main project with reagent
+    Add a CSS framework to make it look pretty - bluma (lighter weight apparently) or bootstrap
+    Consume API from deployed Game Scoreboard API
+
 * 20190320 Yoga, Cycling and other exercises
 ** Thoughts for today
    Cycled down to otford and then my rear derailleur cable snapped, so had to do a bit of bodging to get something better than the hardest gear ratio so I could cycle up all the hills I just cycled down.  Managed to get a top speed of 52.9km/hour and rode for about 1 hour 30 minutes with an average speed of 22.9km/hour.
