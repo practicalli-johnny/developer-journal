@@ -5,6 +5,34 @@
 #+LANGUAGE:    en
 
 
+
+* 20190324 deploy apps to Heroku, unit test API's - Clojure study group
+** Thoughts for today
+
+Topics to cover
+- deploy to heroku
+- lein-ring plugin
+- lein ring uberjar
+- adding a -main function
+- clojure.test and unit tests, what is a unit in Clojure
+- mocking and using ring-mock library
+- trying code outside of a ~deftest~ - flexibility of Clojure
+- Possible refactor steps
+-- common code
+-- SUT for game-scoreboard.handler namespace
+-- .core-test to .handler-test
+
+
+The System Under Test (SUT) from a Unit Testing perspective represents all of the actors (i.e one or more classes) in a test that are not mocks or stubs.
+
+Update Clojure learning path
+http://practicalli.github.io/clojure/learning-clojure.html
+
+** Code commits
+*** .
+** Activities in detail
+*** .
+
 * 20190321 Game scoreboard UI
 ** Thoughts for today
    Work on next study group as Friday afternoon and Saturday is going to be very busy.
