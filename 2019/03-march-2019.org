@@ -5,6 +5,48 @@
 #+LANGUAGE:    en
 
 
+* 20190325 Announce ClojureBridge Functional Works
+** Thoughts for today
+   A day mostly spent promoting the ClojureBridgeLondon event at Functional Works in May this year.
+
+** Code commits
+*** [[https://github.com/ClojureBridgeLondon/clojurebridgelondon.github.io/commit/c37b697e8a3d3d2a539eb6632327d3390b46d85f][ClojureBridgeLondon/clojurebridgelondon.github.io@c37b697]]
+*** [[https://github.com/clojure/clojure-site/pull/375][New Event - ClojureBridge London May 2019]]
+** Activities in detail
+*** Updated description of next ClojureBridgeLondon event
+    Tweaked some of the descriptions of the event on BridgeTroll and made it easier to understand the important parts of the event and sign-up.  As an organiser of the event, there is a dashboard on BridgeTroll that allows you to see what the RSVP forms look like.  There is also the option to go and edit the event details after it has been published.
+
+   [[https://www.bridgetroll.org/events/471][BridgeTroll sign-up page]]
+
+*** Updated ClojureBridgeLondon website
+    Updated ClojureBridge London website with next event details and a link to the sign up page on BridgeTroll
+    [[https://github.com/ClojureBridgeLondon/clojurebridgelondon.github.io/commit/c37b697e8a3d3d2a539eb6632327d3390b46d85f][ClojureBridgeLondon/clojurebridgelondon.github.io@c37b697]]
+
+*** Added ClojureBridgeLondon event to Clojure.org website
+    Raised a pull request with Clojure.org to add this event to their Events section
+
+    https://github.com/clojure/clojure-site/pull/375
+
+    PR merged by Alex Miller and the event is now on the website
+    https://clojure.org/events/2019/clojurebridge-london-may-2019
+
+*** Wrote to MP to vote to revoke article 50
+     While I appreciate you stance in wanting to make Britain a better place for all, it would seem our government is still as split your constituency (which voted remain in Bromley) and as divided as much as the rest of the UK over our relationship with the EU.
+
+     I am sure you do not wish to have a very damaging no deal situation, where only emergency services and essential trade goes on between the UK and EU countries.  It sounds like a bad brexit would also really stall all the work that has gone into improving the constituency, especially in Bromley itself.
+
+     Would it not be better to postpone our exit until the country has a much
+ clearer path that we can all get behind.  If we try to go ahead as a divided country, then those divisions will just continue to grow and affect the way we all vote in the coming local elections.
+
+     Within a few days of food shortages (mainly caused by panic buying) then Brexit will go from being seen as a wonderful opportunity to a desperate thing hated more than austerity.  Crashing out of the EU with such negative effect will only lead to an even bigger push to join the EU and become a much more integrated member of that union.
+
+     There is a legal option for the UK to revoke Article 50 at any time before we leave, which will surely be better that crashing out with a no deal and showing just how right project fear actually was.
+
+     Please consider voting to revoke article 50 so we have time to show just how Great Britain can be.
+
+     Yours sincerely,
+     John Stevenson
+
 
 * 20190324 deploy apps to Heroku, unit test API's - Clojure study group
 ** Thoughts for today
