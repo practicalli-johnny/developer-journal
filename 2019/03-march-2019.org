@@ -5,6 +5,65 @@
 #+LANGUAGE:    en
 
 
+* 20190326 Maria.cloud and cljs-http for game scoreboard
+
+** Thoughts for today
+   Thinking about improvements to the ClojureBridge London course material after watching the [[https://github.com/mhuebert/maria][ClojureD presentation on Maria.cloud]].  Its a very nice environment, simplified for those with no coding experience.
+
+   Experimenting with consuming JSON API's from ClojureScript using ~cljs-http~ library
+** Code commits
+*** .
+** Activities in detail
+*** Reviewing Maria.cloud
+    Watched the [[https://github.com/mhuebert/maria][ClojureD presentation on Maria.cloud]] and it looks like a very interesting tool for absolute beginners.
+
+    [[https://www.maria.cloud/][Maria.cloud]] does abstract away a few things, including a feature to show much more meaningful error messages for beginners.  I think Maria.cloud could be a good 'day one' experience for ClojureBridge students who are completely new to coding.
+
+    The [[https://github.com/mhuebert/maria][maria project on GitHub]] is active and does include a few basic curriculum examples.  I think it should include much more examples and exercises, probably as different pages in Maria.cloud.  Perhaps with a maria.cloud page that lists them all the curriculum pages for ClojureBridge
+
+    [[https://github.com/ClojureBridgeLondon/organise-clojurebridge-london/issues/6][ClojureBridgeLondon Project issue: Reivew Maria.cloud 'Learn Clojure with Shapes' curriculum #6]]
+
+    - [[https://github.com/mhuebert/maria][Maria project on GitHub]]
+    - https://www.maria.cloud/
+    - https://github.com/mhuebert/maria/wiki/curriculum
+
+*** Discussing yasnippets in autocomplete for Spacemacs
+John Stevenson [11:18 AM]
+in the screenshot you have unique items in the list.  The `def -> def` is a yasnippet and will expand to the `(def  )` expression.  `def` by itself is just autocomplete for the `def` function (and will show you the tool tip for) and when selected will only add `def` function name without any parens.  The same goes for the defn entries
+If you dont want the snippets, then you can remove them by setting this line to `nil`, or just removing the line
+```auto-completion-enable-snippets-in-popup nil```
+(edited)
+
+Nollo [11:24 AM]
+You cannot merge the two items?
+
+John Stevenson [11:29 AM]
+Can you elaborate on what you mean by 'better' tool tip?  The tooltip should be showing the docstring for the Clojure function (not all docstrings are useful).  If you want to understand a function better then put your cursor on that function name in your code and use `, h g` to pull down a description and examples of that function from Grimoire Community Clojure documentation https://www.conj.io/
+
+Nollo [11:29 AM]
+better ui sorry
+
+John Stevenson [11:30 AM]
+Why would you merge the two items when they do different things?
+
+Nollo [11:31 AM]
+For the tooltip, I was thinking about having the same style of the completion popup
+and for the merging, it's convenient to have one item which display the doc and can insert the snippet
+
+John Stevenson [11:47 AM]
+I dont know how to change styles.  You seem to have a different theme than I.  I just use the default themes.
+There are two different insertions, either `def`  or `(def )` so you get two different menu items.  Which of these do you not want?
+
+Nollo [11:59 AM]
+I think `def`is better
+
+John Stevenson [12:00 PM]
+then remove `auto-completion-enable-snippets-in-popup nil` line from your autocomplete layer configuration in `.spacemacs` and problem solved for you, no more duplications
+you can still type yasnipets and expand with `M-/`, they just wont appear in the autocomplete menu
+
+*** Usiing ~cljs-http~ to consume JSON and EDN from the Game Scoreboard API
+
+
 * 20190325 Announce ClojureBridge Functional Works
 ** Thoughts for today
    A day mostly spent promoting the ClojureBridgeLondon event at Functional Works in May this year.
