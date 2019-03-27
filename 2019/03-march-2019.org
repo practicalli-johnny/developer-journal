@@ -5,6 +5,14 @@
 #+LANGUAGE:    en
 
 
+* 20190327 More interiews
+** Thoughts for today
+
+** Code commits
+*** .
+** Activities in detail
+*** .
+
 * 20190326 Maria.cloud and cljs-http for game scoreboard
 
 ** Thoughts for today
