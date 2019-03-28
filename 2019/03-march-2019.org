@@ -5,6 +5,17 @@
 #+LANGUAGE:    en
 
 
+* 20190328
+** Thoughts for today
+
+** Code commits
+*** .
+** Activities in detail
+*** Spacemacs PRs to review
+    - https://github.com/syl20bnr/spacemacs/pull/11840
+    - https://github.com/syl20bnr/spacemacs/pull/11361
+
+
 * 20190327 More interiews
 ** Thoughts for today
 
