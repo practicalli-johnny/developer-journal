@@ -5,6 +5,17 @@
 #+LANGUAGE:    en
 
 
+
+* 20190329 Third meaningless vote day
+** Thoughts for today
+   Distracted by the possibility that Labour would support the third meaningless vote, but luckily that didnt happen and the vote was rejected by a majority of 58.
+
+   Continued to work on the Cross Origin Resource Sharing issue I have.  Finally got the local applications to talk to each other, however, its still being blocked by the application on Heroku.
+** Code commits
+*** .
+** Activities in detail
+*** .
+
 * 20190328
 ** Thoughts for today
 
