@@ -5,6 +5,14 @@
 #+LANGUAGE:    en
 
 
+* 20190330 CORS for API app and Figwheel.main website
+** Thoughts for today
+   Todays broadcast was okay, my code was a little messy and needs some tidying up.
+** Code commits
+*** .
+** Activities in detail
+*** .
+
 
 * 20190329 Third meaningless vote day
 ** Thoughts for today
