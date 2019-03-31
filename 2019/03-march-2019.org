@@ -5,6 +5,15 @@
 #+LANGUAGE:    en
 
 
+
+* 20190331 4Clojure on my travels
+** Thoughts for today
+   Out and about today to meet a friend in Wandsworth Town.  An opportunity to document some more solutions to 4Clojure challenges.
+** Code commits
+*** .
+** Activities in detail
+*** Document 4Clojure solutions
+
 * 20190330 CORS for API app and Figwheel.main website
 ** Thoughts for today
    Todays broadcast was okay, my code was a little messy and needs some tidying up.
