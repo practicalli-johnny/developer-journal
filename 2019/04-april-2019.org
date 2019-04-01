@@ -1,0 +1,15 @@
+#+TITLE:       Developer Journal - April 2019
+#+AUTHOR:      John Stevenson
+#+DATE:        <2019-04-01 Mon>
+#+EMAIL:       john@jr0cket.co.uk
+#+LANGUAGE:    en
+
+
+* 20190401 Parliament vote round 2
+** Thoughts for today
+   Brexit is a disaster and the UK parliament is no longer fit for purpose.  Unfortunately, the UK parliament is elected by the UK population, which says very little good about them either...
+** Code commits
+*** Code interview challenge - local commit only
+** Activities in detail
+*** Short notice code challenge
+    Cant share details, but I got a couple of coding challenges for an intervew Thursday Morning.  Had to drop a few things to try fit one in, but not much time.  Came up with some ideas of how I would like to solve the problem, but having tested the feasibility of those ideas.
