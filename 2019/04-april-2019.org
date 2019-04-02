@@ -4,6 +4,23 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190402 Ldnclj meetup - Blockchain
+** Thoughts for today
+  I received some sad personal news today, it has been waying quite heavily in the back of my mind. I am more than a little down about this.  Unfortunately I got caught up in that and was late setting off for an interview, then hit transport issues with the train.  Ended up not making the appointment unfortunately.
+
+  Took the train home as I didnt have the energy to ride.
+
+  Interesting question on creating stong enough passwords for symmetric encryption.  Daniel Compton recommended Diceware (Wikipedia), using several roles of a dice to create a number that is a lookup in a word list (e.g. The Electronic Freedom Frontier word list).  This gives a password of around half a dozen words separated with spaces, to create a very strong password.  Creating a website that generates these random passwords (in multiple languages) would be a great dojo and ClojureBridge exercise.
+
+** Code commits
+***
+** Activities in detail
+*** Presenting the meetup
+    I put a brave face on things and introduced the speaker.  I am afraid I didnt do much of an introduction.
+
+    It was an interesting journey across many subjects and really started to focus on specific topics once the audience engaged.  Some interesting projects were raised and could be talked about in further presentations.
+
+
 
 * 20190401 Parliament vote round 2
 ** Thoughts for today
