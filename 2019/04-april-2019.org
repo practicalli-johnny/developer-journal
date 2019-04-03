@@ -4,6 +4,7 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190403 Personal day
 * 20190402 Ldnclj meetup - Blockchain
 ** Thoughts for today
   I received some sad personal news today, it has been waying quite heavily in the back of my mind. I am more than a little down about this.  Unfortunately I got caught up in that and was late setting off for an interview, then hit transport issues with the train.  Ended up not making the appointment unfortunately.
