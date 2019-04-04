@@ -4,6 +4,7 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190404 away from keyboard
 * 20190403 Personal day
 * 20190402 Ldnclj meetup - Blockchain
 ** Thoughts for today
