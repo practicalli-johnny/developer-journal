@@ -5,6 +5,20 @@
 #+LANGUAGE:    en
 
 
+* 20190413 Maria.cloud @ Clojure Study Group
+** Thoughts for today
+   Creating a Maria.cloud based curriculum for the next ClojureBridge London event.
+
+
+** Code commits
+*** .
+** Activities in detail
+*** Maria.cloud curriculum for ClojureBridge London
+    - naming of files - is there a character limit? or some other limit to stop the files from showing?
+
+*** ClojureScript site for ClojureBridge London website
+*** Spacemacs: refresh gist list
+
 * 20190411 Restart interview test
   I wasnt very focused a few days ago and mixed up the schedule for my technical interview.  So ended up rushing the solution and making a total travesty of it.  Starting from scratch today
 ** Thoughts for today
