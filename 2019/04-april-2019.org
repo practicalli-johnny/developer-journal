@@ -5,6 +5,15 @@
 #+LANGUAGE:    en
 
 
+* 20190414 Practicalli Spacemacs updates
+** Thoughts for today
+   More spring cleaning of the office and its getting very roomy in there.
+
+   Started working on a new ClojureBridge London website using ClojureScript, Figwheel-main and reagent.  As I was documenting that I added more content to the Practicalli Spacemacs guide, especially around the use of Magit.
+
+** Activities in detail
+*** .
+
 * 20190413 Maria.cloud @ Clojure Study Group
 ** Thoughts for today
    Creating a Maria.cloud based curriculum for the next ClojureBridge London event.
