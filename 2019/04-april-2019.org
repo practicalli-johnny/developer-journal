@@ -5,6 +5,20 @@
 #+LANGUAGE:    en
 
 
+* 20190417 ClojureX committee and blogging
+** Thoughts for today
+   I woke up feeling great.  I think I got a pretty good sleep overall, but still had a bit of a weird dream before I woke up.  Got a lot of stuff done in the morning, shopping for fruit and veg in the afternoon and a Jurassic Park triple bill on Netflix.
+
+   Mood: Early morning euphoria and excitement (for no particular reason)
+
+   Cooking: chickpeans in wonderbag before bed.
+
+** Activities in detail
+*** ClojureX CfP draft review and blog post
+    Finalising the ClojureX Call for Papers blurb with SkillsMatter.  I sent through an updated version of the CfP topics, as I didnt think it was clear enough as to what we were suggesting.  I didnt like there marketing speak and inaccuracy of the original prose so I suggested an an alternative.  This alternative is now the text of the CfP.
+
+    I used the updated topics and alternative prose to create a blog on jr0cket.co.uk about the CfP, which I will publish tomorrow.
+
 * 20190414 Practicalli Spacemacs updates
 ** Thoughts for today
    More spring cleaning of the office and its getting very roomy in there.
