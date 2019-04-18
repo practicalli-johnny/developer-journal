@@ -4,6 +4,28 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190418 Gardening and Coding
+** Thoughts for today
+   Its a lovely day to be outside.  I started sorting out the garden
+
+   Mood: still pretty good mood (not quite the euphoria of yesterday).  A few minutes low in the afternoon, but quickly regained.
+
+** Activities in detail
+*** nojekyll for jr0cket blog
+    Added a ~.nojekyll~ file to the ~source~ folder of my Hexo powered blog for jr0cket.co.uk to minimise processing on the GitHub side (as it stops the content from being processed by the GitHub Jekyll service).
+
+    Added ~include: - .nojekyll~ to the ~_config.yml~ file to ensure that the ~.nojekyll~ file is included during ~hexo generate -d~
+
+*** Published blog for the ClojureX CfP
+    Published the blog I wrote yesterday.  It was picked up by Planet Clojure blog roller once I set the category to ~clojure~ in the heading of the post.
+*** Updating jr0cket DNS
+    After publishing a new blog on jr0cket.co.uk I was getting warnings about mis-configured DNS.  It seems GitHub pages have changed the IP Addresses used for A records (which I currently use for redirecting http://jr0cket.co.uk/ bare domain to the GitHub pages site.
+
+    With a bit of hunting I found the new IP addresses https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-a-records-with-your-dns-provider
+
+    I added 4 new A records to the DNS for the jr0cket.co.uk domain on Gandi.net and then deleted the two old A records.  Hopefully everything should work correctly when the change updates a a few hours.
+
+    Ideally I should move away from DNS A record types to the ALIAS type (supported by Gandi.net) and then I can simply point the bare domain to jr0cket.github.io, as show in this article: https://help.github.com/en/articles/setting-up-an-apex-domain#configuring-an-alias-or-aname-record-with-your-dns-provider
 
 * 20190417 ClojureX committee and blogging
 ** Thoughts for today
