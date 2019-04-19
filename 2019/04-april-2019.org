@@ -4,6 +4,20 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+
+* 20190419 More Gardening, more coding
+** Thoughts for today
+   Really hot today, had to be careful to not get sunburn whilst gardening.  The temperature is over 70 Celsius in my hotbox recycler.
+
+   Mood: pretty stable today, no moments of euphoria or downers.
+
+** Code commits
+** [[https://github.com/jr0cket/spacemacs/commit/5d62aba7002ddffc23856e02cc2ddacf12e60471][Spacemacs PR - cider-undef keybinding]]
+** Activities in detail
+*** ClojureBridge London website - Figwheel main and Bulma
+*** Spacemacs cider-undef keybinding
+    Added ~SPC m e u~ keybinding to the ~clojure~ layer to provide a Spacemacs menu entry for the command ~cider-undef~.  The ~cider-undef~ function removes the symbol (i.e. ~def~ / ~defn~ name) under the cursor from the current namespace.  If there is not a symbol under the cursor, then you are prompted in the mini-buffer to supply a symbol name.
+
 * 20190418 Gardening and Coding
 ** Thoughts for today
    Its a lovely day to be outside.  I started sorting out the garden
