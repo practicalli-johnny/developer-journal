@@ -5,6 +5,14 @@
 #+LANGUAGE:    en
 
 
+* 20190420 Maria.cloud @ Clojure Study group
+** Thoughts for today
+
+** Code commits
+*** .
+** Activities in detail
+*** Maria.cloud animation and advanced stuff @ Clojure study group
+
 * 20190419 More Gardening, more coding
 ** Thoughts for today
    Really hot today, had to be careful to not get sunburn whilst gardening.  The temperature is over 70 Celsius in my hotbox recycler.
