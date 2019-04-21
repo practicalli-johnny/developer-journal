@@ -5,6 +5,22 @@
 #+LANGUAGE:    en
 
 
+* 20190421 Bulma ClojureBridge London website
+** Thoughts for today
+   Thinking about the design of the ClojureBridge London website and how to make a good balance of engaging content and functionality.  A lot of experimenting to do.
+
+   Started thinking about hiccup code generators for common elements, such as ordered lists.  However, could take this further and do this for higher abstractions such as navigation bars.  Then simply define common names for things in a data structure and pull that from the application state.
+** Code commits
+*** [[https://github.com/ClojureBridgeLondon/landing-page-test][ClojureBridgeLondon/landing-page-test repository]] - deployment repository (manually copied)
+*** [[https://github.com/ClojureBridgeLondon/landing-page-draft][ClojureBridgeLondon/landing-page-draft repository]] - project source code
+
+** Activities in detail
+*** ClojureBridge London website with Bulma and Clojurescript
+    Applying more styles from the Bulma CSS framework to create a responsive and engaging website for ClojureBridge London.  So far its not much more than a hiccup version of the current site, but it is helping generate ideas of things that can be more dynamic.
+
+**** Resources
+     - [[https://scrimba.com/g/gbulma][Free code camp course on Bulma]]
+
 * 20190420 Maria.cloud @ Clojure Study group
 ** Thoughts for today
 
