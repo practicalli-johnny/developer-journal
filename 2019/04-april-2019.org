@@ -5,6 +5,16 @@
 #+LANGUAGE:    en
 
 
+* 20190422 Bulma tutorial
+** Thoughts for today
+   Watch a tutorial on Bulma for some inspiration.
+
+   Watched the last 3 episodes of `The Umbrella Academy`.  Fairly enjoyable although the some of the story-line was a little predictable.  I enjoyed most of the acting and overall plot
+** Code commits
+*** .
+** Activities in detail
+*** .
+
 * 20190421 Bulma ClojureBridge London website
 ** Thoughts for today
    Thinking about the design of the ClojureBridge London website and how to make a good balance of engaging content and functionality.  A lot of experimenting to do.
