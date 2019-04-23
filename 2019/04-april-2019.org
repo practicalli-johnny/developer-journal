@@ -5,6 +5,40 @@
 #+LANGUAGE:    en
 
 
+* 20190423 Codebar & CSS debug
+** Thoughts for today
+   Cooler weather again, so easier to focus on coding (although I did a pretty good job yesterday)
+
+   Mood: started off quite low, did an hour of exercise and then felt okay the rest of the day.
+** Code commits
+*** [[https://github.com/ClojureBridgeLondon/landing-page-draft/commit/8edbdda2a9fedd26adb6f55e33942b10fe1be1cc][Added debug.css for visually debugging CSS styles]]
+** Activities in detail
+*** Checked clj-refactor still working
+    There was a question on #spacemacs as to if clj-refactor was working (as they were experiencing errors when adding a project dependency).  I fired up a Clojure REPL in the ~clojure->code~ project and tried some ~clj-refactor~ commands.  Everything seemed to work, so reported this back to the slack channel along with my version of Leiningen, Java and Spacemacs (CIDER).
+*** Visually debugging CSS
+    Sometimes CSS errors are hard to see as you are looking at the results rather than the structure that the CSS is creating for you.  Listening to one of the videos on learning Bulma, the person was using a debug.css file to visually debug the structure of the CSS that looked very handy.
+
+    This [[https://medium.freecodecamp.org/heres-my-favorite-weird-trick-to-debug-css-88529aa5a6a3][debugging CSS article]] shows how to create a ~debug.css~ file that will display a structured representation of the CSS.  When you need to debug, just include this file into the index.html page just like any other CSS style file.
+
+#+BEGIN_SRC
+<link rel="stylesheet" href="styles/debug.css">
+#+END_SRC
+
+    The CSS for the debugging is as follows:
+
+#+BEGIN_SRC
+*:not(path):not(g) {
+    color:                    hsla(210, 100%, 100%, 0.9) !important;
+    background:               hsla(210, 100%,  50%, 0.5) !important;
+    outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+    box-shadow: none !important;
+}
+#+END_SRC
+
+    There are newer versions of this [[https://gist.github.com/zaydek/6b2e55258734deabbd2b4a284321d6f6][debug.css file on GitHub Gist]] however only version ~0.0.1~ actually worked with the Leiningen project.  I did not understand if something in the code was required to make the ~[debug]~ work in the newer versions.
+
+    Another approach is to add [[https://zaydek.github.io/debug.css][debug.css as a bookmark]] and then just use that bookmark to toggle debugging off and on again.  This could also be added as a button or switch on the page during development.
+
 * 20190422 Bulma tutorial
 ** Thoughts for today
    Watch a tutorial on Bulma for some inspiration.
