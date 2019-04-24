@@ -5,6 +5,10 @@
 #+LANGUAGE:    en
 
 
+* 20190424 more spring cleaning
+** Thoughts for today
+   Another break from the computer today
+
 * 20190423 Codebar & CSS debug
 ** Thoughts for today
    Cooler weather again, so easier to focus on coding (although I did a pretty good job yesterday)
