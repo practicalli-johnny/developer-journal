@@ -4,6 +4,37 @@
 #+EMAIL:       john@jr0cket.co.uk
 #+LANGUAGE:    en
 
+* 20190426 ClojureBridgeLondon Landing Page refactor
+** Thoughts for today
+   Slow start today but eventually got into the swing of things with the new ClojureBridgeLondon landing page.
+
+   Mood: very low in the morning, but much better by the time I had added lots of improvements to the ClojureBridge London landing page website.
+** Code commits
+*** 25 commits to the landing page repos
+** Activities in detail
+*** ClojureBridgeLondon Landing page
+    After struggling a bit with media object, I changed over to just using columns for layouts.  Columns are much simpler and more flexible.  Each component is now made up of two or three columns and is much more responsive.  I also do not need to cut up images for different sizes of screen.
+
+    I still use the ~box~ style from Bulma as it adds a nice boarder around the sections, yet is not a big gap like using the ~section~ class.
+
+    I also change from the ~hero~ class to columns, so that on the desktop and tablet displays the registraion button would appear on the left hand side of the page title, rather than underneath.  This makes much better use of the design, especially on a desktop.
+
+    Created a new image for the install, composed of the different editor logos from the editors we recommend for ClojureBridge.
+
+    I added Clojure components for all the sections, although several are still placeholders that need to have content added to them.
+*** Clojure Study Group - GitHub pages and orphaned branches
+    Had a quick look at options for using GitHub pages for deploying just the ClojureScript builds.
+    - separate repository - a bit overkill but simple
+    - orphan branch
+    - ~/doc~ directory on ~master~ - this doesnt work for org.github.io or user.github.io repositories
+
+    I am accustomed to using a separate repository for org.github.io based github pages, through the use of GitBook and Hexo.  I do like the separation between project and generated assets, as in these examples the project files are compiled locally, then pushed to the Internet.
+
+    Having separate repositories also makes rollback of a site very easy and keeps a very specific history for deployment.  This could be managed with Git submodules, as any submodule commit would show up in the original project.  You would still need to diligently commit at the same times.
+
+    One limitation is that there is no automatic connection between the commits in the original project and the commits in the deployment.
+
+    I am leaning towards including an orphaned branch, called ~gh-pages~ that will just be used to serve up the website.  Some care would need to be taken to ensure that files are committed to the right branch, although this could mostly be managed by ~.gitignore~ patterns if each branch had its own ignore file.
 * 20190425 a very bad day
 ** Thoughts for today
    The worst day I have had since the start of April
